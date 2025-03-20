@@ -12,10 +12,7 @@ body {
     background: #130824;
     color: #F0F0F0;
 }
-h1, h2, .about-title, .project-heading {
-    color: #FFB400;
-    
-  }
+
   .btn, .project-btn, .contact-me-btn {
     background-color: #F6FF4C;
     border: none;
@@ -37,6 +34,7 @@ h1, h2, .about-title, .project-heading {
 /* === Navbar Namn === */
 .navbar-brand {
     font-size: 1.8rem; 
+    font-family: 'Tektur';
 }
 
 /* === Navbar Länkar === */
@@ -81,7 +79,7 @@ h1, h2, .about-title, .project-heading {
   
 .nav-icon:hover {
     transform: scale(1.1);
-    color: #a8a2a4;
+    color: #F6FF4C;
 }
 
 #langToggle i {
@@ -90,7 +88,7 @@ h1, h2, .about-title, .project-heading {
   
   #langToggle:hover i {
     transform: scale(1.1);
-    color: #a8a2a4;
+    color: #F6FF4C;
   }
   
 
@@ -137,7 +135,8 @@ h1, h2, .about-title, .project-heading {
     transition: color 0.3s;
   }
   .hero-text i:hover {
-    color: #F6FF4C;
+    color: #1D0C38;
+    transform: scale(1.1); 
   }
   
  
@@ -367,8 +366,8 @@ h1, h2, .about-title, .project-heading {
   
   
   .project-btn:hover {
-    background-color: #e5672a;  
-    color: #000000;
+    background-color: #130824;
+    transform: scale(1.1); 
   }
   
   .project-badge {
@@ -400,8 +399,8 @@ h1, h2, .about-title, .project-heading {
     border-color: #F6FF4C;
   }
   .btn-primary:hover {
-    background-color: #F6FF4C;
-    border-color: #F6FF4C;
+    background-color: #130824;
+    transform: scale(1.1); 
   }
 
 .bx-envelope {
