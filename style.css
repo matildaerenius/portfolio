@@ -19,12 +19,7 @@ body {
     color: #000;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   }
-  .btn:hover, .project-btn:hover, .contact-me-btn:hover {
-    background-color: #e0a200;
-    transform: scale(1.03);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-
+ 
 /* === Navbar-sektion === */
 .bg-custom {
     background: #1D0C38;
@@ -212,7 +207,6 @@ body {
   }
   
   .download-cv-link:hover {
-    color: #e0a200;
     text-decoration: underline; 
   }
   .download-cv-link i {
@@ -313,7 +307,7 @@ body {
   .skill-icon-container:hover .tooltip-text {
     display: block;
   }
-  
+
   #social-skills ul li span.text-white {
     font-family: 'Tektur';
   }
