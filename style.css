@@ -247,7 +247,8 @@ body {
   .skill-title {
     margin-top: 1.5rem;      
     transition: margin-top 0.4s ease;
-    color: #ffffff;        
+    color: #ffffff;      
+    font-family: 'Tektur';
   }
   
   .skill-icons {
@@ -311,6 +312,10 @@ body {
   
   .skill-icon-container:hover .tooltip-text {
     display: block;
+  }
+  
+  #social-skills ul li span.text-white {
+    font-family: 'Tektur';
   }
   
   
@@ -445,6 +450,36 @@ body {
   
   #contact .form-control {
     background-color: #1D0C38 !important;
+    font-family: 'Tektur';
+  }
+
+  .form-control:focus {
+    border: none; 
+    outline: none; 
+    box-shadow: 0 0 0 0.05rem #F6FF4C; 
+  }
+  
+  .form-control::placeholder {
+    color: #999; 
+    font-family: 'Tektur';
+    opacity: 1; 
+  }
+ 
+  .form-control::-webkit-input-placeholder {
+    color: #999;
+    opacity: 1;
+  }
+  .form-control:-moz-placeholder {
+    color: #999;
+    opacity: 1;
+  }
+  .form-control::-moz-placeholder {
+    color: #999;
+    opacity: 1;
+  }
+  .form-control:-ms-input-placeholder {
+    color: #999;
+    opacity: 1;
   }
   
 
