@@ -465,3 +465,12 @@ body {
       max-width: 250px;
     }
 }
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    margin: 1rem 0;  
+    font-size: 1.2rem; 
+    text-align: center;
+    
+  }
+}
+
