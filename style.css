@@ -221,7 +221,7 @@ body {
     cursor: pointer;
     position: relative; 
     color: #fff;   
-    min-height: 160px;    
+    min-height: 300px;    
     overflow: hidden;     
     transition: all 0.4s ease; /   
   }
@@ -256,9 +256,7 @@ body {
     margin-top: 1.5rem; 
   }
  
-.skill-card.open {
-    min-height: 180px;
-  }
+
   
   .skill-card.open .skill-title {
     margin-top: -2.5rem; 
