@@ -316,6 +316,10 @@ body {
     color: #ffffff;
     text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);  
   }
+
+  #projects p {
+    font-family: 'Tektur';
+  }
   
   .project-card {
     background-color: #1D0C38; 
