@@ -367,8 +367,26 @@ body {
   
   .project-btn:hover {
     background-color: #130824;
-    transform: scale(1.1); 
+    transform: scale(1.2) rotate(5deg);
+    transition: all 0.2s ease-in-out;
   }
+  .project-icon-btn {
+    padding: 0.3rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%; 
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .project-icon-btn:hover i {
+    transform: scale(1.2) rotate(5deg);
+    transition: all 0.2s ease-in-out;
+  }
+  
   
   .project-badge {
     background-color: #130824; 
