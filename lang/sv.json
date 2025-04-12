@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "about": "Om mig",
+    "skills": "Skills",
+    "projects": "Projekt",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "<Matilda\nErenius/>",
+    "subtitle": "Javautvecklarstudent.",
+    "button": "Kontakta mig"
+  },
+  "about": {
+    "title": "Om mig",
+    "paragraph1": "Hej! Jag heter Matilda och bor i Stockholm, Sverige. Jag studerar till Javautvecklare och kände att IT var en naturlig väg eftersom jag alltid har gillat att lösa problem. Trots att jag inte hade någon tidigare erfarenhet innan jag började studera, blev jag snabbt förälskad i kodning och alla möjligheter det innebär. Jag är en snabb och ivrig inlärningsperson som älskar att utmana mig själv och lära mig nytt.",
+    "paragraph2": "Just nu är jag extra intresserad av backendutveckling och logiken bakom den. Jag vill också gärna utforska molnteknologi för att förstå modern mjukvaruinfrastruktur ännu bättre.",
+    "paragraph3": "Utanför techvärlden älskar jag små äventyr i vardagen. Det kan vara allt från att prova nya recept, upptäcka Stockholms unika hörn, eller åka på en spontan roadtrip. Jag tror att varje upplevelse är en chans att lära sig något nytt. Jag tar mig an alla utmaningar – stora som små – med nyfikenhet och humor, och är alltid redo för nästa roliga projekt.",
+    "paragraph4": "När jag inte sitter klistrad vid datorn så gymmar jag, tar långa promenader – och ibland blir det bussen hem. Jag gillar spelkvällar med familj och vänner (även om jag förlorar 9 av 10 gånger – men jag är i alla fall lyckligt lottad i kärlek!). Annars hittar du mig kanske skrubbande ugnen, sorterande skåp eller rewatchar Friends för elfte gången – med godis i handen, såklart.",
+    "cv": "Visa CV"
+  },
+  "skills": {
+    "title": "Teknisk Stack",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Verktyg",
+    "socialTitle": "Sociala Färdigheter",
+    "problemSolver": "Problemlösare",
+    "positive": "Positiv",
+    "team": "Lagarbetare",
+    "communicative": "Kommunikativ",
+    "curious": "Nyfiken",
+    "adaptable": "Anpassningsbar"
+  },
+  "projects": {
+    "title": "Projekt",
+    "note": "Dessa projekt är fortfarande under utveckling och kan ännu inte visas. Besök gärna min GitHub för mestadels skolprojekt."
+  },
+  "contact": {
+    "title": "Kontakta mig",
+    "paragraph": "Vill du veta mer om mig eller bara säga hej? Skicka ett meddelande eller kontakta mig via mina sociala medier. Jag skulle bli jätteglad att höra från dig.",
+    "formTitle": "Skicka ett meddelande",
+    "formText": "Fyll i formuläret nedan så hör jag av mig så snart som möjligt.",
+    "form": {
+      "name": "Namn",
+      "email": "E-post",
+      "message": "Meddelande",
+      "send": "Skicka meddelande"
+    },
+    "info": {
+      "title": "Kontaktinformation",
+      "location": "Plats",
+      "stockholm": "Stockholm / Sverige",
+      "availability": "Tillgänglighet",
+      "available": "Tillgänglig för praktik"
+    },
+    "social": "Via sociala medier"
+  }
+}

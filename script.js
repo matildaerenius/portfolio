@@ -8,44 +8,37 @@ document.querySelectorAll('.skill-card').forEach(card => {
 const langToggle = document.getElementById("langToggle");
 const flagIcon = document.getElementById("flagIcon");
 
-let currentLang = "en"; 
+let currentLang = localStorage.getItem("language") || "en";
 
-langToggle.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  if (currentLang === "en") {
-    // Byt till svenska
-    flagIcon.src = "images/se.png";
-    flagIcon.alt = "Swedish flag";
-    currentLang = "sv";
-    changeLanguageToSwedish();
-  } else {
-    // Byt tillbaka till engelska
-    flagIcon.src = "images/gb.png";
-    flagIcon.alt = "English flag";
-    currentLang = "en";
-    changeLanguageToEnglish();
-  }
+window.addEventListener("DOMContentLoaded", () => {
+  loadLanguage(currentLang);
+  if (flagIcon) flagIcon.src = `images/${currentLang === "en" ? "gb" : "se"}.png`;
 });
 
-function changeLanguageToSwedish() {
-  document.querySelector('a.nav-link[href="#about"]').textContent = "Om mig";
-  document.querySelector('a.nav-link[href="#skills"]').textContent = "Färdigheter";
-  document.querySelector('a.nav-link[href="#projects"]').textContent = "Projekt";
-  document.querySelector('a.nav-link[href="#contact"]').textContent = "Kontakt";
-  document.querySelector('.contact-me-btn').textContent = "Kontakta mig";
-  document.querySelector('#contact h3').textContent = "Kontakta mig";
-  document.querySelector('#contact p').textContent = "Vill du veta mer om mig eller bara säga hej, skicka ett meddelande eller kontakta mig via mina sociala kanaler. Jag ser fram emot att höra från dig!";
-  
-}
+langToggle?.addEventListener("click", (e) => {
+  e.preventDefault();
+  currentLang = currentLang === "en" ? "sv" : "en";
+  localStorage.setItem("language", currentLang);
+  flagIcon.src = `images/${currentLang === "en" ? "gb" : "se"}.png`;
+  loadLanguage(currentLang);
+});
 
-function changeLanguageToEnglish() {
-  document.querySelector('a.nav-link[href="#about"]').textContent = "About";
-  document.querySelector('a.nav-link[href="#skills"]').textContent = "Skills";
-  document.querySelector('a.nav-link[href="#projects"]').textContent = "Projects";
-  document.querySelector('a.nav-link[href="#contact"]').textContent = "Contact";
-  document.querySelector('.contact-me-btn').textContent = "Contact Me";
-  document.querySelector('#contact h3').textContent = "Get In Touch";
-  document.querySelector('#contact p').textContent = "If you want to know more about me, or just like to say hello, send me a message or contact me through my socials. I'd love to hear from you.";
-  
+function loadLanguage(lang) {
+  fetch(`lang/${lang}.json`)
+    .then((res) => res.json())
+    .then((translations) => {
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        const value = key.split(".").reduce((obj, part) => obj && obj[part], translations);
+
+        if (value) {
+          if (["input", "textarea"].includes(el.tagName.toLowerCase())) {
+            el.placeholder = value;
+          } else {
+            el.innerHTML = value;
+          }
+        }
+      });
+    })
+    .catch((err) => console.error("Språkfil kunde inte laddas:", err));
 }
