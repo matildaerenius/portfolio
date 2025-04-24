@@ -42,3 +42,10 @@ function loadLanguage(lang) {
     })
     .catch((err) => console.error("Språkfil kunde inte laddas:", err));
 }
+
+  document.getElementById('searchBtn')
+    .addEventListener('click', function() {
+      window.location.href = 'buzz.html';
+    });
+
+
