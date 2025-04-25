@@ -255,9 +255,7 @@ body {
     justify-content: center;
     margin-top: 1.5rem; 
   }
- 
-
-  
+   
   .skill-card.open .skill-title {
     margin-top: -2.5rem; 
   }
@@ -521,4 +519,18 @@ body {
     
   }
 }
+
+body, 
+p, 
+li, 
+a, 
+span, 
+div {
+  font-family: 'Tektur', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Overpass Mono', monospace !important;
+}
+
 
