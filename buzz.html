@@ -49,14 +49,14 @@
         <h1 class="display-4 mb-3">Buzz</h1>
         <hr class="section-underline">
         <p class="date">2025-01-01</p>
-        <p class="lead mb-6">
+        <p class="lead mb-6"  data-aos="fade-left">
           Buzz is a social media platform I built as my first real side project during the first year of my Java
           Developer studies. My goal was simply to create a fully functional application with real-time messaging,
           posts, likes, and follows. I didn’t set a deadline—it was all about getting hands-on experience and learning.
         </p>
         
         <!-- Key Features -->
-        <section id="features" class="mb-6">
+        <section id="features" class="mb-6" data-aos="fade-left">
           <h2 class="h4 mb-3">Key Features</h2>
           <hr class="section-underline">
           <div class="row">
@@ -76,7 +76,7 @@
         </section>
 
         <!-- Main content sections -->
-        <section id="tech-stack" class="mb-6">
+        <section id="tech-stack" class="mb-6" data-aos="fade-left">
           <h2 class="h4 mb-2">Tech Stack</h2>
           <hr class="section-underline">
           <ul>
@@ -88,7 +88,7 @@
             <li>Mui</li>
           </ul>
         </section>
-        <section id="purpose" class="mb-6">
+        <section id="purpose" class="mb-6" data-aos="fade-left">
           <h2 class="h4 mb-2">Purpose of the project</h2>
           <hr class="section-underline">
           <p>Buzz was my first solo full-stack adventure with Spring Boot and React during my Java Developer studies. I
@@ -97,7 +97,7 @@
             at every layer of development, master basic Git workflows, and understand what it takes to ship a fully
             functional web application end-to-end.</p>
         </section>
-        <section id="process" class="mb-6">
+        <section id="process" class="mb-6" data-aos="fade-left">
           <h2 class="h4 mb-2">The process</h2>
           <hr class="section-underline">
           <p>Since this was my first Spring Boot/React project, getting the basic structure up and running took a bit of
@@ -106,7 +106,7 @@
             branch, knocked it out, then merged back into <code>main</code> once everything var working. Detta kept my
             flow tidy och hjälpte mig att build confidence med branching och merging early on!</p>
         </section>
-        <section id="problems" class="mb-6">
+        <section id="problems" class="mb-6" data-aos="fade-left">
           <h2 class="h4 mb-2">Problems</h2>
           <hr class="section-underline">
           <p>Diving in solo meant I quickly ran into a handful of gotchas. Wiring up Spring Boot and React took more
@@ -115,7 +115,7 @@
             altogether, och en missing MySQL table silently bröt mina CRUD endpoints. Varje hiccup tvingade mig att dig
             into logs, reconfigure, och try again tills everything clicked.</p>
         </section>
-        <section id="lessons" class="mb-6">
+        <section id="lessons" class="mb-6" data-aos="fade-left">
           <h2 class="h4 mb-2">Lessons learned</h2>
           <hr class="section-underline">
           <ul class="list-unstyled">
@@ -163,7 +163,17 @@
     </div>
   </div>
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: false
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
 </body>
 
 </html>
