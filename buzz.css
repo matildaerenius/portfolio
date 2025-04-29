@@ -57,6 +57,8 @@ h6 {
     position: relative;
     display: inline-block;
     text-decoration: none;
+    font-size: 0.9rem;      
+    transition: color 0.3s ease;
 }
 
 .sidebar a::after {
@@ -77,6 +79,10 @@ h6 {
 .sidebar a {
     color: #F6FF4C !important;
 }
+.col-right .sidebar h3 {
+    font-size: 1rem;          
+    margin-bottom: 0.5rem;
+  }
 
 .date {
     color: #F6FF4C !important;
@@ -138,7 +144,7 @@ code {
 p,
 .lead,
 li {
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 
@@ -156,3 +162,22 @@ h1.display-4 {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.col-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+  }
+  .col-left > * {
+    width: 100%;
+    max-width: 700px;       
+  }
+
+  .col-right {
+    border-left: 1px solid rgba(255,255,255,0.3); 
+    font-weight: 300;
+  }
+  section {
+    padding: 1rem 0;  
+  }
+  
