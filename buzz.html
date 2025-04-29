@@ -10,94 +10,89 @@
   <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <style>
+    
+    .sidebar { max-width: 300px; }
+   
+    .col-left {
+      flex: 0 0 85%;
+      max-width: 85%;
+      padding-right: 1rem;
+    }
+    .col-right {
+      flex: 0 0 15%;
+      max-width: 15%;
+      padding-left: 1rem;
+      border-left: 1px solid #fff; 
+    }
+  </style>
 </head>
 <body class="bg-custom text-white">
   <div class="container py-5">
 
     <!-- Back button -->
-    <a href="index.html"
-       class="text-white text-decoration-none mb-4 d-inline-flex align-items-center"
-       aria-label="Back to portfolio">
+    <a href="index.html" class="text-white text-decoration-none mb-4 d-inline-flex align-items-center" aria-label="Back to portfolio">
       <i class='bx bx-arrow-back fs-4 me-1'></i> BACK
     </a>
 
-    <!-- Title & intro -->
-    <h1 class="display-4 mb-3">Buzz</h1>
-    <p class="lead mb-5">
-      Buzz is a social media platform I built as my first real side project during the first year of my Java Developer studies. My goal was simply to create a fully functional application with real-time messaging, posts, likes, and follows. I didn’t set a deadline—it was all about getting hands-on experience and learning.
-    </p>
+    <!-- Two-column layout -->
+    <div class="row d-flex">
 
-    <!-- Purpose -->
-    <section id="purpose" class="mb-5">
-      <h2 class="h4 mb-2">Purpose of the project</h2>
-      <p>
-        Buzz was my first solo full-stack adventure with Spring Boot and React during my Java Developer studies. I set out to build a complete social media app from scratch—designing RESTful APIs, integrating a MySQL database, and crafting a dynamic React UI with real-time messaging. My goal was to get hands-on experience at every layer of development, master basic Git workflows, and understand what it takes to ship a fully functional web application end-to-end.
-      </p>
-    </section>
-
-    <!-- The process -->
-    <section id="process" class="mb-5">
-      <h2 class="h4 mb-2">The process</h2>
-      <p>
-        Since this was my first Spring Boot/React project, getting the basic structure up and running took a bit of trial and error. I kicked things off on the backend by sketching out a to-do list—tasks like “initial REST API,” “database integration,” “MySQL CRUD operations,” and so on. For each item, I spun up a dedicated Git branch, knocked it out, then merged back into <code>main</code> once everything was working. This kept my workflow tidy and helped me build confidence with branching and merging early on!
-      </p>
-    </section>
-
-    <!-- Problems -->
-    <section id="problems" class="mb-5">
-      <h2 class="h4 mb-2">Problems</h2>
-      <p>
-        Diving in solo meant I quickly ran into a handful of gotchas. Wiring up Spring Boot and React took more trial and error than I expected—dependency mismatches, CORS errors, and forgetting a <code>@CrossOrigin</code> annotation here and there. A typo in my <code>application.properties</code> once prevented the app from starting altogether, and a missing MySQL table silently broke my CRUD endpoints. Each hiccup forced me to dig into logs, reconfigure, and try again until everything clicked.
-      </p>
-    </section>
-
-    <!-- Lessons learned -->
-    <section id="lessons" class="mb-5">
-      <h2 class="h4 mb-2">Lessons learned</h2>
-      <ul>
-        <li><strong>Plan your API contracts before you code:</strong> Sketching endpoints and data models on paper saved me hours later.</li>
-        <li><strong>Branch early and often:</strong> Isolating each feature in its own branch made merges predictable and rollbacks painless.</li>
-        <li><strong>Read the docs (really!):</strong> Spring Boot’s auto-configuration is powerful, but only if you understand what it’s doing under the hood.</li>
-        <li><strong>Automate tests early:</strong> A few simple integration tests caught regressions before they hit production.</li>
-        <li><strong>Embrace errors:</strong> Every bug taught me something new—never shy away from diving into stack traces and logs.</li>
-      </ul>
-    </section>
-
-    <!-- TechStack / GitHub / Demo -->
-    <div class="row text-center pt-4 border-top">
-      <div class="col-md-4 mb-3">
-        <h3 class="h5">Tech Stack</h3>
-        <ul class="list-unstyled">
-          <li>Java & Spring Boot</li>
-          <li>ReactJS</li>
-          <li>MySQL</li>
-          <li>Docker & AWS</li>
-        </ul>
-      </div>
-      <div class="col-md-4 mb-3">
-        <h3 class="h5">GitHub</h3>
-        <p>
-          <a href="https://github.com/matildaerenius/Buzz"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="text-decoration-none text-warning">
-            Repository →
-          </a>
+      <!-- Left: Main Content (80%) -->
+      <div class="col-left">
+        <h1 class="display-4 mb-3">Buzz</h1>
+        <p class="lead mb-5">
+          Buzz is a social media platform I built as my first real side project during the first year of my Java Developer studies. My goal was simply to create a fully functional application with real-time messaging, posts, likes, and follows. I didn’t set a deadline—it was all about getting hands-on experience and learning.
         </p>
+        <!-- Main content sections -->
+        <section id="purpose" class="mb-5">
+          <h2 class="h4 mb-2">Purpose of the project</h2>
+          <p>Buzz was my first solo full-stack adventure with Spring Boot and React during my Java Developer studies. I set out to build a complete social media app from scratch—designing RESTful APIs, integrating a MySQL database, and crafting a dynamic React UI with real-time messaging. My goal was to get hands-on experience at every layer of development, master basic Git workflows, and understand what it takes to ship a fully functional web application end-to-end.</p>
+        </section>
+        <section id="process" class="mb-5">
+          <h2 class="h4 mb-2">The process</h2>
+          <p>Since this was my first Spring Boot/React project, getting the basic structure up and running took a bit of trial and error. I kicked things off on the backend by sketching out a to-do list—tasks like “initial REST API,” “database integration,” “MySQL CRUD operations,” and so on. For varje item, I spun up a dedicated Git branch, knocked it out, then merged back into <code>main</code> once everything var working. Detta kept my flow tidy och hjälpte mig att build confidence med branching och merging early on!</p>
+        </section>
+        <section id="problems" class="mb-5">
+          <h2 class="h4 mb-2">Problems</h2>
+          <p>Diving in solo meant I quickly ran into a handful of gotchas. Wiring up Spring Boot and React took more trial and error än jag expected—dependency mismatches, CORS errors, och glömma <code>@CrossOrigin</code> annotation här och där. Ett typo i mitt <code>application.properties</code> prevented app från starting altogether, och en missing MySQL table silently bröt mina CRUD endpoints. Varje hiccup tvingade mig att dig into logs, reconfigure, och try again tills everything clicked.</p>
+        </section>
+        <section id="lessons" class="mb-5">
+          <h2 class="h4 mb-2">Lessons learned</h2>
+          <ul>
+            <li><strong>Plan your API contracts before you code:</strong> Sketching endpoints och data modellen on paper saved me hours later.</li>
+            <li><strong>Branch early and often:</strong> Isolating varje feature i its own branch made merges predictable och rollbacks painless.</li>
+            <li><strong>Read the docs (really!):</strong> Spring Boot’s auto-configuration är powerful, men only if you understand vad it’s doing under the hood.</li>
+            <li><strong>Automate tests early:</strong> A few simple integration tests caught regressions before ’de hit production.</li>
+            <li><strong>Embrace errors:</strong> Every bug taught me någonting new—never shy away från to dive into stack traces och logs.</li>
+          </ul>
+        </section>
       </div>
-      <div class="col-md-4 mb-3">
-        <h3 class="h5">Demo</h3>
-        <p>
-          <a href="#"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="text-decoration-none text-warning">
-            View site →
-          </a>
-        </p>
+
+      <!-- Right: Sidebar (20%) -->
+      <div class="col-right d-none d-lg-block">
+        <div class="sidebar sticky-top" style="top: 100px;">
+        
+          <div class="mb-4">
+            <h3 class="h5">GitHub</h3>
+            <p><a href="https://github.com/matildaerenius/Buzz" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-warning">Repository →</a></p>
+          </div>
+          <div class="mb-4">
+            <h3 class="h5">Demo</h3>
+            <p><a href="#" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-warning">View site →</a></p>
+          </div>
+          <div class="mb-4">
+            <h3 class="h5">Video</h3>
+            <p><a href="#" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-warning">Watch demo →</a></p>
+          </div>
+          <div>
+            <h3 class="h5">README</h3>
+            <p><a href="README.md" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-warning">Read me →</a></p>
+          </div>
+        </div>
       </div>
+
     </div>
-
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

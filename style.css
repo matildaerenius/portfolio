@@ -113,6 +113,11 @@ body {
     position: relative;
     z-index: 2;
   }
+  h1.display-1 {
+    font-family: 'Tektur', sans-serif !important;
+  }
+  
+  
   
   .hero-text h1 {
     font-weight: 700;
