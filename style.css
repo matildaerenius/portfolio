@@ -87,6 +87,10 @@ body {
   color: #ffffff;
 }
 
+#langToggle:hover {
+  transform: scale(1.1);
+}
+
 #langToggle:hover i {
   transform: scale(1.1);
   color: #F6FF4C;
