@@ -1,541 +1,712 @@
 /* === Grundläggande styling === */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Overpass mono';
-    list-style: none;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Overpass mono';
+
+  text-decoration: none;
 }
 
 body {
-    background: #130824;
-    color: #F0F0F0;
+  background: #130824;
+  color: #F0F0F0;
 }
 
-  .btn, .project-btn, .contact-me-btn {
-    background-color: #F6FF4C;
-    border: none;
-    color: #000;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  }
- 
+.btn,
+.project-btn,
+.contact-me-btn {
+  background-color: #F6FF4C;
+  border: none;
+  color: #000;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 /* === Navbar-sektion === */
 .bg-custom {
-    background: #1D0C38;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  background: #1D0C38;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* === Navbar Namn === */
 .navbar-brand {
-    font-size: 1.8rem; 
-    font-family: 'Tektur';
+  font-size: 1.8rem;
+  font-family: 'Tektur';
 }
 
 /* === Navbar Länkar === */
 .navbar-nav .nav-link {
-    color: #ffffff;
-    font-family: 'Tektur';
-    font-size: 16px;
-    text-transform: capitalize;
-    transition: color 0.3s ease;
-    position: relative;
-    padding: 7px 20px;
-    font-weight: 400;
+  color: #ffffff;
+  font-family: 'Tektur';
+  font-size: 16px;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 7px 20px;
+  font-weight: 400;
 }
+
 .navbar-nav .nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0;
-    height: 3px;
-    background: #F6FF4C;
-    transition: width 0.3s ease;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background: #F6FF4C;
+  transition: width 0.3s ease;
 }
+
 .navbar-nav .nav-link:hover::after {
-    width: 100%;
+  width: 100%;
 }
+
 .navbar-nav .nav-link:hover {
-    color: #F6FF4C
-  }
+  color: #F6FF4C
+}
 
 /* === Navbar Ikoner === */
 .nav-icon {
-    font-size: 16px;
-    font-family: 'Tektur';
-    color: #ffffff;
-    margin-left: 20px;
-    transition: all 0.3s ease;
+  font-size: 16px;
+  font-family: 'Tektur';
+  color: #ffffff;
+  margin-left: 20px;
+  transition: all 0.3s ease;
 }
+
 .navbar .nav-icon span {
-    font-family: 'Tektur';
-  }
-  
-.nav-icon:hover {
-    transform: scale(1.1);
-    color: #F6FF4C;
-}
-
-#langToggle i {
-    color: #ffffff; 
-  }
-  
-  #langToggle:hover i {
-    transform: scale(1.1);
-    color: #F6FF4C;
-  }
-  
-
-/* === Hero sektion === */
-.hero-section {
-    min-height: 100vh;        
-    color: #ffffff;
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);          
-    padding-top: 100px;  
-    padding-bottom: 50px; 
-    background: url('images/stockholm.jpg') no-repeat center center;
-    background-size: cover;
-    position: relative;    
-    margin-bottom: 50px; 
-  }
-  .hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); 
-    z-index: 1;
-  }
-  .hero-section > * {
-    position: relative;
-    z-index: 2;
-  }
-  h1.display-1 {
-    font-family: 'Tektur', sans-serif !important;
-  }
-  
-  
-  
-  .hero-text h1 {
-    font-weight: 700;
-    line-height: 1.2;
-    font-family: 'Tektur';
-    color: #F6FF4C;
-  }
-  .hero-text p {
-    font-family: 'Tektur';
-    color: #ffffff;
-  }
-  
-  .hero-text i {
-    color: #fcfcfc;
-    transition: color 0.3s;
-  }
-  .hero-text i:hover {
-    color: #1D0C38;
-    transform: scale(1.1); 
-  }
-  
- 
-  .contact-me-btn {
-    background-color: #F6FF4C;  
-    font-family: 'Tektur';
-    color: #3b2f13;             
-    border: 2px solid #1D0C38;  
-    border-radius: 30px;        
-    padding: 0.5rem 1.5rem;     
-    font-weight: 600;           
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
-  }
-  
-  .contact-me-btn:hover {
-    background-color: #1D0C38;  
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  }
-  
-/* === About sektion === */
-#about {
-    background: #1D0C38;
-    padding: 1.5rem;
-  }
-  
-  .img-wrapper {
-    position: relative; 
-    display: inline-block; 
-  }
-  
-  .about-img {
-    border-radius: 8px;   
-    z-index: 2;           
-    position: relative;   
-    max-width: 100%;      
-  }
-  
-  .img-border {
-    position: absolute;
-    top: 10px;        
-    left: 10px;       
-    width: 100%;
-    height: 100%;
-    border: 3px solid #F6FF4C; 
-    border-radius: 8px;        
-    z-index: 1;                
-  }
-  
-  .about-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #ffffff;
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5); 
-    margin-bottom: 1rem;
-    padding-bottom: 0.3rem;
-    border-bottom: 3px solid #F6FF4C; 
-    display: inline-block;
-  }
-  
-  .about-text {
-    color: #ffffff; 
-    font-family: 'Tektur';
-    line-height: 1.6;
-  }
-  
-  .download-cv-link {
-    color: #F6FF4C;   
-    font-family: 'Tektur';        
-    font-weight: 600;         
-    text-decoration: none;    
-    transition: color 0.3s ease;
-  }
-  
-  .download-cv-link:hover {
-    text-decoration: underline; 
-  }
-  .download-cv-link i {
-    position: relative;
-    top: 2px; 
-  }
-  
- /* === Skills sektion === */
-   .skill-card {
-    background-color: #1D0C38; 
-    border-radius: 8px;
-    cursor: pointer;
-    position: relative; 
-    color: #fff;   
-    min-height: 300px;    
-    overflow: hidden;     
-    transition: all 0.4s ease; /   
-  }
-
-  .tech-stack-heading {
-    color: #ffffff; 
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);     
-    font-size: 2.5rem;   
-  }
-  
-  .skill-divider {
-    border-top: 3px solid #F6FF4C;
-    width: 80%;
-    margin: 2.1rem auto 0 auto;
-  }
-  
-  .skill-title {
-    margin-top: 1.5rem;      
-    transition: margin-top 0.4s ease;
-    color: #ffffff;      
-    font-family: 'Tektur';
-  }
-  
-  .skill-icons {
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    display: flex; 
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-    margin-top: 1.5rem; 
-  }
-   
-  .skill-card.open .skill-title {
-    margin-top: -2.5rem; 
-  }
-  
-  .skill-card.open .skill-icons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .skill-icon-container {
-    position: relative;
-    display: inline-block; 
-    margin: 0.5rem; 
-  }
-  
-  .skill-icon {
-    width: 48px;     
-    height: 48px;    
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .skill-icon:hover {
-    transform: scale(1.1); 
-  }
-  
-  .tooltip-text {
-    display: none;      
-    position: absolute; 
-    bottom: 100%;       
-    left: 50%; 
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 3px 6px;
-    border-radius: 4px;
-    font-size: 0.75rem; 
-    white-space: nowrap;
-    pointer-events: none; 
-  }
-  
-  .skill-icon-container:hover .tooltip-text {
-    display: block;
-  }
-
-  #social-skills ul li span.text-white {
-    font-family: 'Tektur';
-  }
-  
-  
-  /* === Projekt-sektionen === */
-  .project-heading {
-    color: #ffffff;
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);  
-  }
-
-  #projects p {
-    font-family: 'Tektur';
-  }
-  
-  .project-card {
-    background-color: #1D0C38; 
-    font-family: 'Tektur';
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: none;             
-    border-radius: 1rem;      
-    overflow: hidden;       
-  }
-  .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  }
-  
-  .project-card .card-title {
-    color:#F6FF4C; 
-    font-family: 'Tektur';
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
-    font-weight: 700;
-  }
-  
-  .project-card .card-text {
-    color: #ffffff;
-    font-family: 'Tektur';
-    font-size: 1rem;
-  }
-  .project-card ul li small {
   font-family: 'Tektur';
 }
 
-  .project-btn {
-    background-color: #F6FF4C; 
-    font-family: 'Tektur';
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
-    border: none;
-    color: #000000;
-    padding: 0.4rem 1rem;
-    font-size: 0.875rem;
-    border-radius: 30px;      
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-  }
-  
-  
-  .project-btn:hover {
-    background-color: #130824;
-    transform: scale(1.2) rotate(5deg);
-    transition: all 0.2s ease-in-out;
-  }
-  .project-icon-btn {
-    padding: 0.3rem;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%; 
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
-  }
-  .project-icon-btn:hover i {
-    transform: scale(1.2) rotate(5deg);
-    transition: all 0.2s ease-in-out;
-  }
-  
-  
-  .project-badge {
-    background-color: #130824; 
-    font-family: 'Tektur';
-    color: #fff;             
-    padding: 0.4rem 0.8rem;   
-    border-radius: 2rem;       
-    margin-right: 0.5rem;      
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-  }
-  
-  .project-badge:hover {
-    background-color: #495057; 
-  }
-  
-  
-
-/* === Contact-sektion === */
-#contact {
-    background: #130824;
-    padding: 3rem 0;
-  }
-  
-  .btn-primary {
-    background-color: #F6FF4C;
-    font-family: 'Tektur'; 
-    border-color: #F6FF4C;
-  }
-  .btn-primary:hover {
-    background-color: #130824;
-    transform: scale(1.1); 
-  }
-
-.bx-envelope {
-    color: #3d3ddb;
-  }
-  
-  .bx-bell {
-    color: #1edd1e;
-  }
-  
-.connect-list a {
-   display: inline-flex;         
-   align-items: center;         
-   text-decoration: none;       
-   color: #ccc;  
-   font-family: 'Tektur';               
-   padding: 0.4rem 0.8rem;      
-   border-radius: 2rem;          
-   transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  .connect-list a i {
-    margin-right: 0.5rem;     
-    font-family: 'Tektur';    
-  }
-  
-  .connect-list a:hover {
-    background-color: #3a3a3a;    
-    color: #fff;           
-  }
-  .connect-list a:hover i {
-    background-color: #3a3a3a;   
-    color: #fff;            
-  }
-  
-    #contact p, #contact .card-body div span {
-    font-family: 'Tektur';
-    }
-
-#contact .card {
-    background-color: #1D0C38 !important;
-  }
-  
-  #contact .form-control {
-    background-color: #1D0C38 !important;
-    font-family: 'Tektur';
-  }
-
-  .form-control:focus {
-    border: none; 
-    outline: none; 
-    box-shadow: 0 0 0 0.05rem #F6FF4C; 
-  }
-  
-  .form-control::placeholder {
-    color: #999; 
-    font-family: 'Tektur';
-    opacity: 1; 
-  }
- 
-  .form-control::-webkit-input-placeholder {
-    color: #999;
-    opacity: 1;
-  }
-  .form-control:-moz-placeholder {
-    color: #999;
-    opacity: 1;
-  }
-  .form-control::-moz-placeholder {
-    color: #999;
-    opacity: 1;
-  }
-  .form-control:-ms-input-placeholder {
-    color: #999;
-    opacity: 1;
-  }
-  
-
-  
-  /* === Footer sektion === */
-  .footer-custom {
-    background: #1D0C38;
-    font-family: 'Tektur';
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  }
-
-  /* Responsiv anpassning */
-@media (max-width: 768px) {
-    .hero-text h1 {
-      font-size: 2.5rem;
-    }
-    .hero-img {
-      max-width: 250px;
-    }
-}
-@media (max-width: 768px) {
-  .navbar-nav .nav-link {
-    margin: 1rem 0;  
-    font-size: 1.2rem; 
-    text-align: center;
-    
-  }
+.nav-icon:hover {
+  transform: scale(1.1);
+  color: #F6FF4C;
 }
 
-body, 
-p, 
-li, 
-a, 
-span, 
-div {
+#langToggle i {
+  color: #ffffff;
+}
+
+#langToggle:hover i {
+  transform: scale(1.1);
+  color: #F6FF4C;
+}
+
+
+/* === Hero sektion === */
+.hero-section {
+  min-height: 100vh;
+  color: #ffffff;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background: url('images/stockholm.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-section>* {
+  position: relative;
+  z-index: 2;
+}
+
+h1.display-1 {
   font-family: 'Tektur', sans-serif !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+
+.hero-text h1 {
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: 'Tektur';
+  color: #F6FF4C;
+}
+
+.hero-text p {
+  font-family: 'Tektur';
+  color: #ffffff;
+}
+
+.hero-text i {
+  color: #fcfcfc;
+  transition: color 0.3s;
+}
+
+.hero-text i:hover {
+  color: #1D0C38;
+  transform: scale(1.1);
+}
+
+
+.contact-me-btn {
+  background-color: #F6FF4C;
+  font-family: 'Tektur';
+  color: #3b2f13;
+  border: 2px solid #1D0C38;
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-me-btn:hover {
+  background-color: #1D0C38;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* === About sektion === */
+#about {
+  background: #1D0C38;
+  padding: 1.5rem;
+}
+
+.img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.about-img {
+  border-radius: 8px;
+  z-index: 2;
+  position: relative;
+  max-width: 100%;
+}
+
+.img-border {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #F6FF4C;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+  margin-bottom: 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 3px solid #F6FF4C;
+  display: inline-block;
+}
+
+.about-text {
+  color: #ffffff;
+  font-family: 'Tektur';
+  line-height: 1.6;
+}
+
+.download-cv-link {
+  color: #F6FF4C;
+  font-family: 'Tektur';
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.download-cv-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background: #F6FF4C;
+  transition: width 0.3s ease;
+}
+
+.download-cv-link:hover::after {
+  width: 100%;
+}
+
+
+/* === Skills sektion === */
+.skill-card {
+  background-color: #1D0C38;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  color: #fff;
+  min-height: 300px;
+  overflow: hidden;
+  transition: all 0.4s ease;/
+}
+
+.tech-stack-heading {
+  color: #ffffff;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+  font-size: 2.5rem;
+}
+
+.skill-divider {
+  border-top: 3px solid #F6FF4C;
+  width: 80%;
+  margin: 2.1rem auto 0 auto;
+}
+
+.skill-title {
+  margin-top: 1.5rem;
+  transition: margin-top 0.4s ease;
+  color: #ffffff;
+  font-family: 'Tektur';
+}
+
+.skill-icons {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.skill-card.open .skill-title {
+  margin-top: -2.5rem;
+}
+
+.skill-card.open .skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-icon-container {
+  position: relative;
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+.skill-icon {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1);
+}
+
+.tooltip-text {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.skill-icon-container:hover .tooltip-text {
+  display: block;
+}
+
+#social-skills ul li span.text-white {
+  font-family: 'Tektur';
+}
+
+
+/* === Projekt-sektionen === */
+.project-heading {
+  color: #ffffff;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+#projects p {
+  font-family: 'Tektur';
+}
+
+.project-card {
+  background-color: #1D0C38;
+  font-family: 'Tektur';
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-card .card-title {
+  color: #F6FF4C;
+  font-family: 'Tektur';
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+  font-weight: 700;
+}
+
+.project-card .card-text {
+  color: #ffffff;
+  font-family: 'Tektur';
+  font-size: 1rem;
+}
+
+.project-card ul li small {
+  font-family: 'Tektur';
+}
+
+.project-btn {
+  background-color: #F6FF4C;
+  font-family: 'Tektur';
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+  border: none;
+  color: #000000;
+  padding: 0.4rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+
+.project-btn:hover {
+  background-color: #130824;
+  transform: scale(1.2) rotate(5deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.project-icon-btn {
+  padding: 0.3rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.project-icon-btn:hover i {
+  transform: scale(1.2) rotate(5deg);
+  transition: all 0.2s ease-in-out;
+}
+
+
+.project-badge {
+  background-color: #130824;
+  font-family: 'Tektur';
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 2rem;
+  margin-right: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.project-badge:hover {
+  background-color: #495057;
+}
+
+
+
+/* === Contact-sektion === */
+#contact {
+  background: #130824;
+  padding: 3rem 0;
+}
+
+.btn-primary {
+  background-color: #F6FF4C;
+  font-family: 'Tektur';
+  border-color: #F6FF4C;
+}
+
+.btn-primary:hover {
+  background-color: #130824;
+  transform: scale(1.1);
+}
+
+.bx-envelope {
+  color: #3d3ddb;
+}
+
+.bx-bell {
+  color: #1edd1e;
+}
+
+.connect-list a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ccc;
+  font-family: 'Tektur';
+  padding: 0.4rem 0.8rem;
+  border-radius: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.connect-list a i {
+  margin-right: 0.5rem;
+  font-family: 'Tektur';
+}
+
+.connect-list a:hover {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.connect-list a:hover i {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+#contact p,
+#contact .card-body div span {
+  font-family: 'Tektur';
+}
+
+#contact .card {
+  background-color: #1D0C38 !important;
+}
+
+#contact .form-control {
+  background-color: #1D0C38 !important;
+  font-family: 'Tektur';
+}
+
+.form-control:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0 0 0 0.05rem #F6FF4C;
+}
+
+.form-control::placeholder {
+  color: #999;
+  font-family: 'Tektur';
+  opacity: 1;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.form-control:-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.form-control::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+
+
+/* === Footer sektion === */
+.footer-custom {
+  background: #1D0C38;
+  font-family: 'Tektur';
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsiv anpassning */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-img {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    text-align: center;
+
+  }
+}
+
+/* === Buzz-sida === */
+body,
+p,
+li,
+a,
+span,
+div,
+ul {
+  font-family: 'Tektur', sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Overpass Mono', monospace !important;
 }
 
 
+/* Back-knapp med underline-hover*/
+.back-btn {
+  position: relative;
+  text-decoration: none;
+}
+
+.back-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background: #F6FF4C;
+  transition: width 0.3s ease;
+}
+
+.back-btn:hover::after {
+  width: 100%;
+}
+
+.back-btn:hover {
+  color: #F6FF4C !important;
+}
+
+
+/* Understrykningseffekt på sidebar-länkar */
+.sidebar a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.sidebar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background: #F6FF4C;
+  transition: width 0.3s ease;
+}
+
+.sidebar a:hover::after {
+  width: 100%;
+}
+
+.sidebar a {
+  color: #F6FF4C !important;
+}
+
+.date {
+  color: #F6FF4C !important;
+  font-size: 0.875rem;
+}
+
+code {
+  color: #F6FF4C !important;
+}
+
+#tech-stack h2 {
+  font-family: 'Overpass Mono', monospace !important;
+}
+
+/* Key Features */
+#features h2 {
+  font-family: 'Overpass Mono', monospace;
+
+}
+
+#features p {
+  font-family: 'Tektur', sans-serif;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+#features i {
+  display: block;
+}
+
+#features i {
+  color: #F6FF4C !important;
+}
+
+#tech-stack ul {
+  list-style-type: square !important;
+  list-style-position: inside !important;
+  padding-left: 1.5rem !important;
+}
+
+#tech-stack li {
+  font-family: 'Tektur', sans-serif !important;
+}
+
+#tech-stack ul li::marker {
+  color: #F6FF4C;
+}
+
+/* Gul linje under rubriker */
+.section-underline {
+  display: block;
+  width: 340px;
+  margin: -0.5rem 0 1.5rem 0;
+  border: none;
+  border-top: 3px solid #F6FF4C;
+  opacity: 1;
+}
+
+p,
+.lead,
+li {
+  line-height: 1.6;
+}
+
+
+h1.display-4 {
+
+  font-size: 2.5rem;
+}
+
+
+#features .row>div {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#features .row>div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
