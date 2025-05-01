@@ -48,4 +48,34 @@ function loadLanguage(lang) {
       window.location.href = 'buzz.html';
     });
 
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      const itemsPerBatch = 3;
+      const initialVisible = 6;
+      const projects = Array.from(document.querySelectorAll('.project-item'));
+      const loadMoreBtn = document.getElementById('loadMoreBtn');
+      let visibleCount = initialVisible;
+    
+      
+      projects.forEach((item, i) => {
+        if (i >= visibleCount) item.style.display = 'none';
+      });
+    
+      loadMoreBtn.addEventListener('click', () => {
+        
+        const nextCount = visibleCount + itemsPerBatch;
+        projects.forEach((item, i) => {
+          if (i < nextCount) {
+            item.style.display = '';
+          }
+        });
+        visibleCount = nextCount;
+    
+        
+        if (visibleCount >= projects.length) {
+          loadMoreBtn.style.display = 'none';
+        }
+      });
+    });
+    
 
