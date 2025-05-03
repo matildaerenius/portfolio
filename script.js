@@ -60,6 +60,10 @@ function loadLanguage(lang) {
       projects.forEach((item, i) => {
         if (i >= visibleCount) item.style.display = 'none';
       });
+
+      if (typeof AOS !== 'undefined') {
+        AOS.refresh();
+      }
     
       loadMoreBtn.addEventListener('click', () => {
         
@@ -75,6 +79,7 @@ function loadLanguage(lang) {
         if (visibleCount >= projects.length) {
           loadMoreBtn.style.display = 'none';
         }
+        if (typeof AOS !== 'undefined') AOS.refresh();
       });
     });
     
