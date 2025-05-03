@@ -184,5 +184,48 @@ h1.display-4 {
     margin-top: 0.5rem;    
     margin-bottom: 1.5rem; 
   }
+
+@media (min-width: 992px) {
+    .col-left {
+      flex: 0 0 87% !important;
+      max-width: 87% !important;
+      padding-right: 1rem;
+    }
+    .col-right {
+      flex: 0 0 13% !important;
+      max-width: 13% !important;
+      padding-left: 1rem;
+      border-left: 1px solid rgba(255,255,255,0.3);
+      
+      margin-top: 0;
+      border-top: none;
+    }
+  }
+  
+  @media (max-width: 991.98px) {
+    .sidebar-container {
+        max-width: 300px;     
+        margin: 0,75rem auto;   
+        padding: 1rem;        
+        border-top: 1px solid #fff;
+      }
+    .col-right {
+      border-left: none !important;
+      padding-left: 0;
+   
+    }
+    @media (max-width: 991.98px) {
+        .sidebar-container {
+          box-sizing: border-box;    
+          padding-top:    2rem;      
+          padding-bottom: 1rem;
+          padding-left:   1rem;      
+          padding-right:  1rem;      
+        }
+      }
+      
+  }
+  
+  
   
   
