@@ -43,9 +43,19 @@ function loadLanguage(lang) {
     .catch((err) => console.error("Språkfil kunde inte laddas:", err));
 }
 
-  document.getElementById('searchBtn')
+  document.getElementById('BuzzSearchBtn')
     .addEventListener('click', function() {
       window.location.href = 'buzz.html';
+    });
+
+    document.getElementById('RecipediaSearchBtn')
+    .addEventListener('click', function() {
+      window.location.href = 'recipedia.html';
+    });
+
+    document.getElementById('sthlmExitSearchBtn')
+    .addEventListener('click', function() {
+      window.location.href = 'sthlmExit.html';
     });
 
     
