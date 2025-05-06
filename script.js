@@ -63,6 +63,11 @@ function loadLanguage(lang) {
       window.location.href = 'revu.html';
     });
 
+    document.getElementById('portifySearchBtn')
+    .addEventListener('click', function() {
+      window.location.href = 'portify.html';
+    });
+
     
     document.addEventListener('DOMContentLoaded', () => {
       const itemsPerBatch = 3;
