@@ -1,997 +1,1397 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to Matilda Erenius's portfolio. Explore projects, skills, and contact information to learn more about my work and experience."
+    />
+    <title>Matilda Erenius | Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Welcome to Matilda Erenius's portfolio. Explore projects, skills, and contact information to learn more about my work and experience.">
-  <title>Matilda Erenius | Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
-</head>
-
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Matilda Erenius</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills" data-i18n="nav.skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects" data-i18n="nav.projects">Projects</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
-          </li>
-        </ul>
-        <div class="d-flex align-items-center">
-          <a href="files/Matilda_Erenius-CV.pdf" download
-            class="nav-icon d-flex flex-column align-items-center text-decoration-none me-3">
-            <i class='bx bxs-download'></i>
-            <span class="small" data-i18n="nav.download">Download CV</span>
-          </a>
-          <!-- Språkhanterare-->
-          <a href="#" id="langToggle" class="ms-2" aria-label="Change language">
-            <img id="flagIcon" src="images/gb.png" alt="English flag" width="24" height="24"
-              style="border-radius: 50%;">
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Home-sektion -->
-  <section id="home" class="hero-section d-flex align-items-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 text-center text-lg-start hero-text">
-          <!-- rubrik -->
-          <h1 class="display-1">
-            &lt;Matilda<br>Erenius/&gt;
-          </h1>
-          <p class="lead mb-4" data-i18n="hero.subtitle">Java Developer Student.</p>
-          <div class="d-flex justify-content-center justify-content-lg-start gap-4 align-items-center">
-            <a href="https://github.com/matildaerenius" target="_blank" aria-label="GitHub"><i
-                class="bx bxl-github fs-3"></i></a>
-            <a href="https://linkedin.com/in/matildaerenius" target="_blank" aria-label="GitHub"><i
-                class="bx bxl-linkedin fs-3"></i></a>
-            <a href="#contact" class="btn contact-me-btn" data-i18n="hero.button">Contact Me</a>
-          </div>
-        </div>
-        <div class="col-lg-6"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About me-sektion -->
-  <section id="about" class="container py-5" data-aos="fade-up">
-    <div class="row align-items-center">
-      <div class="col-md-5 position-relative">
-        <div class="img-wrapper">
-          <img src="images/aboutme.png" alt="Matilda Erenius" class="img-fluid about-img">
-          <div class="img-border"></div>
-        </div>
-      </div>
-
-
-      <div class="col-md-7 mt-4 mt-md-0 ">
-        <div class="about-box p-4">
-        <h2 class="about-title mb-3" data-i18n="about.title">About me</h2>
-        <p class="about-text" data-i18n="about.paragraph1">
-          Hey! I'm Matilda, I currently live in Stockholm, Sweden, and I'm studying to become a Java developer. IT felt
-          like a natural fit for me since I've always enjoyed tackling challenges head-on. Even though I had no
-          experience before starting my studies, I quickly fell in love with coding and its endless possibilities. I'm
-          an eager and quick learner, constantly excited to dive into new puzzles and expand my tech skills.
-        </p>
-        <p class="about-text" data-i18n="about.paragraph2">
-          As of right now, I'm particularly passionate about backend development and the logic behind it. I would love
-          to explore more about cloud technologies to enhance my understanding of modern software infrastructure.
-        </p>
-        <p class="about-text" data-i18n="about.paragraph3">
-          Outside of my tech journey, I'm all about embracing life's little adventures. Whether I'm experimenting with
-          new recipes, exploring quirky corners of Stockholm, or diving into a spontaneous road trip, I believe every
-          experience is a chance to learn something new. I approach every challenge - big or small - with a sense of
-          curiosity and humor, and I'm always ready to take on the next fun project that comes my way.
-        </p>
-        <p class="about-text" data-i18n="about.paragraph4">
-          Furthermore, when I'm not glued to my computer, you'll find me lifting weights or out on a long walk - then
-          getting too tired and catch the bus back. I love a good board game night with family or friends (even though I
-          lose about nine out of ten times - hey, at least I'm lucky in love). Otherwise, I'm probably scrubbing the
-          oven, reorganizing the kitchen cabinet, or switching from one screen to another, rewatching Friends for the
-          11th time - always with a stash of lollies, of course.
-        </p>
-        <p class="mt-3">
-          <a href="files/Matilda_Erenius-CV.pdf" target="_blank" class="download-cv-link">
-            <span data-i18n="about.cv">View CV →</span> <i class='bx bx-right-arrow-alt fs-5'></i>
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-  </section>
-
-  <!-- Skills sektion-->
-  <section id="skills" class="container py-5" data-aos="fade-up">
-    <h2 class="mb-5 text-center tech-stack-heading" data-i18n="skills.title">Tech Stack</h2>
-    <hr class="mx-auto mb-4" style="margin-top: -25px; width: 200px; border-top: 3px solid #F6FF4C; opacity: 1;">
-    
-    <div class="row g-4 justify-content-center">
-
-
-      <!-- Kort 1: Frontend -->
-      <div class="col-md-4">
-        <div class="skill-card text-center p-3" data-skill="frontend">
-          <hr class="skill-divider" />
-          <h3 class="skill-title mb-0" data-i18n="skills.frontend">Frontend</h3>
-          <div class="skill-icons">
-            <div class="skill-icon-container">
-              <img src="images/html5.png" alt="HTML5" class="skill-icon" />
-              <span class="tooltip-text">HTML</span>
-            </div>
-            <div class="skill-icon-container">
-              <img src="images/css3.png" alt="CSS3" class="skill-icon" />
-              <span class="tooltip-text">CSS</span>
-            </div>
-            <div class="skill-icon-container">
-              <img src="images/js.png" alt="JavaScript" class="skill-icon" />
-              <span class="tooltip-text">JavaScript</span>
-            </div>
-            <div class="skill-icon-container">
-              <img src="images/react.png" alt="React" class="skill-icon" />
-              <span class="tooltip-text">React</span>
-            </div>
-            <div class="skill-icon-container">
-              <img src="images/mui.png" alt="MUI" class="skill-icon" />
-              <span class="tooltip-text">MUI</span>
-            </div>
-            <div class="skill-icon-container">
-              <img src="images/bootstrap.png" alt="Bootstrap" class="skill-icon" />
-              <span class="tooltip-text">Bootstrap</span>
-            </div>
-            <div class="skill-icon-container">
-              <img src="images/tailwind.png" alt="TailwindCSS" class="skill-icon" />
-              <span class="tooltip-text">TailwindCSS</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Kort 2: Backend -->
-      <div class="col-md-4">
-        <div class="skill-card text-center p-3" data-skill="backend">
-          <hr class="skill-divider" />
-          <h3 class="skill-title mb-0" data-i18n="skills.backend">Backend</h3>
-          <div class="skill-icons">
-            <div class="skill-icon-container">
-              <img src="images/java.png" alt="Java" class="skill-icon" />
-              <span class="tooltip-text">Java</span>
-            </div>
-            <div class="skill-icon-container">
-              <img src="images/springBoot.png" alt="Spring Boot" class="skill-icon" />
-              <span class="tooltip-text">Spring Boot</span>
-            </div>
-            <div class="skill-icon-container">
-              <img src="images/mySQL.png" alt="MySQL" class="skill-icon" />
-              <span class="tooltip-text">MySQL</span>
-            </div>
-            <div class="skill-icon-container">
-              <img src="images/mongoDB.png" alt="MongoDB" class="skill-icon" />
-              <span class="tooltip-text">MongoDB</span>
-            </div>
-            <div class="skill-icon-container">
-              <img src="images/kotlin.png" alt="Kotlin" class="skill-icon" />
-              <span class="tooltip-text">Kotlin</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Kort 3: Tools, icons8 -->
-      <div class="col-md-4">
-        <div class="skill-card text-center p-3" data-skill="tools">
-          <hr class="skill-divider" />
-          <h3 class="skill-title mb-0" data-i18n="skills.tools">Tools</h3>
-          <div class="skill-icons">
-            <div class="skill-icon-container">
-              <img src="images/git.png" alt="Git" class="skill-icon" />
-              <span class="tooltip-text">Git</span>
-            </div>
-            <div class="skill-icon-container">
-              <img src="images/github.png" alt="Github" class="skill-icon" />
-              <span class="tooltip-text">Github</span>
-            </div>
-            <div class="skill-icon-container">
-              <img src="images/postman.png" alt="Postman" class="skill-icon" />
-              <span class="tooltip-text">Postman</span>
-            </div>
-            <div class="skill-icon-container">
-              <img src="images/maven.png" alt="Maven" class="skill-icon" />
-              <span class="tooltip-text">Maven</span>
-            </div>
-            <div class="skill-icon-container">
-              <img src="images/vscode.png" alt="VScode" class="skill-icon" />
-              <span class="tooltip-text">VScode</span>
-            </div>
-            <div class="skill-icon-container">
-              <img src="images/intelliJ.png" alt="IntelliJ" class="skill-icon" />
-              <span class="tooltip-text">IntelliJ</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Social Skills Section -->
-  <section id="social-skills" class="container py-5">
-    <h2 class="text-center text-white mb-4" data-aos="fade-up" data-i18n="skills.socialTitle">Social Skills</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <ul class="list-unstyled d-flex flex-wrap justify-content-center gap-4">
-          <li class="d-flex align-items-center">
-            <i class="bx bx-check fs-4 me-2" style="color: #F6FF4C;" data-aos="fade-up"></i>
-            <span class="text-white" data-i18n="skills.problemSolver">Problem Solver</span>
-          </li>
-          <li class="d-flex align-items-center">
-            <i class="bx bx-check fs-4 me-2" style="color: #F6FF4C;" data-aos="fade-up"></i>
-            <span class="text-white" data-i18n="skills.positive">Positive</span>
-          </li>
-          <li class="d-flex align-items-center">
-            <i class="bx bx-check fs-4 me-2" style="color: #F6FF4C;" data-aos="fade-up"></i>
-            <span class="text-white" data-i18n="skills.team">Team Member</span>
-          </li>
-          <li class="d-flex align-items-center">
-            <i class="bx bx-check fs-4 me-2" style="color: #F6FF4C;" data-aos="fade-up"></i>
-            <span class="text-white" data-i18n="skills.communicative">Communicative</span>
-          </li>
-          <li class="d-flex align-items-center">
-            <i class="bx bx-check fs-4 me-2" style="color: #F6FF4C;" data-aos="fade-up"></i>
-            <span class="text-white" data-i18n="skills.curious">Curious</span>
-          </li>
-          <li class="d-flex align-items-center">
-            <i class="bx bx-check fs-4 me-2" style="color: #F6FF4C;" data-aos="fade-up"></i>
-            <span class="text-white" data-i18n="skills.adaptable">Adaptable</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Project-sektion -->
-  <section id="projects" class="container py-5" data-aos="fade-up">
-    <h2 class="mb-3 text-center project-heading display-5" data-i18n="projects.title">Projects</h2>
-    <p class="text-light text-center" data-i18n="projects.note">
-      Most of these projects are still just ideas and therefore under construction and cannot yet be viewed. Click on the magnifying glass to read more about the project. However, feel free
-      to check out my GitHub
-      for mostly school projects
-    </p>
-    <hr class="mx-auto mb-4" style="width: 180px; border-top: 3px solid #F6FF4C; opacity: 1;">
-    
-
-    <div class="row row-cols-1 row-cols-md-3 g-4 h-100" id="projectsRow">
-      <!-- Projektkort 9 -->
-      <div class="col project-item">
-        <div class="card project-card p-4 text-white h-100" data-aos="fade-up">
-          <!-- Sökikon -->
-          <div class="position-absolute top-0 end-0 p-2">
-            <button id="BuzzSearchBtn" class="btn project-btn project-icon-btn" title="More info">
-              <i class='bx bx-search fs-5'></i>
-            </button>
-          </div>
-
-          <img src="images/holder.png" alt="Projektbild" class="img-fluid rounded mb-3">
-          <h3 class="card-title mb-3" style="color: #F6FF4C;">Buzz</h3>
-          <p class="card-text mb-1">
-            Buzz...with your friends on this social media website.
-          </p>
-          <div class="d-flex flex-wrap gap-1 my-3">
-            <span class="badge project-badge">Java</span>
-            <span class="badge project-badge">Spring Boot</span>
-            <span class="badge project-badge">MySQL</span>
-            <span class="badge project-badge">React</span>
-            <span class="badge project-badge">Tailwind</span>
-            <span class="badge project-badge">MUI</span>
-            <span class="badge project-badge">Redux</span>
-            <span class="badge project-badge">Axios</span>
-            <span class="badge project-badge">Formik</span>
-            <span class="badge project-badge">Yup</span>
-            <span class="badge project-badge">Postman</span>
-          </div>
-          <!-- Lista med ikoner och text -->
-          <ul class="list-unstyled mb-4">
-            <li class="d-flex align-items-center mb-2">
-              <i class="bx bx-code fs-5 me-2"></i>
-              <small>Create, like, save, repost & comment on posts</small>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Matilda Erenius</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
             </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class='bx bx-layer fs-5 me-2'></i>
-              <small>Real time message and video/voice calls</small>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills" data-i18n="nav.skills"
+                >Skills</a
+              >
             </li>
-            <li class="d-flex align-items-center">
-              <i class='bx bx-data fs-5 me-2'></i>
-              <small>Update user profile, follow & unfollow users</small>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects" data-i18n="nav.projects"
+                >Projects</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" data-i18n="nav.contact"
+                >Contact</a
+              >
             </li>
           </ul>
-          <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-            <a href="https://github.com/matildaerenius/Buzz" target="_blank" class="btn project-btn"><i
-                class='bx bxl-github fs-6'></i> code</a>
-            <a href="#" class="btn project-btn"><i class='bx bx-link fs-6'></i> Demo
+          <div class="d-flex align-items-center">
+            <a
+              href="files/Matilda_Erenius-CV.pdf"
+              download
+              class="nav-icon d-flex flex-column align-items-center text-decoration-none me-3"
+            >
+              <i class="bx bxs-download"></i>
+              <span class="small" data-i18n="nav.download">Download CV</span>
+            </a>
+            <!-- Språkhanterare-->
+            <a
+              href="#"
+              id="langToggle"
+              class="ms-2"
+              aria-label="Change language"
+            >
+              <img
+                id="flagIcon"
+                src="images/gb.png"
+                alt="English flag"
+                width="24"
+                height="24"
+                style="border-radius: 50%"
+              />
             </a>
           </div>
         </div>
       </div>
-      <!-- Projektkort 1 -->
-      <div class="col project-item">
-        <div class="card project-card p-4 text-white h-100" data-aos="fade-up">
-          <!-- Sökikon -->
-          <div class="position-absolute top-0 end-0 p-2">
-            <button id= RecipediaSearchBtn class="btn project-btn project-icon-btn" title="More info">
-              <i class='bx bx-search fs-5'></i>
-            </button>
+    </nav>
+
+    <!-- Home-sektion -->
+    <section id="home" class="hero-section d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 text-center text-lg-start hero-text">
+            <!-- rubrik -->
+            <h1 class="display-1">&lt;Matilda<br />Erenius/&gt;</h1>
+            <p class="lead mb-4" data-i18n="hero.subtitle">
+              Java Developer Student.
+            </p>
+            <div
+              class="d-flex justify-content-center justify-content-lg-start gap-4 align-items-center"
+            >
+              <a
+                href="https://github.com/matildaerenius"
+                target="_blank"
+                aria-label="GitHub"
+                ><i class="bx bxl-github fs-3"></i
+              ></a>
+              <a
+                href="https://linkedin.com/in/matildaerenius"
+                target="_blank"
+                aria-label="GitHub"
+                ><i class="bx bxl-linkedin fs-3"></i
+              ></a>
+              <a
+                href="#contact"
+                class="btn contact-me-btn"
+                data-i18n="hero.button"
+                >Contact Me</a
+              >
+            </div>
           </div>
-          <img src="images/holder.png" alt="Projektbild" class="img-fluid rounded mb-3">
-          <h3 class="card-title mb-3" style="color: #F6FF4C;">Recipedia</h3>
-          <p class="card-text mb-1">
-            Get recipe suggestions based on what's already in your kitchen.
-          </p>
-          <!-- ikoner -->
-          <div class="d-flex flex-wrap gap-1 my-3">
-            <span class="badge project-badge">Java</span>
-            <span class="badge project-badge">Spring Boot</span>
-            <span class="badge project-badge">React</span>
-            <span class="badge project-badge">MySQL</span>
-            
+          <div class="col-lg-6"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About me-sektion -->
+    <section id="about" class="container py-5" data-aos="fade-up">
+      <div class="row align-items-center">
+        <div class="col-md-5 position-relative">
+          <div class="img-wrapper">
+            <img
+              src="images/aboutme.png"
+              alt="Matilda Erenius"
+              class="img-fluid about-img"
+            />
+            <div class="img-border"></div>
           </div>
-          <!-- Lista med ikoner och text -->
-          <ul class="list-unstyled mb-4">
-            <li class="d-flex align-items-center mb-2">
-              <i class="bx bx-code fs-5 me-2"></i>
-              <small>Add & remove ingredients in categories</small>
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class='bx bx-layer fs-5 me-2'></i>
-              <small>Recommend recipes via API</small>
-            </li>
-            <li class="d-flex align-items-center">
-              <i class='bx bx-data fs-5 me-2'></i>
-              <small>Save ingredients in user profile</small>
-            </li>
-          </ul>
-          <!-- Knapp -->
-          <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-            <a href="https://github.com/matildaerenius/Recipedia" target="_blank" class="btn project-btn"> <i
-                class='bx bxl-github fs-6'></i> code</a>
-            <a href="#" class="btn project-btn"><i class='bx bx-link fs-6'></i> Demo
-            </a>
+        </div>
+
+        <div class="col-md-7 mt-4 mt-md-0">
+          <div class="about-box p-4">
+            <h2 class="about-title mb-3" data-i18n="about.title">About me</h2>
+            <p class="about-text" data-i18n="about.paragraph1">
+              Hey! I'm Matilda, I currently live in Stockholm, Sweden, and I'm
+              studying to become a Java developer. IT felt like a natural fit
+              for me since I've always enjoyed tackling challenges head-on. Even
+              though I had no experience before starting my studies, I quickly
+              fell in love with coding and its endless possibilities. I'm an
+              eager and quick learner, constantly excited to dive into new
+              puzzles and expand my tech skills.
+            </p>
+            <p class="about-text" data-i18n="about.paragraph2">
+              As of right now, I'm particularly passionate about backend
+              development and the logic behind it. I would love to explore more
+              about cloud technologies to enhance my understanding of modern
+              software infrastructure.
+            </p>
+            <p class="about-text" data-i18n="about.paragraph3">
+              Outside of my tech journey, I'm all about embracing life's little
+              adventures. Whether I'm experimenting with new recipes, exploring
+              quirky corners of Stockholm, or diving into a spontaneous road
+              trip, I believe every experience is a chance to learn something
+              new. I approach every challenge - big or small - with a sense of
+              curiosity and humor, and I'm always ready to take on the next fun
+              project that comes my way.
+            </p>
+            <p class="about-text" data-i18n="about.paragraph4">
+              Furthermore, when I'm not glued to my computer, you'll find me
+              lifting weights or out on a long walk - then getting too tired and
+              catch the bus back. I love a good board game night with family or
+              friends (even though I lose about nine out of ten times - hey, at
+              least I'm lucky in love). Otherwise, I'm probably scrubbing the
+              oven, reorganizing the kitchen cabinet, or switching from one
+              screen to another, rewatching Friends for the 11th time - always
+              with a stash of lollies, of course.
+            </p>
+            <p class="mt-3">
+              <a
+                href="files/Matilda_Erenius-CV.pdf"
+                target="_blank"
+                class="download-cv-link"
+              >
+                <span data-i18n="about.cv">View CV →</span>
+                <i class="bx bx-right-arrow-alt fs-5"></i>
+              </a>
+            </p>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Projektkort 2 -->
-      <div class="col project-item">
-        <div class="card project-card p-4 text-white h-100" data-aos="fade-up">
-          <!-- Sökikon -->
-          <div class="position-absolute top-0 end-0 p-2">
-            <button id= sthlmExitSearchBtn class="btn project-btn project-icon-btn" title="More info">
-              <i class='bx bx-search fs-5'></i>
-            </button>
+    <!-- Skills sektion-->
+    <section id="skills" class="container py-5" data-aos="fade-up">
+      <h2 class="mb-5 text-center tech-stack-heading" data-i18n="skills.title">
+        Tech Stack
+      </h2>
+      <hr
+        class="mx-auto mb-4"
+        style="
+          margin-top: -25px;
+          width: 200px;
+          border-top: 3px solid #f6ff4c;
+          opacity: 1;
+        "
+      />
+
+      <div class="row g-4 justify-content-center">
+        <!-- Kort 1: Frontend -->
+        <div class="col-md-4">
+          <div class="skill-card text-center p-3" data-skill="frontend">
+            <hr class="skill-divider" />
+            <h3 class="skill-title mb-0" data-i18n="skills.frontend">
+              Frontend
+            </h3>
+            <div class="skill-icons">
+              <div class="skill-icon-container">
+                <img src="images/html5.png" alt="HTML5" class="skill-icon" />
+                <span class="tooltip-text">HTML</span>
+              </div>
+              <div class="skill-icon-container">
+                <img src="images/css3.png" alt="CSS3" class="skill-icon" />
+                <span class="tooltip-text">CSS</span>
+              </div>
+              <div class="skill-icon-container">
+                <img src="images/js.png" alt="JavaScript" class="skill-icon" />
+                <span class="tooltip-text">JavaScript</span>
+              </div>
+              <div class="skill-icon-container">
+                <img src="images/react.png" alt="React" class="skill-icon" />
+                <span class="tooltip-text">React</span>
+              </div>
+              <div class="skill-icon-container">
+                <img src="images/mui.png" alt="MUI" class="skill-icon" />
+                <span class="tooltip-text">MUI</span>
+              </div>
+              <div class="skill-icon-container">
+                <img
+                  src="images/bootstrap.png"
+                  alt="Bootstrap"
+                  class="skill-icon"
+                />
+                <span class="tooltip-text">Bootstrap</span>
+              </div>
+              <div class="skill-icon-container">
+                <img
+                  src="images/tailwind.png"
+                  alt="TailwindCSS"
+                  class="skill-icon"
+                />
+                <span class="tooltip-text">TailwindCSS</span>
+              </div>
+            </div>
           </div>
-          <img src="images/holder.png" alt="Projektbild" class="img-fluid rounded mb-3">
-          <h3 class="card-title mb-3" style="color: #F6FF4C;">SthlmExit</h3>
-          <p class="card-text mb-1">
-            Find the best train seat and the right exit for your subway ride.
-          </p>
-          <div class="d-flex flex-wrap gap-1 my-3">
-            <span class="badge project-badge">Java</span>
-            <span class="badge project-badge">Spring Boot</span>
-            <span class="badge project-badge">HTML</span>
-            <span class="badge project-badge">CSS</span>
-            <span class="badge project-badge">Bootstrap</span>
-            <span class="badge project-badge">JavaScript</span>
-            <span class="badge project-badge">Postman</span>
+        </div>
+
+        <!-- Kort 2: Backend -->
+        <div class="col-md-4">
+          <div class="skill-card text-center p-3" data-skill="backend">
+            <hr class="skill-divider" />
+            <h3 class="skill-title mb-0" data-i18n="skills.backend">Backend</h3>
+            <div class="skill-icons">
+              <div class="skill-icon-container">
+                <img src="images/java.png" alt="Java" class="skill-icon" />
+                <span class="tooltip-text">Java</span>
+              </div>
+              <div class="skill-icon-container">
+                <img
+                  src="images/springBoot.png"
+                  alt="Spring Boot"
+                  class="skill-icon"
+                />
+                <span class="tooltip-text">Spring Boot</span>
+              </div>
+              <div class="skill-icon-container">
+                <img src="images/mySQL.png" alt="MySQL" class="skill-icon" />
+                <span class="tooltip-text">MySQL</span>
+              </div>
+              <div class="skill-icon-container">
+                <img
+                  src="images/mongoDB.png"
+                  alt="MongoDB"
+                  class="skill-icon"
+                />
+                <span class="tooltip-text">MongoDB</span>
+              </div>
+              <div class="skill-icon-container">
+                <img src="images/kotlin.png" alt="Kotlin" class="skill-icon" />
+                <span class="tooltip-text">Kotlin</span>
+              </div>
+            </div>
           </div>
-          <!-- Lista med ikoner och text -->
-          <ul class="list-unstyled mb-4">
-            <li class="d-flex align-items-center mb-2">
-              <i class="bx bx-code fs-5 me-2"></i>
-              <small>Real-time data about stations and departures</small>
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class='bx bx-layer fs-5 me-2'></i>
-              <small>Optimized seat recommendation</small>
-            </li>
-            <li class="d-flex align-items-center">
-              <i class='bx bx-data fs-5 me-2'></i>
-              <small>User authentication</small>
-            </li>
-          </ul>
-          <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-            <a href="https://github.com/matildaerenius/SthlmExit" target="_blank" class="btn project-btn"><i
-                class='bx bxl-github fs-6'></i> code</a>
-            <a href="#" class="btn project-btn"><i class='bx bx-link fs-6'></i> Demo
-            </a>
+        </div>
+
+        <!-- Kort 3: Tools, icons8 -->
+        <div class="col-md-4">
+          <div class="skill-card text-center p-3" data-skill="tools">
+            <hr class="skill-divider" />
+            <h3 class="skill-title mb-0" data-i18n="skills.tools">Tools</h3>
+            <div class="skill-icons">
+              <div class="skill-icon-container">
+                <img src="images/git.png" alt="Git" class="skill-icon" />
+                <span class="tooltip-text">Git</span>
+              </div>
+              <div class="skill-icon-container">
+                <img src="images/github.png" alt="Github" class="skill-icon" />
+                <span class="tooltip-text">Github</span>
+              </div>
+              <div class="skill-icon-container">
+                <img
+                  src="images/postman.png"
+                  alt="Postman"
+                  class="skill-icon"
+                />
+                <span class="tooltip-text">Postman</span>
+              </div>
+              <div class="skill-icon-container">
+                <img src="images/maven.png" alt="Maven" class="skill-icon" />
+                <span class="tooltip-text">Maven</span>
+              </div>
+              <div class="skill-icon-container">
+                <img src="images/vscode.png" alt="VScode" class="skill-icon" />
+                <span class="tooltip-text">VScode</span>
+              </div>
+              <div class="skill-icon-container">
+                <img
+                  src="images/intelliJ.png"
+                  alt="IntelliJ"
+                  class="skill-icon"
+                />
+                <span class="tooltip-text">IntelliJ</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Projektkort 3 -->
-      <div class="col project-item">
-        <div class="card project-card p-4 text-white h-100" data-aos="fade-up">
-          <!-- Sökikon -->
-          <div class="position-absolute top-0 end-0 p-2">
-            <button class="btn project-btn project-icon-btn" title="More info">
-              <i class='bx bx-search fs-5'></i>
-            </button>
-          </div>
-          <img src="images/holder.png" alt="Projektbild" class="img-fluid rounded mb-3">
-          <h3 class="card-title mb-3" style="color: #F6FF4C;">PastCast</h3>
-          <p class="card-text mb-1">
-            View past weather trends and future forecasts in one place.
-          </p>
-          <div class="d-flex flex-wrap gap-1 my-3">
-            <span class="badge project-badge">Java</span>
-            <span class="badge project-badge">Spring Boot</span>
-            <span class="badge project-badge">React</span>
-            <span class="badge project-badge">MongoDB</span>
-            <span class="badge project-badge">GraphQL</span>
-          </div>
-          <!-- Lista med ikoner och text -->
-          <ul class="list-unstyled mb-4">
-            <li class="d-flex align-items-center mb-2">
-
-              <i class="bx bx-code fs-5 me-2"></i>
-              <small>Multiple weather sources in one view</small>
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class='bx bx-layer fs-5 me-2'></i>
-              <small>Historical data and trend graphs</small>
+    <!-- Social Skills Section -->
+    <section id="social-skills" class="container py-5">
+      <h2
+        class="text-center text-white mb-4"
+        data-aos="fade-up"
+        data-i18n="skills.socialTitle"
+      >
+        Social Skills
+      </h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <ul
+            class="list-unstyled d-flex flex-wrap justify-content-center gap-4"
+          >
+            <li class="d-flex align-items-center">
+              <i
+                class="bx bx-check fs-4 me-2"
+                style="color: #f6ff4c"
+                data-aos="fade-up"
+              ></i>
+              <span class="text-white" data-i18n="skills.problemSolver"
+                >Problem Solver</span
+              >
             </li>
             <li class="d-flex align-items-center">
-              <i class='bx bx-data fs-5 me-2'></i>
-              <small>Scheduled data collection</small>
+              <i
+                class="bx bx-check fs-4 me-2"
+                style="color: #f6ff4c"
+                data-aos="fade-up"
+              ></i>
+              <span class="text-white" data-i18n="skills.positive"
+                >Positive</span
+              >
+            </li>
+            <li class="d-flex align-items-center">
+              <i
+                class="bx bx-check fs-4 me-2"
+                style="color: #f6ff4c"
+                data-aos="fade-up"
+              ></i>
+              <span class="text-white" data-i18n="skills.team"
+                >Team Member</span
+              >
+            </li>
+            <li class="d-flex align-items-center">
+              <i
+                class="bx bx-check fs-4 me-2"
+                style="color: #f6ff4c"
+                data-aos="fade-up"
+              ></i>
+              <span class="text-white" data-i18n="skills.communicative"
+                >Communicative</span
+              >
+            </li>
+            <li class="d-flex align-items-center">
+              <i
+                class="bx bx-check fs-4 me-2"
+                style="color: #f6ff4c"
+                data-aos="fade-up"
+              ></i>
+              <span class="text-white" data-i18n="skills.curious">Curious</span>
+            </li>
+            <li class="d-flex align-items-center">
+              <i
+                class="bx bx-check fs-4 me-2"
+                style="color: #f6ff4c"
+                data-aos="fade-up"
+              ></i>
+              <span class="text-white" data-i18n="skills.adaptable"
+                >Adaptable</span
+              >
             </li>
           </ul>
-          <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-            <a href="https://github.com/matildaerenius/PastCast" target="_blank" class="btn project-btn"> <i
-                class='bx bxl-github fs-6'></i> code</a>
-            <a href="#" class="btn project-btn"><i class='bx bx-link fs-6'></i> Demo
-            </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project-sektion -->
+    <section id="projects" class="container py-5" data-aos="fade-up">
+      <h2
+        class="mb-3 text-center project-heading display-5"
+        data-i18n="projects.title"
+      >
+        Projects
+      </h2>
+      <p class="text-light text-center" data-i18n="projects.note">
+        Most of these projects are still just ideas and therefore under
+        construction and cannot yet be viewed. Click on the magnifying glass to
+        read more about the project. However, feel free to check out my GitHub
+        for mostly school projects
+      </p>
+      <hr
+        class="mx-auto mb-4"
+        style="width: 180px; border-top: 3px solid #f6ff4c; opacity: 1"
+      />
+
+      <div class="row row-cols-1 row-cols-md-3 g-4 h-100" id="projectsRow">
+        <!-- Projektkort 9 -->
+        <div class="col project-item">
+          <div
+            class="card project-card p-4 text-white h-100"
+            data-aos="fade-up"
+          >
+            <!-- Sökikon -->
+            <div class="position-absolute top-0 end-0 p-2">
+              <button
+                id="BuzzSearchBtn"
+                class="btn project-btn project-icon-btn"
+                title="More info"
+              >
+                <i class="bx bx-search fs-5"></i>
+              </button>
+            </div>
+
+            <img
+              src="images/holder.png"
+              alt="Projektbild"
+              class="img-fluid rounded mb-3"
+            />
+            <h3 class="card-title mb-3" style="color: #f6ff4c">Buzz</h3>
+            <p class="card-text mb-1">
+              Buzz...with your friends on this social media website.
+            </p>
+            <div class="d-flex flex-wrap gap-1 my-3">
+              <span class="badge project-badge">Java</span>
+              <span class="badge project-badge">Spring Boot</span>
+              <span class="badge project-badge">MySQL</span>
+              <span class="badge project-badge">React</span>
+              <span class="badge project-badge">Tailwind</span>
+              <span class="badge project-badge">MUI</span>
+              <span class="badge project-badge">Redux</span>
+              <span class="badge project-badge">Axios</span>
+              <span class="badge project-badge">Formik</span>
+              <span class="badge project-badge">Yup</span>
+              <span class="badge project-badge">Postman</span>
+            </div>
+            <!-- Lista med ikoner och text -->
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-code fs-5 me-2"></i>
+                <small>Create, like, save, repost & comment on posts</small>
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-layer fs-5 me-2"></i>
+                <small>Real time message and video/voice calls</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bx bx-data fs-5 me-2"></i>
+                <small>Update user profile, follow & unfollow users</small>
+              </li>
+            </ul>
+            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+              <a
+                href="https://github.com/matildaerenius/Buzz"
+                target="_blank"
+                class="btn project-btn"
+                ><i class="bx bxl-github fs-6"></i> code</a
+              >
+              <a href="#" class="btn project-btn"
+                ><i class="bx bx-link fs-6"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Projektkort 1 -->
+        <div class="col project-item">
+          <div
+            class="card project-card p-4 text-white h-100"
+            data-aos="fade-up"
+          >
+            <!-- Sökikon -->
+            <div class="position-absolute top-0 end-0 p-2">
+              <button
+                id="RecipediaSearchBtn"
+                class="btn project-btn project-icon-btn"
+                title="More info"
+              >
+                <i class="bx bx-search fs-5"></i>
+              </button>
+            </div>
+            <img
+              src="images/holder.png"
+              alt="Projektbild"
+              class="img-fluid rounded mb-3"
+            />
+            <h3 class="card-title mb-3" style="color: #f6ff4c">Recipedia</h3>
+            <p class="card-text mb-1">
+              Get recipe suggestions based on what's already in your kitchen.
+            </p>
+            <!-- ikoner -->
+            <div class="d-flex flex-wrap gap-1 my-3">
+              <span class="badge project-badge">Java</span>
+              <span class="badge project-badge">Spring Boot</span>
+              <span class="badge project-badge">React</span>
+              <span class="badge project-badge">MySQL</span>
+            </div>
+            <!-- Lista med ikoner och text -->
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-code fs-5 me-2"></i>
+                <small>Add & remove ingredients in categories</small>
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-layer fs-5 me-2"></i>
+                <small>Recommend recipes via API</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bx bx-data fs-5 me-2"></i>
+                <small>Save ingredients in user profile</small>
+              </li>
+            </ul>
+            <!-- Knapp -->
+            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+              <a
+                href="https://github.com/matildaerenius/Recipedia"
+                target="_blank"
+                class="btn project-btn"
+              >
+                <i class="bx bxl-github fs-6"></i> code</a
+              >
+              <a href="#" class="btn project-btn"
+                ><i class="bx bx-link fs-6"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projektkort 2 -->
+        <div class="col project-item">
+          <div
+            class="card project-card p-4 text-white h-100"
+            data-aos="fade-up"
+          >
+            <!-- Sökikon -->
+            <div class="position-absolute top-0 end-0 p-2">
+              <button
+                id="sthlmExitSearchBtn"
+                class="btn project-btn project-icon-btn"
+                title="More info"
+              >
+                <i class="bx bx-search fs-5"></i>
+              </button>
+            </div>
+            <img
+              src="images/holder.png"
+              alt="Projektbild"
+              class="img-fluid rounded mb-3"
+            />
+            <h3 class="card-title mb-3" style="color: #f6ff4c">SthlmExit</h3>
+            <p class="card-text mb-1">
+              Find the best train seat and the right exit for your subway ride.
+            </p>
+            <div class="d-flex flex-wrap gap-1 my-3">
+              <span class="badge project-badge">Java</span>
+              <span class="badge project-badge">Spring Boot</span>
+              <span class="badge project-badge">HTML</span>
+              <span class="badge project-badge">CSS</span>
+              <span class="badge project-badge">Bootstrap</span>
+              <span class="badge project-badge">JavaScript</span>
+              <span class="badge project-badge">Postman</span>
+            </div>
+            <!-- Lista med ikoner och text -->
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-code fs-5 me-2"></i>
+                <small>Real-time data about stations and departures</small>
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-layer fs-5 me-2"></i>
+                <small>Optimized seat recommendation</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bx bx-data fs-5 me-2"></i>
+                <small>User authentication</small>
+              </li>
+            </ul>
+            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+              <a
+                href="https://github.com/matildaerenius/SthlmExit"
+                target="_blank"
+                class="btn project-btn"
+                ><i class="bx bxl-github fs-6"></i> code</a
+              >
+              <a href="#" class="btn project-btn"
+                ><i class="bx bx-link fs-6"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projektkort 3 -->
+        <div class="col project-item">
+          <div
+            class="card project-card p-4 text-white h-100"
+            data-aos="fade-up"
+          >
+            <!-- Sökikon -->
+            <div class="position-absolute top-0 end-0 p-2">
+              <button
+                class="btn project-btn project-icon-btn"
+                title="More info"
+              >
+                <i class="bx bx-search fs-5"></i>
+              </button>
+            </div>
+            <img
+              src="images/holder.png"
+              alt="Projektbild"
+              class="img-fluid rounded mb-3"
+            />
+            <h3 class="card-title mb-3" style="color: #f6ff4c">PastCast</h3>
+            <p class="card-text mb-1">
+              View past weather trends and future forecasts in one place.
+            </p>
+            <div class="d-flex flex-wrap gap-1 my-3">
+              <span class="badge project-badge">Java</span>
+              <span class="badge project-badge">Spring Boot</span>
+              <span class="badge project-badge">React</span>
+              <span class="badge project-badge">MongoDB</span>
+              <span class="badge project-badge">GraphQL</span>
+            </div>
+            <!-- Lista med ikoner och text -->
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-code fs-5 me-2"></i>
+                <small>Multiple weather sources in one view</small>
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-layer fs-5 me-2"></i>
+                <small>Historical data and trend graphs</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bx bx-data fs-5 me-2"></i>
+                <small>Scheduled data collection</small>
+              </li>
+            </ul>
+            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+              <a
+                href="https://github.com/matildaerenius/PastCast"
+                target="_blank"
+                class="btn project-btn"
+              >
+                <i class="bx bxl-github fs-6"></i> code</a
+              >
+              <a href="#" class="btn project-btn"
+                ><i class="bx bx-link fs-6"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Projektkort 7 -->
+        <div class="col project-item">
+          <div
+            class="card project-card p-4 text-white h-100"
+            data-aos="fade-up"
+          >
+            <!-- Sökikon -->
+            <div class="position-absolute top-0 end-0 p-2">
+              <button
+              id="revuSearchBtn"
+                class="btn project-btn project-icon-btn"
+                title="More info"
+              >
+                <i class="bx bx-search fs-5"></i>
+              </button>
+            </div>
+
+            <img
+              src="images/holder.png"
+              alt="Projektbild"
+              class="img-fluid rounded mb-3"
+            />
+            <h3 class="card-title mb-3" style="color: #f6ff4c">Revu</h3>
+            <p class="card-text mb-1">
+              Revu your movies on this movie review website.
+            </p>
+            <div class="d-flex flex-wrap gap-1 my-3">
+              <span class="badge project-badge">Java</span>
+              <span class="badge project-badge">Spring Boot</span>
+              <span class="badge project-badge">MySQL</span>
+              <span class="badge project-badge">React</span>
+              <span class="badge project-badge">Jsoup</span>
+            </div>
+            <!-- Lista med ikoner och text -->
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-code fs-5 me-2"></i>
+                <small>Scan Gmail inbox for newsletter senders</small>
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-layer fs-5 me-2"></i>
+                <small>Detect unsubscribe links</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bx bx-data fs-5 me-2"></i>
+                <small>One-click unsubscribe automation</small>
+              </li>
+            </ul>
+            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+              <a href="#" target="_blank" class="btn project-btn"
+                ><i class="bx bxl-github fs-6"></i> code</a
+              >
+              <a href="#" class="btn project-btn"
+                ><i class="bx bx-link fs-6"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projektkort 4 -->
+        <div class="col project-item">
+          <div
+            class="card project-card p-4 text-white h-100"
+            data-aos="fade-up"
+          >
+            <!-- Sökikon -->
+            <div class="position-absolute top-0 end-0 p-2">
+              <button
+                class="btn project-btn project-icon-btn"
+                title="More info"
+              >
+                <i class="bx bx-search fs-5"></i>
+              </button>
+            </div>
+            <img
+              src="images/holder.png"
+              alt="Projektbild"
+              class="img-fluid rounded mb-3"
+            />
+            <h3 class="card-title mb-3" style="color: #f6ff4c">Portify</h3>
+            <p class="card-text mb-1">
+              Copy your Spotify playlists and download them as MP3s via YouTube.
+            </p>
+            <div class="d-flex flex-wrap gap-1 my-3">
+              <span class="badge project-badge">Java</span>
+              <span class="badge project-badge">Spring Boot</span>
+              <span class="badge project-badge">MySQL</span>
+              <span class="badge project-badge">React</span>
+              <span class="badge project-badge">yt-dlp</span>
+              <span class="badge project-badge">Postman</span>
+            </div>
+            <!-- Lista med ikoner och text -->
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-code fs-5 me-2"></i>
+                <small>Import Spotify playlists via OAuth</small>
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-layer fs-5 me-2"></i>
+                <small>Match and fetch songs from YouTube</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bx bx-data fs-5 me-2"></i>
+                <small>Download and ZIP MP3 files</small>
+              </li>
+            </ul>
+            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+              <a href="#" target="_blank" class="btn project-btn"
+                ><i class="bx bxl-github fs-6"></i> code</a
+              >
+              <a href="#" class="btn project-btn"
+                ><i class="bx bx-link fs-6"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Projektkort 5 -->
+        <div class="col project-item">
+          <div
+            class="card project-card p-4 text-white h-100"
+            data-aos="fade-up"
+          >
+            <!-- Sökikon -->
+            <div class="position-absolute top-0 end-0 p-2">
+              <button
+                class="btn project-btn project-icon-btn"
+                title="More info"
+              >
+                <i class="bx bx-search fs-5"></i>
+              </button>
+            </div>
+
+            <img
+              src="images/holder.png"
+              alt="Projektbild"
+              class="img-fluid rounded mb-3"
+            />
+            <h3 class="card-title mb-3" style="color: #f6ff4c">UnSub</h3>
+            <p class="card-text mb-1">
+              Scan your Gmail and unsubscribe from newsletters with one click.
+            </p>
+            <div class="d-flex flex-wrap gap-1 my-3">
+              <span class="badge project-badge">Java</span>
+              <span class="badge project-badge">Spring Boot</span>
+              <span class="badge project-badge">MySQL</span>
+              <span class="badge project-badge">React</span>
+              <span class="badge project-badge">Jsoup</span>
+            </div>
+            <!-- Lista med ikoner och text -->
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-code fs-5 me-2"></i>
+                <small>Scan Gmail inbox for newsletter senders</small>
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-layer fs-5 me-2"></i>
+                <small>Detect unsubscribe links</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bx bx-data fs-5 me-2"></i>
+                <small>One-click unsubscribe automation</small>
+              </li>
+            </ul>
+            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+              <a href="#" target="_blank" class="btn project-btn"
+                ><i class="bx bxl-github fs-6"></i> code</a
+              >
+              <a href="#" class="btn project-btn"
+                ><i class="bx bx-link fs-6"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Projektkort 6 -->
+        <div class="col project-item">
+          <div
+            class="card project-card p-4 text-white h-100"
+            data-aos="fade-up"
+          >
+            <!-- Sökikon -->
+            <div class="position-absolute top-0 end-0 p-2">
+              <button
+                class="btn project-btn project-icon-btn"
+                title="More info"
+              >
+                <i class="bx bx-search fs-5"></i>
+              </button>
+            </div>
+            <img
+              src="images/holder.png"
+              alt="Projektbild"
+              class="img-fluid rounded mb-3"
+            />
+            <h3 class="card-title mb-3" style="color: #f6ff4c">Savr</h3>
+            <p class="card-text mb-1">
+              A real life-SAVR - compare store prices & generate the cheapest
+              shopping list.
+            </p>
+            <div class="d-flex flex-wrap gap-1 my-3">
+              <span class="badge project-badge">Java</span>
+              <span class="badge project-badge">Spring Boot</span>
+              <span class="badge project-badge">MySQL</span>
+              <span class="badge project-badge">React</span>
+              <span class="badge project-badge">Jsoup</span>
+            </div>
+            <!-- Lista med ikoner och text -->
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-code fs-5 me-2"></i>
+                <small>Convert recipes into ingredient lists</small>
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-layer fs-5 me-2"></i>
+                <small>Scrape store prices and compare</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bx bx-data fs-5 me-2"></i>
+                <small>Generate cheapest shopping list</small>
+              </li>
+            </ul>
+            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+              <a href="#" target="_blank" class="btn project-btn"
+                ><i class="bx bxl-github fs-6"></i> code</a
+              >
+              <a href="#" class="btn project-btn"
+                ><i class="bx bx-link fs-6"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projektkort 8 -->
+        <div class="col project-item">
+          <div
+            class="card project-card p-4 text-white h-100"
+            data-aos="fade-up"
+          >
+            <!-- Sökikon -->
+            <div class="position-absolute top-0 end-0 p-2">
+              <button
+                class="btn project-btn project-icon-btn"
+                title="More info"
+              >
+                <i class="bx bx-search fs-5"></i>
+              </button>
+            </div>
+
+            <img
+              src="images/holder.png"
+              alt="Projektbild"
+              class="img-fluid rounded mb-3"
+            />
+            <h3 class="card-title mb-3" style="color: #f6ff4c">EchoType</h3>
+            <p class="card-text mb-1">Audio to text transcriber.</p>
+            <div class="d-flex flex-wrap gap-1 my-3">
+              <span class="badge project-badge">Java</span>
+              <span class="badge project-badge">Spring Boot</span>
+              <span class="badge project-badge">MySQL</span>
+              <span class="badge project-badge">React</span>
+              <span class="badge project-badge">Jsoup</span>
+            </div>
+            <!-- Lista med ikoner och text -->
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-code fs-5 me-2"></i>
+                <small>Scan Gmail inbox for newsletter senders</small>
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-layer fs-5 me-2"></i>
+                <small>Detect unsubscribe links</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bx bx-data fs-5 me-2"></i>
+                <small>One-click unsubscribe automation</small>
+              </li>
+            </ul>
+            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+              <a href="#" target="_blank" class="btn project-btn"
+                ><i class="bx bxl-github fs-6"></i> code</a
+              >
+              <a href="#" class="btn project-btn"
+                ><i class="bx bx-link fs-6"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projektkort 10 -->
+        <div class="col project-item">
+          <div
+            class="card project-card p-4 text-white h-100"
+            data-aos="fade-up"
+          >
+            <!-- Sökikon -->
+            <div class="position-absolute top-0 end-0 p-2">
+              <button
+                class="btn project-btn project-icon-btn"
+                title="More info"
+              >
+                <i class="bx bx-search fs-5"></i>
+              </button>
+            </div>
+
+            <img
+              src="images/holder.png"
+              alt="Projektbild"
+              class="img-fluid rounded mb-3"
+            />
+            <h3 class="card-title mb-3" style="color: #f6ff4c">Mallsy</h3>
+            <p class="card-text mb-1">eCommerce website.</p>
+            <div class="d-flex flex-wrap gap-1 my-3">
+              <span class="badge project-badge">Java</span>
+              <span class="badge project-badge">Spring Boot</span>
+              <span class="badge project-badge">MySQL</span>
+              <span class="badge project-badge">React</span>
+              <span class="badge project-badge">Jsoup</span>
+            </div>
+            <!-- Lista med ikoner och text -->
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-code fs-5 me-2"></i>
+                <small>Scan Gmail inbox for newsletter senders</small>
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-layer fs-5 me-2"></i>
+                <small>Detect unsubscribe links</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bx bx-data fs-5 me-2"></i>
+                <small>One-click unsubscribe automation</small>
+              </li>
+            </ul>
+            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+              <a href="#" target="_blank" class="btn project-btn"
+                ><i class="bx bxl-github fs-6"></i> code</a
+              >
+              <a href="#" class="btn project-btn"
+                ><i class="bx bx-link fs-6"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Projektkort 11 -->
+        <div class="col project-item">
+          <div
+            class="card project-card p-4 text-white h-100"
+            data-aos="fade-up"
+          >
+            <!-- Sökikon -->
+            <div class="position-absolute top-0 end-0 p-2">
+              <button
+                class="btn project-btn project-icon-btn"
+                title="More info"
+              >
+                <i class="bx bx-search fs-5"></i>
+              </button>
+            </div>
+
+            <img
+              src="images/holder.png"
+              alt="Projektbild"
+              class="img-fluid rounded mb-3"
+            />
+            <h3 class="card-title mb-3" style="color: #f6ff4c">BeautiQ</h3>
+            <p class="card-text mb-1">Salon Booking System.</p>
+            <div class="d-flex flex-wrap gap-1 my-3">
+              <span class="badge project-badge">Java</span>
+              <span class="badge project-badge">Spring Boot</span>
+              <span class="badge project-badge">MySQL</span>
+              <span class="badge project-badge">React</span>
+              <span class="badge project-badge">Jsoup</span>
+            </div>
+            <!-- Lista med ikoner och text -->
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-code fs-5 me-2"></i>
+                <small>Scan Gmail inbox for newsletter senders</small>
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-layer fs-5 me-2"></i>
+                <small>Detect unsubscribe links</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bx bx-data fs-5 me-2"></i>
+                <small>One-click unsubscribe automation</small>
+              </li>
+            </ul>
+            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+              <a href="#" target="_blank" class="btn project-btn"
+                ><i class="bx bxl-github fs-6"></i> code</a
+              >
+              <a href="#" class="btn project-btn"
+                ><i class="bx bx-link fs-6"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Projektkort 12 -->
+        <div class="col project-item">
+          <div
+            class="card project-card p-4 text-white h-100"
+            data-aos="fade-up"
+          >
+            <!-- Sökikon -->
+            <div class="position-absolute top-0 end-0 p-2">
+              <button
+                class="btn project-btn project-icon-btn"
+                title="More info"
+              >
+                <i class="bx bx-search fs-5"></i>
+              </button>
+            </div>
+
+            <img
+              src="images/holder.png"
+              alt="Projektbild"
+              class="img-fluid rounded mb-3"
+            />
+            <h3 class="card-title mb-3" style="color: #f6ff4c">Dishdash</h3>
+            <p class="card-text mb-1">
+              Dash your dish home with this food-ordering website.
+            </p>
+            <div class="d-flex flex-wrap gap-1 my-3">
+              <span class="badge project-badge">Java</span>
+              <span class="badge project-badge">Spring Boot</span>
+              <span class="badge project-badge">MySQL</span>
+              <span class="badge project-badge">React</span>
+              <span class="badge project-badge">Tailwind</span>
+              <span class="badge project-badge">Mui</span>
+              <span class="badge project-badge">Redux</span>
+              <span class="badge project-badge">Axios</span>
+              <span class="badge project-badge">Strip</span>
+            </div>
+            <!-- Lista med ikoner och text -->
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-code fs-5 me-2"></i>
+                <small>Scan Gmail inbox for newsletter senders</small>
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-layer fs-5 me-2"></i>
+                <small>Detect unsubscribe links</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bx bx-data fs-5 me-2"></i>
+                <small>One-click unsubscribe automation</small>
+              </li>
+            </ul>
+            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+              <a href="#" target="_blank" class="btn project-btn"
+                ><i class="bx bxl-github fs-6"></i> code</a
+              >
+              <a href="#" class="btn project-btn"
+                ><i class="bx bx-link fs-6"></i> Demo
+              </a>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Projektkort 4 -->
-      <div class="col project-item">
-        <div class="card project-card p-4 text-white h-100" data-aos="fade-up">
-          <!-- Sökikon -->
-          <div class="position-absolute top-0 end-0 p-2">
-            <button class="btn project-btn project-icon-btn" title="More info">
-              <i class='bx bx-search fs-5'></i>
-            </button>
-          </div>
-          <img src="images/holder.png" alt="Projektbild" class="img-fluid rounded mb-3">
-          <h3 class="card-title mb-3" style="color: #F6FF4C;">Portify</h3>
-          <p class="card-text mb-1">
-            Copy your Spotify playlists and download them as MP3s via YouTube.
-          </p>
-          <div class="d-flex flex-wrap gap-1 my-3">
-            <span class="badge project-badge">Java</span>
-            <span class="badge project-badge">Spring Boot</span>
-            <span class="badge project-badge">MySQL</span>
-            <span class="badge project-badge">React</span>
-            <span class="badge project-badge">yt-dlp</span>
-            <span class="badge project-badge">Postman</span>
-          </div>
-          <!-- Lista med ikoner och text -->
-          <ul class="list-unstyled mb-4">
-            <li class="d-flex align-items-center mb-2">
-              <i class="bx bx-code fs-5 me-2"></i>
-              <small>Import Spotify playlists via OAuth</small>
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class='bx bx-layer fs-5 me-2'></i>
-              <small>Match and fetch songs from YouTube</small>
-            </li>
-            <li class="d-flex align-items-center">
-              <i class='bx bx-data fs-5 me-2'></i>
-              <small>Download and ZIP MP3 files</small>
-            </li>
-          </ul>
-          <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-            <a href="#" target="_blank" class="btn project-btn"><i class='bx bxl-github fs-6'></i> code</a>
-            <a href="#" class="btn project-btn"><i class='bx bx-link fs-6'></i> Demo
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Projektkort 5 -->
-      <div class="col project-item">
-        <div class="card project-card p-4 text-white h-100" data-aos="fade-up">
-          <!-- Sökikon -->
-          <div class="position-absolute top-0 end-0 p-2">
-            <button class="btn project-btn project-icon-btn" title="More info">
-              <i class='bx bx-search fs-5'></i>
-            </button>
-          </div>
-
-          <img src="images/holder.png" alt="Projektbild" class="img-fluid rounded mb-3">
-          <h3 class="card-title mb-3" style="color: #F6FF4C;">UnSub</h3>
-          <p class="card-text mb-1">
-            Scan your Gmail and unsubscribe from newsletters with one click.
-          </p>
-          <div class="d-flex flex-wrap gap-1 my-3">
-            <span class="badge project-badge">Java</span>
-            <span class="badge project-badge">Spring Boot</span>
-            <span class="badge project-badge">MySQL</span>
-            <span class="badge project-badge">React</span>
-            <span class="badge project-badge">Jsoup</span>
-          </div>
-          <!-- Lista med ikoner och text -->
-          <ul class="list-unstyled mb-4">
-            <li class="d-flex align-items-center mb-2">
-              <i class="bx bx-code fs-5 me-2"></i>
-              <small>Scan Gmail inbox for newsletter senders</small>
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class='bx bx-layer fs-5 me-2'></i>
-              <small>Detect unsubscribe links</small>
-            </li>
-            <li class="d-flex align-items-center">
-              <i class='bx bx-data fs-5 me-2'></i>
-              <small>One-click unsubscribe automation</small>
-            </li>
-          </ul>
-          <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-            <a href="#" target="_blank" class="btn project-btn"><i class='bx bxl-github fs-6'></i> code</a>
-            <a href="#" class="btn project-btn"><i class='bx bx-link fs-6'></i> Demo
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Projektkort 6 -->
-      <div class="col project-item">
-        <div class="card project-card p-4 text-white h-100" data-aos="fade-up">
-          <!-- Sökikon -->
-          <div class="position-absolute top-0 end-0 p-2">
-            <button class="btn project-btn project-icon-btn" title="More info">
-              <i class='bx bx-search fs-5'></i>
-            </button>
-          </div>
-          <img src="images/holder.png" alt="Projektbild" class="img-fluid rounded mb-3">
-          <h3 class="card-title mb-3" style="color: #F6FF4C;">Savr</h3>
-          <p class="card-text mb-1">
-            A real life-SAVR - compare store prices & generate the cheapest shopping list.
-          </p>
-          <div class="d-flex flex-wrap gap-1 my-3">
-            <span class="badge project-badge">Java</span>
-            <span class="badge project-badge">Spring Boot</span>
-            <span class="badge project-badge">MySQL</span>
-            <span class="badge project-badge">React</span>
-            <span class="badge project-badge">Jsoup</span>
-          </div>
-          <!-- Lista med ikoner och text -->
-          <ul class="list-unstyled mb-4">
-            <li class="d-flex align-items-center mb-2">
-              <i class="bx bx-code fs-5 me-2"></i>
-              <small>Convert recipes into ingredient lists</small>
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class='bx bx-layer fs-5 me-2'></i>
-              <small>Scrape store prices and compare</small>
-            </li>
-            <li class="d-flex align-items-center">
-              <i class='bx bx-data fs-5 me-2'></i>
-              <small>Generate cheapest shopping list</small>
-            </li>
-          </ul>
-          <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-            <a href="#" target="_blank" class="btn project-btn"><i class='bx bxl-github fs-6'></i> code</a>
-            <a href="#" class="btn project-btn"><i class='bx bx-link fs-6'></i> Demo
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Projektkort 7 -->
-      <div class="col project-item">
-        <div class="card project-card p-4 text-white h-100" data-aos="fade-up">
-          <!-- Sökikon -->
-          <div class="position-absolute top-0 end-0 p-2">
-            <button class="btn project-btn project-icon-btn" title="More info">
-              <i class='bx bx-search fs-5'></i>
-            </button>
-          </div>
-
-          <img src="images/holder.png" alt="Projektbild" class="img-fluid rounded mb-3">
-          <h3 class="card-title mb-3" style="color: #F6FF4C;">Revu</h3>
-          <p class="card-text mb-1">
-            Revu your movies on this movie review website.
-          </p>
-          <div class="d-flex flex-wrap gap-1 my-3">
-            <span class="badge project-badge">Java</span>
-            <span class="badge project-badge">Spring Boot</span>
-            <span class="badge project-badge">MySQL</span>
-            <span class="badge project-badge">React</span>
-            <span class="badge project-badge">Jsoup</span>
-          </div>
-          <!-- Lista med ikoner och text -->
-          <ul class="list-unstyled mb-4">
-            <li class="d-flex align-items-center mb-2">
-              <i class="bx bx-code fs-5 me-2"></i>
-              <small>Scan Gmail inbox for newsletter senders</small>
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class='bx bx-layer fs-5 me-2'></i>
-              <small>Detect unsubscribe links</small>
-            </li>
-            <li class="d-flex align-items-center">
-              <i class='bx bx-data fs-5 me-2'></i>
-              <small>One-click unsubscribe automation</small>
-            </li>
-          </ul>
-          <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-            <a href="#" target="_blank" class="btn project-btn"><i class='bx bxl-github fs-6'></i> code</a>
-            <a href="#" class="btn project-btn"><i class='bx bx-link fs-6'></i> Demo
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Projektkort 8 -->
-      <div class="col project-item">
-        <div class="card project-card p-4 text-white h-100" data-aos="fade-up">
-          <!-- Sökikon -->
-          <div class="position-absolute top-0 end-0 p-2">
-            <button class="btn project-btn project-icon-btn" title="More info">
-              <i class='bx bx-search fs-5'></i>
-            </button>
-          </div>
-
-          <img src="images/holder.png" alt="Projektbild" class="img-fluid rounded mb-3">
-          <h3 class="card-title mb-3" style="color: #F6FF4C;">EchoType</h3>
-          <p class="card-text mb-1">
-            Audio to text transcriber.
-          </p>
-          <div class="d-flex flex-wrap gap-1 my-3">
-            <span class="badge project-badge">Java</span>
-            <span class="badge project-badge">Spring Boot</span>
-            <span class="badge project-badge">MySQL</span>
-            <span class="badge project-badge">React</span>
-            <span class="badge project-badge">Jsoup</span>
-          </div>
-          <!-- Lista med ikoner och text -->
-          <ul class="list-unstyled mb-4">
-            <li class="d-flex align-items-center mb-2">
-              <i class="bx bx-code fs-5 me-2"></i>
-              <small>Scan Gmail inbox for newsletter senders</small>
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class='bx bx-layer fs-5 me-2'></i>
-              <small>Detect unsubscribe links</small>
-            </li>
-            <li class="d-flex align-items-center">
-              <i class='bx bx-data fs-5 me-2'></i>
-              <small>One-click unsubscribe automation</small>
-            </li>
-          </ul>
-          <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-            <a href="#" target="_blank" class="btn project-btn"><i class='bx bxl-github fs-6'></i> code</a>
-            <a href="#" class="btn project-btn"><i class='bx bx-link fs-6'></i> Demo
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Projektkort 10 -->
-      <div class="col project-item">
-        <div class="card project-card p-4 text-white h-100" data-aos="fade-up">
-          <!-- Sökikon -->
-          <div class="position-absolute top-0 end-0 p-2">
-            <button class="btn project-btn project-icon-btn" title="More info">
-              <i class='bx bx-search fs-5'></i>
-            </button>
-          </div>
-
-          <img src="images/holder.png" alt="Projektbild" class="img-fluid rounded mb-3">
-          <h3 class="card-title mb-3" style="color: #F6FF4C;">Mallsy</h3>
-          <p class="card-text mb-1">
-            eCommerce website.
-          </p>
-          <div class="d-flex flex-wrap gap-1 my-3">
-            <span class="badge project-badge">Java</span>
-            <span class="badge project-badge">Spring Boot</span>
-            <span class="badge project-badge">MySQL</span>
-            <span class="badge project-badge">React</span>
-            <span class="badge project-badge">Jsoup</span>
-          </div>
-          <!-- Lista med ikoner och text -->
-          <ul class="list-unstyled mb-4">
-            <li class="d-flex align-items-center mb-2">
-              <i class="bx bx-code fs-5 me-2"></i>
-              <small>Scan Gmail inbox for newsletter senders</small>
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class='bx bx-layer fs-5 me-2'></i>
-              <small>Detect unsubscribe links</small>
-            </li>
-            <li class="d-flex align-items-center">
-              <i class='bx bx-data fs-5 me-2'></i>
-              <small>One-click unsubscribe automation</small>
-            </li>
-          </ul>
-          <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-            <a href="#" target="_blank" class="btn project-btn"><i class='bx bxl-github fs-6'></i> code</a>
-            <a href="#" class="btn project-btn"><i class='bx bx-link fs-6'></i> Demo
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Projektkort 11 -->
-      <div class="col project-item">
-        <div class="card project-card p-4 text-white h-100" data-aos="fade-up">
-          <!-- Sökikon -->
-          <div class="position-absolute top-0 end-0 p-2">
-            <button class="btn project-btn project-icon-btn" title="More info">
-              <i class='bx bx-search fs-5'></i>
-            </button>
-          </div>
-
-          <img src="images/holder.png" alt="Projektbild" class="img-fluid rounded mb-3">
-          <h3 class="card-title mb-3" style="color: #F6FF4C;">BeautiQ</h3>
-          <p class="card-text mb-1">
-            Salon Booking System.
-          </p>
-          <div class="d-flex flex-wrap gap-1 my-3">
-            <span class="badge project-badge">Java</span>
-            <span class="badge project-badge">Spring Boot</span>
-            <span class="badge project-badge">MySQL</span>
-            <span class="badge project-badge">React</span>
-            <span class="badge project-badge">Jsoup</span>
-          </div>
-          <!-- Lista med ikoner och text -->
-          <ul class="list-unstyled mb-4">
-            <li class="d-flex align-items-center mb-2">
-              <i class="bx bx-code fs-5 me-2"></i>
-              <small>Scan Gmail inbox for newsletter senders</small>
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class='bx bx-layer fs-5 me-2'></i>
-              <small>Detect unsubscribe links</small>
-            </li>
-            <li class="d-flex align-items-center">
-              <i class='bx bx-data fs-5 me-2'></i>
-              <small>One-click unsubscribe automation</small>
-            </li>
-          </ul>
-          <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-            <a href="#" target="_blank" class="btn project-btn"><i class='bx bxl-github fs-6'></i> code</a>
-            <a href="#" class="btn project-btn"><i class='bx bx-link fs-6'></i> Demo
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Projektkort 12 -->
-      <div class="col project-item">
-        <div class="card project-card p-4 text-white h-100" data-aos="fade-up">
-          <!-- Sökikon -->
-          <div class="position-absolute top-0 end-0 p-2">
-            <button class="btn project-btn project-icon-btn" title="More info">
-              <i class='bx bx-search fs-5'></i>
-            </button>
-          </div>
-
-          <img src="images/holder.png" alt="Projektbild" class="img-fluid rounded mb-3">
-          <h3 class="card-title mb-3" style="color: #F6FF4C;">Dishdash</h3>
-          <p class="card-text mb-1">
-            Dash your dish home with this food-ordering website.
-          </p>
-          <div class="d-flex flex-wrap gap-1 my-3">
-            <span class="badge project-badge">Java</span>
-            <span class="badge project-badge">Spring Boot</span>
-            <span class="badge project-badge">MySQL</span>
-            <span class="badge project-badge">React</span>
-            <span class="badge project-badge">Tailwind</span>
-            <span class="badge project-badge">Mui</span>
-            <span class="badge project-badge">Redux</span>
-            <span class="badge project-badge">Axios</span>
-            <span class="badge project-badge">Strip</span>
-          </div>
-          <!-- Lista med ikoner och text -->
-          <ul class="list-unstyled mb-4">
-            <li class="d-flex align-items-center mb-2">
-              <i class="bx bx-code fs-5 me-2"></i>
-              <small>Scan Gmail inbox for newsletter senders</small>
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class='bx bx-layer fs-5 me-2'></i>
-              <small>Detect unsubscribe links</small>
-            </li>
-            <li class="d-flex align-items-center">
-              <i class='bx bx-data fs-5 me-2'></i>
-              <small>One-click unsubscribe automation</small>
-            </li>
-          </ul>
-          <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-            <a href="#" target="_blank" class="btn project-btn"><i class='bx bxl-github fs-6'></i> code</a>
-            <a href="#" class="btn project-btn"><i class='bx bx-link fs-6'></i> Demo
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
       <div class="d-flex justify-content-center mt-4">
-        <button id="loadMoreBtn" class="btn project-btn">Show More <i class="bx bx-chevron-down"></i>
+        <button id="loadMoreBtn" class="btn project-btn">
+          Show More <i class="bx bx-chevron-down"></i>
         </button>
       </div>
-  </section>
+    </section>
 
-
-  <!-- Kontaktsektion -->
-  <section id="contact" class="py-5" data-aos="fade-up">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h3 class="display-5" style="color:#ffffff;" data-i18n="contact.title">Get In Touch</h3>
-        <p class="text-light" data-i18n="contact.paragraph">
-          If you want to know more about me, or just like to say hello, send me a message or contact me through my
-          socials. I'd love to hear from you.
-        </p>
-        <hr class="mx-auto" style="width: 200px; border-top: 3px solid #F6FF4C; opacity: 1;">
-      </div>
-
-      <div class="row">
-        <div class="col-lg-7 mb-4">
-          <h4 class="text-light mb-3">
-            <i class='bx bx-message-square-dots fs-4 text-primary'></i>
-            <span data-i18n="contact.formTitle">Send a Message</span>
-          </h4>
-          <p class="text-secondary" data-i18n="contact.formText">
-            Fill out the form below and I'll get back to you as soon as possible.
+    <!-- Kontaktsektion -->
+    <section id="contact" class="py-5" data-aos="fade-up">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h3
+            class="display-5"
+            style="color: #ffffff"
+            data-i18n="contact.title"
+          >
+            Get In Touch
+          </h3>
+          <p class="text-light" data-i18n="contact.paragraph">
+            If you want to know more about me, or just like to say hello, send
+            me a message or contact me through my socials. I'd love to hear from
+            you.
           </p>
-
-          <!-- Formulär -->
-          <form action="https://formspree.io/f/xwplvlon" method="POST">
-            <div class="mb-3">
-              <label for="contactName" class="form-label text-light" data-i18n="contact.form.name">Name</label>
-              <input type="text" class="form-control bg-dark text-light border-0" id="contactName" name="name"
-                placeholder="Jane Doe">
-            </div>
-            <div class="mb-3">
-              <label for="contactEmail" class="form-label text-light" data-i18n="contact.form.email">Email</label>
-              <input type="email" class="form-control bg-dark text-light border-0" id="contactEmail" name="_replyto"
-                placeholder="janedoe@gmail.com">
-            </div>
-            <div class="mb-3">
-              <label for="contactMessage" class="form-label text-light" data-i18n="contact.form.message">Message</label>
-              <textarea class="form-control bg-dark text-light border-0" id="contactMessage" name="message" rows="5"
-                placeholder="Your message...."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary px-4 py-2">
-              <i class='bx bx-paper-plane me-1'></i>
-              <span data-i18n="contact.form.send">Send Message</span>
-            </button>
-
-          </form>
+          <hr
+            class="mx-auto"
+            style="width: 200px; border-top: 3px solid #f6ff4c; opacity: 1"
+          />
         </div>
 
-        <!-- Kontaktinfo -->
-        <div class="col-lg-5">
-          <div class="card bg-dark text-light mb-4">
-            <div class="card-body">
-              <h5 class="card-title mb-3">
-                <i class='bx bx-envelope'></i>
-                <span data-i18n="contact.info.title">Contact Info</span>
-              </h5>
-              <h6 class="text-light" data-i18n="contact.info.location">Location</h6>
-              <div class="d-flex align-items-center mb-2" style="color: #999;">
-                <i class="bx bx-map fs-5 me-2"></i>
-                <span data-i18n="contact.info.stockholm">Stockholm / SWE</span>
+        <div class="row">
+          <div class="col-lg-7 mb-4">
+            <h4 class="text-light mb-3">
+              <i class="bx bx-message-square-dots fs-4 text-primary"></i>
+              <span data-i18n="contact.formTitle">Send a Message</span>
+            </h4>
+            <p class="text-secondary" data-i18n="contact.formText">
+              Fill out the form below and I'll get back to you as soon as
+              possible.
+            </p>
+
+            <!-- Formulär -->
+            <form action="https://formspree.io/f/xwplvlon" method="POST">
+              <div class="mb-3">
+                <label
+                  for="contactName"
+                  class="form-label text-light"
+                  data-i18n="contact.form.name"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control bg-dark text-light border-0"
+                  id="contactName"
+                  name="name"
+                  placeholder="Jane Doe"
+                />
               </div>
-              <h6 class="text-light mt-3" data-i18n="contact.info.availability">Availability</h6>
-              <div class="d-flex align-items-center" style="color: #999;">
-                <i class="bx bx-calendar fs-5 me-2"></i>
-                <span data-i18n="contact.info.available">Available for internship</span>
+              <div class="mb-3">
+                <label
+                  for="contactEmail"
+                  class="form-label text-light"
+                  data-i18n="contact.form.email"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="form-control bg-dark text-light border-0"
+                  id="contactEmail"
+                  name="_replyto"
+                  placeholder="janedoe@gmail.com"
+                />
               </div>
-            </div>
+              <div class="mb-3">
+                <label
+                  for="contactMessage"
+                  class="form-label text-light"
+                  data-i18n="contact.form.message"
+                  >Message</label
+                >
+                <textarea
+                  class="form-control bg-dark text-light border-0"
+                  id="contactMessage"
+                  name="message"
+                  rows="5"
+                  placeholder="Your message...."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary px-4 py-2">
+                <i class="bx bx-paper-plane me-1"></i>
+                <span data-i18n="contact.form.send">Send Message</span>
+              </button>
+            </form>
           </div>
 
-          <!-- "Connect" -->
-          <div class="card bg-dark text-light">
-            <div class="card-body">
-              <h5 class="card-title mb-3">
-                <i class='bx bx-bell'></i>
-                <span data-i18n="contact.social">Connect Via Socials</span>
-              </h5>
-              <ul class="row row-cols-2 g-3 list-unstyled connect-list">
-                <!-- 1. GitHub -->
-                <li class="col d-flex align-items-center">
-                  <a href="https://github.com/matildaerenius" target="_blank" rel="noopener noreferrer"
-                    aria-label="GitHub" class="contact-icon github-link text-decoration-none">
-                    <i class="bx bxl-github fs-5 me-2"></i>
-                    Github
-                  </a>
-                </li>
-                <!-- 2. LinkedIn -->
-                <li class="col d-flex align-items-center">
-                  <a href="https://linkedin.com/in/matildaerenius" target="_blank" rel="noopener noreferrer"
-                    aria-label="Linkedin" class="contact-icon linkedin-link text-decoration-none">
-                    <i class='bx bxl-linkedin fs-5 me-2'></i>
-                    LinkedIn
-                  </a>
-                </li>
-                <!-- 3. Instagram -->
-                <li class="col d-flex align-items-center">
-                  <a href="https://instagram.com/matildaerenius" target="_blank" rel="noopener noreferrer"
-                    aria-label="Instagram" class="contact-icon instagram-link text-decoration-none">
-                    <i class='bx bxl-instagram fs-5 me-2'></i>
-                    Instagram
-                  </a>
-                </li>
-                <!-- 4. Facebook -->
-                <li class="col d-flex align-items-center">
-                  <a href="https://facebook.com/matildaerenius" target="_blank" rel="noopener noreferrer"
-                    aria-label="Facebook" class="contact-icon facebook-link text-decoration-none">
-                    <i class='bx bxl-facebook-circle fs-5 me-2'></i>
-                    Facebook
-                  </a>
-                </li>
-                <!-- 5. Email -->
-                <li class="col d-flex align-items-center">
-                  <a href="mailto:matildaerenius@hotmail.com" class="contact-icon email-link text-decoration-none">
-                    <i class='bx bxl-gmail fs-5 me-2'></i>
-                    Email
-                  </a>
-                </li>
-                <!-- 6. CV -->
-                <li class="col d-flex align-items-center">
-                  <a href="files/Matilda_Erenius-CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="CV"
-                    class="contact-icon cv-link text-decoration-none">
-                    <i class='bx bx-file fs-5 me-2'></i>
-                    CV
-                  </a>
-                </li>
-              </ul>
+          <!-- Kontaktinfo -->
+          <div class="col-lg-5">
+            <div class="card bg-dark text-light mb-4">
+              <div class="card-body">
+                <h5 class="card-title mb-3">
+                  <i class="bx bx-envelope"></i>
+                  <span data-i18n="contact.info.title">Contact Info</span>
+                </h5>
+                <h6 class="text-light" data-i18n="contact.info.location">
+                  Location
+                </h6>
+                <div class="d-flex align-items-center mb-2" style="color: #999">
+                  <i class="bx bx-map fs-5 me-2"></i>
+                  <span data-i18n="contact.info.stockholm"
+                    >Stockholm / SWE</span
+                  >
+                </div>
+                <h6
+                  class="text-light mt-3"
+                  data-i18n="contact.info.availability"
+                >
+                  Availability
+                </h6>
+                <div class="d-flex align-items-center" style="color: #999">
+                  <i class="bx bx-calendar fs-5 me-2"></i>
+                  <span data-i18n="contact.info.available"
+                    >Available for internship</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- "Connect" -->
+            <div class="card bg-dark text-light">
+              <div class="card-body">
+                <h5 class="card-title mb-3">
+                  <i class="bx bx-bell"></i>
+                  <span data-i18n="contact.social">Connect Via Socials</span>
+                </h5>
+                <ul class="row row-cols-2 g-3 list-unstyled connect-list">
+                  <!-- 1. GitHub -->
+                  <li class="col d-flex align-items-center">
+                    <a
+                      href="https://github.com/matildaerenius"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                      class="contact-icon github-link text-decoration-none"
+                    >
+                      <i class="bx bxl-github fs-5 me-2"></i>
+                      Github
+                    </a>
+                  </li>
+                  <!-- 2. LinkedIn -->
+                  <li class="col d-flex align-items-center">
+                    <a
+                      href="https://linkedin.com/in/matildaerenius"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Linkedin"
+                      class="contact-icon linkedin-link text-decoration-none"
+                    >
+                      <i class="bx bxl-linkedin fs-5 me-2"></i>
+                      LinkedIn
+                    </a>
+                  </li>
+                  <!-- 3. Instagram -->
+                  <li class="col d-flex align-items-center">
+                    <a
+                      href="https://instagram.com/matildaerenius"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram"
+                      class="contact-icon instagram-link text-decoration-none"
+                    >
+                      <i class="bx bxl-instagram fs-5 me-2"></i>
+                      Instagram
+                    </a>
+                  </li>
+                  <!-- 4. Facebook -->
+                  <li class="col d-flex align-items-center">
+                    <a
+                      href="https://facebook.com/matildaerenius"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Facebook"
+                      class="contact-icon facebook-link text-decoration-none"
+                    >
+                      <i class="bx bxl-facebook-circle fs-5 me-2"></i>
+                      Facebook
+                    </a>
+                  </li>
+                  <!-- 5. Email -->
+                  <li class="col d-flex align-items-center">
+                    <a
+                      href="mailto:matildaerenius@hotmail.com"
+                      class="contact-icon email-link text-decoration-none"
+                    >
+                      <i class="bx bxl-gmail fs-5 me-2"></i>
+                      Email
+                    </a>
+                  </li>
+                  <!-- 6. CV -->
+                  <li class="col d-flex align-items-center">
+                    <a
+                      href="files/Matilda_Erenius-CV.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="CV"
+                      class="contact-icon cv-link text-decoration-none"
+                    >
+                      <i class="bx bx-file fs-5 me-2"></i>
+                      CV
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer sektion -->
-  <footer class="footer-custom text-white py-3">
-    <div class="container text-center">
-      <p class="mb-0">&copy;Copyright 2025. Made with love by Matilda Erenius</p>
-    </div>
-  </footer>
+    <!-- Footer sektion -->
+    <footer class="footer-custom text-white py-3">
+      <div class="container text-center">
+        <p class="mb-0">
+          &copy;Copyright 2025. Made with love by Matilda Erenius
+        </p>
+      </div>
+    </footer>
 
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: false
-    });
-  </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: false,
+      });
+    </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -58,6 +58,11 @@ function loadLanguage(lang) {
       window.location.href = 'sthlmExit.html';
     });
 
+    document.getElementById('revuSearchBtn')
+    .addEventListener('click', function() {
+      window.location.href = 'revu.html';
+    });
+
     
     document.addEventListener('DOMContentLoaded', () => {
       const itemsPerBatch = 3;

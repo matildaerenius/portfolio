@@ -1,157 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recipedia</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="projects.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <style>
+      .sidebar {
+        max-width: 300px;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Recipedia</title>
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="projects.css">
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-  <style>
-    .sidebar {
-      max-width: 300px;
-    }
-  </style>
-</head>
+  <body class="bg-custom text-white">
+    <div class="container py-5">
+      <!-- Back button -->
+      <a
+        href="index.html#projects"
+        class="back-btn text-white text-decoration-none mb-4 d-inline-flex align-items-center"
+        aria-label="Back to portfolio"
+      >
+        <i class="bx bx-arrow-back fs-4 me-1"></i> BACK
+      </a>
 
-<body class="bg-custom text-white">
-  <div class="container py-5">
-
-    <!-- Back button -->
-    <a href="index.html#projects" class="back-btn text-white text-decoration-none mb-4 d-inline-flex align-items-center"
-      aria-label="Back to portfolio">
-      <i class='bx bx-arrow-back fs-4 me-1'></i> BACK
-    </a>
-
-
-    <!-- Two-column layout -->
-    <div class="row">
-
-      <!-- Left: Main Content -->
-      <div class="col-12 col-lg-9 col-left">
-        <h1 class="display-4 mb-3">Recipedia</h1>
-        <hr class="section-underline">
-        <p class="date">2000-00-00</p>
-        <p class="lead mb-6" data-aos="fade-left">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem ex eaque aut libero possimus totam quae debitis, neque natus nesciunt perferendis autem facilis vel quis amet fugiat tempore soluta assumenda, dolorum perspiciatis impedit exercitationem incidunt sequi! Voluptatem repudiandae culpa, vitae ipsam omnis laborum, possimus aperiam, labore deleniti in consectetur a?
-        </p>
-
-        <!-- Key Features -->
-        <section id="features" class="mb-6" data-aos="fade-left">
-          <h2 class="h4 mb-3">Key Features</h2>
-          <hr class="section-underline">
-          <div class="row">
-            <div class="col-6 col-lg-4 mb-4 text-center">
-              <i class='bx bx-code fs-2 text-warning mb-2'></i>
-              <p>Create, like & comment on posts</p>
-            </div>
-            <div class="col-6 col-lg-4 mb-4 text-center">
-              <i class='bx bx-message-dots fs-2 text-warning mb-2'></i>
-              <p>Real-time messaging & calls</p>
-            </div>
-            <div class="col-6 col-lg-4 mb-4 text-center">
-              <i class='bx bx-user fs-2 text-warning mb-2'></i>
-              <p>Follow & unfollow users</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Main content sections -->
-        <section id="tech-stack" class="mb-6" data-aos="fade-left">
-          <h2 class="h4 mb-2">Tech Stack</h2>
-          <hr class="section-underline">
-          <ul class="row list-unstyled">
-            <li class="col-6">Java</li>
-            <li class="col-6">Spring Boot</li>
-            <li class="col-6">MySQL</li>
-            <li class="col-6">React</li>
-            <li class="col-6">Tailwind</li>
-            <li class="col-6">Redux</li>
-            <li class="col-6">MUI</li>
-            <li class="col-6">Axios</li>
-            <li class="col-6">Formik</li>
-            <li class="col-6">Yup</li>
-          </ul>
-        </section>
-        <section id="purpose" class="mb-6" data-aos="fade-left">
-          <h2 class="h4 mb-2">Why I built Recipedia</h2>
-          <hr class="section-underline">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem molestias vitae facere ad, harum laboriosam, nostrum sit quod voluptatum at asperiores perferendis, quibusdam rem corporis! Necessitatibus maiores vero ab reprehenderit odio illo quidem quia aliquam ex corporis exercitationem, ad assumenda eos sequi voluptatibus nisi deleniti veritatis molestiae explicabo blanditiis tempora?</p>
-        </section>
-        <section id="process" class="mb-6" data-aos="fade-left">
-          <h2 class="h4 mb-2">The process</h2>
-          <hr class="section-underline">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit facilis maxime inventore possimus explicabo vero, pariatur praesentium eos in amet doloremque consectetur asperiores ex aliquam deleniti voluptatibus dicta minus dolorem excepturi minima, illo doloribus officia. Minus fugit maiores natus error perferendis cupiditate consectetur dicta recusandae incidunt velit rem, minima eveniet?</p>
-        </section>
-        <section id="problems" class="mb-6" data-aos="fade-left">
-          <h2 class="h4 mb-2">Problems</h2>
-          <hr class="section-underline">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium architecto optio ullam corporis tenetur molestias eligendi, libero culpa eos totam beatae quisquam ut illum dolorem? Eveniet nesciunt ducimus consequuntur! Recusandae velit magni architecto neque officia animi illo doloremque, ex omnis distinctio autem facere veritatis porro quod modi enim at iure!
+      <!-- Two-column layout -->
+      <div class="row">
+        <!-- Left: Main Content -->
+        <div class="col-12 col-lg-9 col-left">
+          <h1 class="display-4 mb-3">Recipedia</h1>
+          <hr class="section-underline" />
+          <p class="date">2000-00-00</p>
+          <p class="lead mb-6" data-aos="fade-left">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem ex
+            eaque aut libero possimus totam quae debitis, neque natus nesciunt
+            perferendis autem facilis vel quis amet fugiat tempore soluta
+            assumenda, dolorum perspiciatis impedit exercitationem incidunt
+            sequi! Voluptatem repudiandae culpa, vitae ipsam omnis laborum,
+            possimus aperiam, labore deleniti in consectetur a?
           </p>
-        </section>
-        <section id="lessons" class="mb-6" data-aos="fade-left">
-          <h2 class="h4 mb-2">Lessons learned</h2>
-          <hr class="section-underline">
-          <ul class="list-unstyled">
-            <li><strong>Plan before you code:</strong> Sketching endpoints och data models on paper
-              saved me hours later.</li> <br>
-            <li><strong>Branch often:</strong> Isolating each feature in its own Git branch keeps merges
-              predictable and rollbacks painless.</li> <br>
-            <li><strong>Docs are your best friend:</strong> I now start every new feature by reading the official guide
-              (whether it’s Spring Boot’s auto-configuration docs or MUI’s theming examples), rather than hunting for
-              random blog posts.</li> <br>
-            <li><strong>Turn bugs into lessons:</strong> Every typo, missing import, or broken build became a
-              little lesson in patience and persistence, and now I view logs and stack traces not as annoyances but as
-              roadmaps to the solution.</li>
-          </ul>
-        </section>
-      </div>
 
-      <!-- Right: Sidebar -->
-      <div class="col-12 col-lg-3 col-right sidebar-container">
-        <div class="sidebar sticky-top" style="top: 100px;">
+          <!-- Key Features -->
+          <section id="features" class="mb-6" data-aos="fade-left">
+            <h2 class="h4 mb-3">Key Features</h2>
+            <hr class="section-underline" />
+            <div class="row">
+              <div class="col-6 col-lg-4 mb-4 text-center">
+                <i class="bx bx-code fs-2 text-warning mb-2"></i>
+                <p>Create, like & comment on posts</p>
+              </div>
+              <div class="col-6 col-lg-4 mb-4 text-center">
+                <i class="bx bx-message-dots fs-2 text-warning mb-2"></i>
+                <p>Real-time messaging & calls</p>
+              </div>
+              <div class="col-6 col-lg-4 mb-4 text-center">
+                <i class="bx bx-user fs-2 text-warning mb-2"></i>
+                <p>Follow & unfollow users</p>
+              </div>
+            </div>
+          </section>
 
-          <div class="mb-4">
-            <h3 class="h5">GitHub</h3>
-            <p><a href="#" target="_blank" rel="noopener noreferrer"
-                class="text-decoration-none text-warning">Repository →</a></p>
+          <!-- Main content sections -->
+          <section id="tech-stack" class="mb-6" data-aos="fade-left">
+            <h2 class="h4 mb-2">Tech Stack</h2>
+            <hr class="section-underline" />
+            <ul class="row list-unstyled">
+              <li class="col-6">Java</li>
+              <li class="col-6">Spring Boot</li>
+              <li class="col-6">MySQL</li>
+              <li class="col-6">React</li>
+              <li class="col-6">Tailwind</li>
+              <li class="col-6">Redux</li>
+              <li class="col-6">MUI</li>
+              <li class="col-6">Axios</li>
+              <li class="col-6">Formik</li>
+              <li class="col-6">Yup</li>
+            </ul>
+          </section>
+          <section id="purpose" class="mb-6" data-aos="fade-left">
+            <h2 class="h4 mb-2">Why I built Recipedia</h2>
+            <hr class="section-underline" />
+            <p>
+              Recipedia was mainly a way for me to sharpen my tech skills and
+              build something practical. I mean, who hasn't stood in the kitchen
+              with no idea what to cook for dinner? When I started thinking
+              about a new project, I wanted it to make my everyday life a bit
+              easier. I came across a YouTube video where a group had built
+              something similar at a hackathon, and I was inspired to create my
+              own version. I wanted to build an application that knows what I
+              already have in my kitchen and suggests recipes based on exactly
+              that. I also wanted it to recommend recipes where I'm just missing
+              a few ingredients, so that grocery shopping wouldn't break the
+              bank, especially in times like these.
+            </p>
+          </section>
+          <section id="process" class="mb-6" data-aos="fade-left">
+            <h2 class="h4 mb-2">The process</h2>
+            <hr class="section-underline" />
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit
+              facilis maxime inventore possimus explicabo vero, pariatur
+              praesentium eos in amet doloremque consectetur asperiores ex
+              aliquam deleniti voluptatibus dicta minus dolorem excepturi
+              minima, illo doloribus officia. Minus fugit maiores natus error
+              perferendis cupiditate consectetur dicta recusandae incidunt velit
+              rem, minima eveniet?
+            </p>
+          </section>
+          <section id="problems" class="mb-6" data-aos="fade-left">
+            <h2 class="h4 mb-2">Problems</h2>
+            <hr class="section-underline" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium architecto optio ullam corporis tenetur molestias
+              eligendi, libero culpa eos totam beatae quisquam ut illum dolorem?
+              Eveniet nesciunt ducimus consequuntur! Recusandae velit magni
+              architecto neque officia animi illo doloremque, ex omnis
+              distinctio autem facere veritatis porro quod modi enim at iure!
+            </p>
+          </section>
+          <section id="lessons" class="mb-6" data-aos="fade-left">
+            <h2 class="h4 mb-2">Lessons learned</h2>
+            <hr class="section-underline" />
+            <ul class="list-unstyled">
+              <li>
+                <strong>Plan before you code:</strong> Sketching endpoints och
+                data models on paper saved me hours later.
+              </li>
+              <br />
+              <li>
+                <strong>Branch often:</strong> Isolating each feature in its own
+                Git branch keeps merges predictable and rollbacks painless.
+              </li>
+              <br />
+              <li>
+                <strong>Docs are your best friend:</strong> I now start every
+                new feature by reading the official guide (whether it’s Spring
+                Boot’s auto-configuration docs or MUI’s theming examples),
+                rather than hunting for random blog posts.
+              </li>
+              <br />
+              <li>
+                <strong>Turn bugs into lessons:</strong> Every typo, missing
+                import, or broken build became a little lesson in patience and
+                persistence, and now I view logs and stack traces not as
+                annoyances but as roadmaps to the solution.
+              </li>
+            </ul>
+          </section>
+          <!-- Project navigation buttons -->
+          <div class="d-flex justify-content-between mt-5 align-items-start text-white">
+            <!-- Previous block -->
+            <div class="d-flex flex-column align-items-start">
+              <small class="text-muted mb-1">Previous</small>
+              <span class="fw-bold mb-2" style="color: #f6ff4c;">Buzz</span>
+              <a
+                href="buzz.html"
+                class="back-btn text-white text-decoration-none d-inline-flex align-items-center"
+              >
+                <i class="bx bx-arrow-back fs-4 me-1"></i> Previous
+              </a>
+            </div>
+          
+            <!-- Next block -->
+            <div class="d-flex flex-column align-items-end text-end">
+              <small class="text-muted mb-1">Next</small>
+              <span class="fw-bold mb-2" style="color: #f6ff4c;">SthlmExit</span>
+              <a
+                href="sthlmexit.html"
+                class="back-btn text-white text-decoration-none d-inline-flex align-items-center"
+              >
+                Next <i class="bx bx-arrow-back fs-4 ms-1" style="transform: rotate(180deg);"></i>
+              </a>
+            </div>
           </div>
-          <div class="mb-4">
-            <h3 class="h5">Demo</h3>
-            <p><a href="#" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-warning">View site
-                →</a></p>
-          </div>
-          <div class="mb-4">
-            <h3 class="h5">Video</h3>
-            <p><a href="#" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-warning">Watch
-                demo →</a></p>
-          </div>
-          <div>
-            <h3 class="h5">Details</h3>
-            <p><a href="https://github.com/matildaerenius/buzz/blob/main/README.md" target="_blank"
-                rel="noopener noreferrer" class="text-decoration-none text-warning">Read Me →</a></p>
+          
+        </div>
+
+        <!-- Right: Sidebar -->
+        <div class="col-12 col-lg-3 col-right sidebar-container">
+          <div class="sidebar sticky-top" style="top: 100px">
+            <div class="mb-4">
+              <h3 class="h5">GitHub</h3>
+              <p>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-decoration-none text-warning"
+                  >Repository →</a
+                >
+              </p>
+            </div>
+            <div class="mb-4">
+              <h3 class="h5">Demo</h3>
+              <p>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-decoration-none text-warning"
+                  >View site →</a
+                >
+              </p>
+            </div>
+            <div class="mb-4">
+              <h3 class="h5">Video</h3>
+              <p>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-decoration-none text-warning"
+                  >Watch demo →</a
+                >
+              </p>
+            </div>
+            <div>
+              <h3 class="h5">Details</h3>
+              <p>
+                <a
+                  href="https://github.com/matildaerenius/buzz/blob/main/README.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-decoration-none text-warning"
+                  >Read Me →</a
+                >
+              </p>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
-  </div>
 
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: false
-    });
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: false,
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
