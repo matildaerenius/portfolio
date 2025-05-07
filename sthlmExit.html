@@ -62,16 +62,16 @@
             <hr class="section-underline" />
             <div class="row">
               <div class="col-6 col-lg-4 mb-4 text-center">
-                <i class="bx bx-code fs-2 text-warning mb-2"></i>
-                <p>Create, like & comment on posts</p>
+                <i class="bx bx-train  fs-2 text-warning mb-2"></i>
+                <p>Optimized seat recommendation</p>
               </div>
               <div class="col-6 col-lg-4 mb-4 text-center">
-                <i class="bx bx-message-dots fs-2 text-warning mb-2"></i>
-                <p>Real-time messaging & calls</p>
+                <i class="bx bx-map  fs-2 text-warning mb-2"></i>
+                <p>Station data powered by SL's public API</p>
               </div>
               <div class="col-6 col-lg-4 mb-4 text-center">
-                <i class="bx bx-user fs-2 text-warning mb-2"></i>
-                <p>Follow & unfollow users</p>
+                <i class="bx bx-shuffle fs-2 text-warning mb-2"></i>
+                <p>Simplified UI</p>
               </div>
             </div>
           </section>
@@ -93,41 +93,45 @@
             <h2 class="h4 mb-2">Why I built SthlmExit</h2>
             <hr class="section-underline" />
             <p>
-              SthlmExit was the first project idea I wanted to try and build,
-              but it sat on the shelf for a while before I finally gave it a
-              try. From the very start, I knew it would be a challenge because
-              of the complex logic involved. SL used to offer this feature years
-              ago, and I've missed it ever since. So I figured I'd solve the
-              problem myself, focusing on the backend while keeping the frontend
-              intentionally simple.
+              SthlmExit was actually the first idea I ever had for a project -
+              but like most “one day I’ll build this” ideas, it gathered a bit
+              of digital dust before I finally gave it a shot. The idea came
+              from pure frustration: SL used to show which subway door would put
+              you closest to the exit, and then... they just stopped. I missed
+              it every time I found myself sprinting down a platform. So, I
+              thought - why not build it myself? I knew the logic would be
+              complex, but I was also ready to challenge myself. The frontend? I
+              kept it super simple on purpose. This one was all about the logic
+              puzzle.
             </p>
           </section>
           <section id="process" class="mb-6" data-aos="fade-left">
             <h2 class="h4 mb-2">The process</h2>
             <hr class="section-underline" />
             <p>
-              I figure planning was the key to success, so I did very much
-              research before jumping in coding. I created a backlog, which API
-              that i could (for free) use facilis maxime inventore possimus
-              explicabo vero, pariatur praesentium eos in amet doloremque
-              consectetur asperiores ex aliquam deleniti voluptatibus dicta
-              minus dolorem excepturi minima, illo doloribus officia. Minus
-              fugit maiores natus error perferendis cupiditate consectetur dicta
-              recusandae incidunt velit rem, minima eveniet?
+              Before writing a single line of code, I went full detective mode.
+              I researched station layouts, tried different APIs, and even
+              watched YouTube ride-alongs on the Stockholm subway. I built a
+              small backlog to organize my chaos—things like “get station
+              metadata,” “match platform exits,” “optimize seat recommendation.”
+              I tackled one piece at a time, using Git branches like
+              mini-chapters in my story. Backend first, then a functional
+              frontend just to let the user see the magic happen.
             </p>
           </section>
           <section id="problems" class="mb-6" data-aos="fade-left">
             <h2 class="h4 mb-2">Problems</h2>
             <hr class="section-underline" />
             <p>
-              Where do I even begin? I never imagined the headaches this would
-              cause me, but what a lesson it turned out to be. Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Laudantium architecto optio
-              ullam corporis tenetur molestias eligendi, libero culpa eos totam
-              beatae quisquam ut illum dolorem? Eveniet nesciunt ducimus
-              consequuntur! Recusandae velit magni architecto neque officia
-              animi illo doloremque, ex omnis distinctio autem facere veritatis
-              porro quod modi enim at iure!
+              Where do I even begin? Building a personal train-exit assistant
+              is... not as easy as it sounds😅 What started as “just a clever
+              little feature” quickly snowballed into mapping coordinates,
+              dealing with inconsistent data, and questioning my life choices at
+              1AM because my API returned null - for no reason. Also: SL’s data
+              isn’t exactly plug-and-play, so I had to get creative more than
+              once. But in the end, every bug, every weird error, every stack
+              trace that made me sigh turned into a puzzle I was weirdly proud
+              to solve.
             </p>
           </section>
           <section id="lessons" class="mb-6" data-aos="fade-left">
@@ -135,36 +139,36 @@
             <hr class="section-underline" />
             <ul class="list-unstyled">
               <li>
-                <strong>Plan before you code:</strong> Sketching endpoints och
-                data models on paper saved me hours later.
+                <strong>Start small, dream big:</strong> This project reminded
+                me that even simple ideas can have complex under-the-hood logic.
+                Breaking things down into manageable steps saved me from getting
+                overwhelmed early on.
               </li>
               <br />
               <li>
-                <strong>Branch often:</strong> Isolating each feature in its own
-                Git branch keeps merges predictable and rollbacks painless.
+                <strong>APIs are not magic spells:</strong> Just because an API
+                exists doesn’t mean it gives you what you want, how you want it.
+                I learned to read the docs, test responses early, and always
+                have a plan B (and sometimes a C).
               </li>
               <br />
               <li>
-                <strong>Docs are your best friend:</strong> I now start every
-                new feature by reading the official guide (whether it’s Spring
-                Boot’s auto-configuration docs or MUI’s theming examples),
-                rather than hunting for random blog posts.
+                <strong>Frustration = growth:</strong> Every time I got stuck,
+                Googled wildly, and stared at the screen like it betrayed me - I
+                learned something new. Turns out debugging messy transit data at
+                1AM teaches you patience and problem-solving, who knew?.
               </li>
-              <br />
-              <li>
-                <strong>Turn bugs into lessons:</strong> Every typo, missing
-                import, or broken build became a little lesson in patience and
-                persistence, and now I view logs and stack traces not as
-                annoyances but as roadmaps to the solution.
-              </li>
+              <br />  
             </ul>
           </section>
           <!-- Project navigation buttons -->
-          <div class="d-flex justify-content-between mt-5 align-items-start text-white">
+          <div
+            class="d-flex justify-content-between mt-5 align-items-start text-white"
+          >
             <!-- Previous block -->
             <div class="d-flex flex-column align-items-start">
               <small class="text-muted mb-1">Previous</small>
-              <span class="fw-bold mb-2" style="color: #f6ff4c;">Recipedia</span>
+              <span class="fw-bold mb-2" style="color: #f6ff4c">Recipedia</span>
               <a
                 href="recipedia.html"
                 class="back-btn text-white text-decoration-none d-inline-flex align-items-center"
@@ -172,20 +176,23 @@
                 <i class="bx bx-arrow-back fs-4 me-1"></i> Previous
               </a>
             </div>
-          
+
             <!-- Next block -->
             <div class="d-flex flex-column align-items-end text-end">
               <small class="text-muted mb-1">Next</small>
-              <span class="fw-bold mb-2" style="color: #f6ff4c;">EchoType</span>
+              <span class="fw-bold mb-2" style="color: #f6ff4c">EchoType</span>
               <a
                 href="echotype.html"
                 class="back-btn text-white text-decoration-none d-inline-flex align-items-center"
               >
-                Next <i class="bx bx-arrow-back fs-4 ms-1" style="transform: rotate(180deg);"></i>
+                Next
+                <i
+                  class="bx bx-arrow-back fs-4 ms-1"
+                  style="transform: rotate(180deg)"
+                ></i>
               </a>
             </div>
           </div>
-          
         </div>
 
         <!-- Right: Sidebar -->

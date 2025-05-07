@@ -62,16 +62,16 @@
             <hr class="section-underline" />
             <div class="row">
               <div class="col-6 col-lg-4 mb-4 text-center">
-                <i class="bx bx-code fs-2 text-warning mb-2"></i>
-                <p>Create, like & comment on posts</p>
+                <i class="bx bx-basket fs-2 text-warning mb-2"></i>
+                <p>Add & remove ingredients in categories</p>
               </div>
               <div class="col-6 col-lg-4 mb-4 text-center">
-                <i class="bx bx-message-dots fs-2 text-warning mb-2"></i>
-                <p>Real-time messaging & calls</p>
+                <i class="bx bx-restaurant  fs-2 text-warning mb-2"></i>
+                <p>Recommend recipes via API</p>
               </div>
               <div class="col-6 col-lg-4 mb-4 text-center">
-                <i class="bx bx-user fs-2 text-warning mb-2"></i>
-                <p>Follow & unfollow users</p>
+                <i class="bx bx-heart fs-2 text-warning mb-2"></i>
+                <p>Save ingredients in user profile</p>
               </div>
             </div>
           </section>
@@ -97,42 +97,61 @@
             <h2 class="h4 mb-2">Why I built Recipedia</h2>
             <hr class="section-underline" />
             <p>
-              Recipedia was mainly a way for me to sharpen my tech skills and
-              build something practical. I mean, who hasn't stood in the kitchen
-              with no idea what to cook for dinner? When I started thinking
-              about a new project, I wanted it to make my everyday life a bit
-              easier. I came across a YouTube video where a group had built
-              something similar at a hackathon, and I was inspired to create my
-              own version. I wanted to build an application that knows what I
-              already have in my kitchen and suggests recipes based on exactly
-              that. I also wanted it to recommend recipes where I'm just missing
-              a few ingredients, so that grocery shopping wouldn't break the
-              bank, especially in times like these.
+              Recipedia started with a very real-life problem: me, standing in
+              front of the fridge, holding a half-used zucchini and wondering
+              what on earth I could make for dinner. I figured, "Why not build
+              an application that helps me figure that out?" The idea was
+              simple: track what ingredients I already have at home and suggest
+              recipes based on that. No more endless Googling or throwing out
+              forgotten leftovers.
+              <br />
+              <br />
+              I wanted it to feel like a smart little kitchen buddy - one that
+              not only finds matching recipes but also shows what I’m almost
+              able to cook, so I’d only need to buy one or two things, not a
+              full cart of groceries. I was also inspired by a hackathon video I
+              stumbled across where a team had built something similar. That
+              gave me the nudge to try building my own version from scratch,
+              using the tech stack I’d been practicing. It turned into a really
+              fun (and delicious) way to level up my coding skills while solving
+              a real problem I face pretty much every evening.
             </p>
           </section>
           <section id="process" class="mb-6" data-aos="fade-left">
             <h2 class="h4 mb-2">The process</h2>
             <hr class="section-underline" />
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit
-              facilis maxime inventore possimus explicabo vero, pariatur
-              praesentium eos in amet doloremque consectetur asperiores ex
-              aliquam deleniti voluptatibus dicta minus dolorem excepturi
-              minima, illo doloribus officia. Minus fugit maiores natus error
-              perferendis cupiditate consectetur dicta recusandae incidunt velit
-              rem, minima eveniet?
+              I kicked things off by setting up a basic Spring Boot
+              backend—nothing fancy, just some classic REST endpoints and a
+              MySQL database to hold my kitchen “inventory.” I wanted the user
+              to be able to add and remove ingredients easily, so I kept the
+              backend clean and straightforward. Once that was rolling, I jumped
+              into the frontend with React and built a minimal UI where users
+              could check off ingredients they had. I hooked it up to a recipe
+              API that returned suggestions based on those inputs. The goal was
+              to keep it fast, clean, and actually useful. I didn’t want bells
+              and whistles—just a solid helper app that could answer “What’s for
+              dinner?” To top it off, I added login functionality so users could
+              save their ingredient lists. Because let’s face it, no one wants
+              to re-enter “pasta, ketchup, and cheese” every single time.
             </p>
           </section>
           <section id="problems" class="mb-6" data-aos="fade-left">
             <h2 class="h4 mb-2">Problems</h2>
             <hr class="section-underline" />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium architecto optio ullam corporis tenetur molestias
-              eligendi, libero culpa eos totam beatae quisquam ut illum dolorem?
-              Eveniet nesciunt ducimus consequuntur! Recusandae velit magni
-              architecto neque officia animi illo doloremque, ex omnis
-              distinctio autem facere veritatis porro quod modi enim at iure!
+              First off: recipe APIs are picky. Some had limits, some wanted
+              money, and some returned... weird suggestions (like “tuna
+              smoothie,” no thanks). Also, getting the matching logic right was
+              trickier than expected. At one point, it kept recommending recipes
+              that needed one ingredient I definitely didn’t have: “anchovies.”
+              I don’t even like anchovies. Frontend state management also caused
+              some chaos. I’d forget to update the UI when ingredients were
+              removed, so it kept suggesting recipes for stuff that no longer
+              existed in my fridge. Classic. But every bug, API hiccup, or
+              design decision taught me something—from better error handling to
+              making smarter queries, to appreciating how real apps think like
+              real users (even if they don’t like anchovies either).
             </p>
           </section>
           <section id="lessons" class="mb-6" data-aos="fade-left">
@@ -140,36 +159,37 @@
             <hr class="section-underline" />
             <ul class="list-unstyled">
               <li>
-                <strong>Plan before you code:</strong> Sketching endpoints och
-                data models on paper saved me hours later.
+                <strong>Start small, then spice it up:</strong> Trying to build
+                everything at once is like throwing all your spices into a pot
+                and hoping for the best. Starting with basic CRUD and gradually
+                layering in features made everything easier to manage (and
+                actually work).
               </li>
               <br />
               <li>
-                <strong>Branch often:</strong> Isolating each feature in its own
-                Git branch keeps merges predictable and rollbacks painless.
+                <strong>APIs are not always your friend:</strong> Some APIs play
+                nice. Others ghost you, rate-limit you, or send you recipe
+                suggestions that make you question humanity. Always read the
+                fine print and test thoroughly.
               </li>
               <br />
               <li>
-                <strong>Docs are your best friend:</strong> I now start every
-                new feature by reading the official guide (whether it’s Spring
-                Boot’s auto-configuration docs or MUI’s theming examples),
-                rather than hunting for random blog posts.
+                <strong>UX matters, even for dinner apps:</strong> Just because
+                it’s a utility doesn’t mean it has to look boring. Making the UI
+                simple, responsive, and nice to use actually made me more
+                motivated to keep improving the project.
               </li>
               <br />
-              <li>
-                <strong>Turn bugs into lessons:</strong> Every typo, missing
-                import, or broken build became a little lesson in patience and
-                persistence, and now I view logs and stack traces not as
-                annoyances but as roadmaps to the solution.
-              </li>
             </ul>
           </section>
           <!-- Project navigation buttons -->
-          <div class="d-flex justify-content-between mt-5 align-items-start text-white">
+          <div
+            class="d-flex justify-content-between mt-5 align-items-start text-white"
+          >
             <!-- Previous block -->
             <div class="d-flex flex-column align-items-start">
               <small class="text-muted mb-1">Previous</small>
-              <span class="fw-bold mb-2" style="color: #f6ff4c;">Buzz</span>
+              <span class="fw-bold mb-2" style="color: #f6ff4c">Buzz</span>
               <a
                 href="buzz.html"
                 class="back-btn text-white text-decoration-none d-inline-flex align-items-center"
@@ -177,20 +197,23 @@
                 <i class="bx bx-arrow-back fs-4 me-1"></i> Previous
               </a>
             </div>
-          
+
             <!-- Next block -->
             <div class="d-flex flex-column align-items-end text-end">
               <small class="text-muted mb-1">Next</small>
-              <span class="fw-bold mb-2" style="color: #f6ff4c;">SthlmExit</span>
+              <span class="fw-bold mb-2" style="color: #f6ff4c">SthlmExit</span>
               <a
                 href="sthlmExit.html"
                 class="back-btn text-white text-decoration-none d-inline-flex align-items-center"
               >
-                Next <i class="bx bx-arrow-back fs-4 ms-1" style="transform: rotate(180deg);"></i>
+                Next
+                <i
+                  class="bx bx-arrow-back fs-4 ms-1"
+                  style="transform: rotate(180deg)"
+                ></i>
               </a>
             </div>
           </div>
-          
         </div>
 
         <!-- Right: Sidebar -->
@@ -208,7 +231,7 @@
                 >
               </p>
             </div>
-           
+
             <div class="mb-4">
               <h3 class="h5">Video</h3>
               <p>

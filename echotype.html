@@ -46,14 +46,11 @@
         <div class="col-12 col-lg-9 col-left">
           <h1 class="display-4 mb-3">EchoType</h1>
           <hr class="section-underline" />
-          <p class="date">2025-05-10</p>
+          <p class="date">2025-05-07</p>
           <p class="lead mb-6" data-aos="fade-left">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem ex
-            eaque aut libero possimus totam quae debitis, neque natus nesciunt
-            perferendis autem facilis vel quis amet fugiat tempore soluta
-            assumenda, dolorum perspiciatis impedit exercitationem incidunt
-            sequi! Voluptatem repudiandae culpa, vitae ipsam omnis laborum,
-            possimus aperiam, labore deleniti in consectetur a?
+            EchoType is a minimal audio-to-text tool using Spring Boot, React,
+            and OpenAI's Whisper model. Upload a file and get instant
+            transcription, simple, clean, and effective.
           </p>
 
           <!-- Key Features -->
@@ -62,16 +59,16 @@
             <hr class="section-underline" />
             <div class="row">
               <div class="col-6 col-lg-4 mb-4 text-center">
-                <i class="bx bx-code fs-2 text-warning mb-2"></i>
-                <p>Create, like & comment on posts</p>
+                <i class="bx bx-upload fs-2 text-warning mb-2"></i>
+                <p>Upload audio files in seconds</p>
               </div>
               <div class="col-6 col-lg-4 mb-4 text-center">
-                <i class="bx bx-message-dots fs-2 text-warning mb-2"></i>
-                <p>Real-time messaging & calls</p>
+                <i class="bx bx-microphone fs-2 text-warning mb-2"></i>
+                <p>Transcribe using OpenAI Whisper</p>
               </div>
               <div class="col-6 col-lg-4 mb-4 text-center">
-                <i class="bx bx-user fs-2 text-warning mb-2"></i>
-                <p>Follow & unfollow users</p>
+                <i class="bx bx-desktop fs-2 text-warning mb-2"></i>
+                <p>Clean and responsive UI</p>
               </div>
             </div>
           </section>
@@ -94,38 +91,38 @@
             <h2 class="h4 mb-2">Why I built EchoType</h2>
             <hr class="section-underline" />
             <p>
-              EchoType was one of those quick weekend projects I threw myself
-              into between school courses. I wanted to play around with OpenAI
-              and was curious about how speech-to-text actually works. The goal
-              was to build something quite simple, just for fun and to learn
-              something new. Since the API isn't free and I'm living off student
-              loans (hehe), I knew this would be a one-time project purely for
-              learning and showcasing purposes.
+              EchoType started as a classic "what if I just..." kind of weekend
+              idea. I had a break between courses, was curious about OpenAI's
+              Whisper model, and thought, why not build something that turns
+              audio into text? It wasn’t meant to be fancy, just a fun little
+              experiment to learn something new. Since API credits don’t grow on
+              trees (and neither does CSN), I knew this would be a one-time
+              build. A quick project, just for me, and now, for my portfolio.
             </p>
           </section>
           <section id="process" class="mb-6" data-aos="fade-left">
             <h2 class="h4 mb-2">The process</h2>
             <hr class="section-underline" />
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit
-              facilis maxime inventore possimus explicabo vero, pariatur
-              praesentium eos in amet doloremque consectetur asperiores ex
-              aliquam deleniti voluptatibus dicta minus dolorem excepturi
-              minima, illo doloribus officia. Minus fugit maiores natus error
-              perferendis cupiditate consectetur dicta recusandae incidunt velit
-              rem, minima eveniet?
+              First things first: get Spring Boot talking to OpenAI. It took a
+              few cups of coffee and a mild dependency meltdown, but I
+              eventually got Whisper working locally. After that, I spun up a
+              React app with Vite (because fast builds = happy dev). The goal
+              was simple: one page, upload your file, and boom - transcription.
+              I kept the design super clean to make sure the feature stood out,
+              not the fluff.
             </p>
           </section>
           <section id="problems" class="mb-6" data-aos="fade-left">
             <h2 class="h4 mb-2">Problems</h2>
             <hr class="section-underline" />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium architecto optio ullam corporis tenetur molestias
-              eligendi, libero culpa eos totam beatae quisquam ut illum dolorem?
-              Eveniet nesciunt ducimus consequuntur! Recusandae velit magni
-              architecto neque officia animi illo doloremque, ex omnis
-              distinctio autem facere veritatis porro quod modi enim at iure!
+              Oh, the version drama. I picked Spring AI M2 thinking it would be
+              smooth sailing, but my dependencies clearly had other plans—they
+              wanted to live in the future. That meant cryptic errors, renamed
+              methods, and a bit of confused staring at the screen. Then came
+              the classic “CORS says no” moment when trying to connect frontend
+              to backend. But hey, nothing a custom config can’t fix. In short: a lot of small bumps, but every one was a lesson in disguise.
             </p>
           </section>
           <section id="lessons" class="mb-6" data-aos="fade-left">
@@ -133,27 +130,21 @@
             <hr class="section-underline" />
             <ul class="list-unstyled">
               <li>
-                <strong>Plan before you code:</strong> Sketching endpoints och
-                data models on paper saved me hours later.
+                <strong>Versions matter:</strong> Turns out not all Spring AI
+                work with all versions. Spent an hour wondering why nothing
+                worked... until I checked the docs. Oops.
               </li>
               <br />
               <li>
-                <strong>Branch often:</strong> Isolating each feature in its own
-                Git branch keeps merges predictable and rollbacks painless.
+                <strong>Keep it simple:</strong> A clean UI doesn't just look
+                nice, it helps people *actually* use your app. Bonus: less
+                CSS-induced headaches.
               </li>
               <br />
               <li>
-                <strong>Docs are your best friend:</strong> I now start every
-                new feature by reading the official guide (whether it’s Spring
-                Boot’s auto-configuration docs or MUI’s theming examples),
-                rather than hunting for random blog posts.
-              </li>
-              <br />
-              <li>
-                <strong>Turn bugs into lessons:</strong> Every typo, missing
-                import, or broken build became a little lesson in patience and
-                persistence, and now I view logs and stack traces not as
-                annoyances but as roadmaps to the solution.
+                <strong>Docs are once again your best friend:</strong> I used to avoid
+                documentation like a salad at a pizza buffet. Now? It's the
+                first place I go when things break, which is often.
               </li>
             </ul>
           </section>

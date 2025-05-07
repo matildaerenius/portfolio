@@ -95,16 +95,15 @@
             <h2 class="h4 mb-2">Why I built Buzz</h2>
             <hr class="section-underline" />
             <p>
-              Buzz was my very first solo fullstack project with Spring Boot and
-              React during my first year of my Java Developer studies. I decided
-              to build a social media website because it felt like a reasonable,
-              fairly basic challenge I was confident I could manage, even though
-              i wasn't familiar with React at all. I choose it because it was
-              something I wanted to try for a while. I kind of threw myself into
-              the full-stack world just to get a feel for everything, building
-              REST endpoints, styling React components with MUI, the whole
-              package. I didn't set any deadline or anything, it was just about
-              learning and getting some experience along the way.
+              Buzz started as a “what's the hardest thing I can build without
+              losing my mind?” kind of challenge. I was just getting into
+              fullstack development during my first year of my Java Developer
+              studies and figured: Why not try making a social media platform?
+              I'd never touched React before, but I went for it anyway. No
+              deadlines, no pressure - just me, IntellJ, VS Code, and a long
+              list of features I Googled one by one. I wanted to experience
+              everything: building REST APIs, handling auth, styling with MUI,
+              and breaking things just to fix them again.
             </p>
           </section>
           <section id="process" class="mb-6" data-aos="fade-left">
@@ -113,36 +112,31 @@
             <p>
               Since this was my first Spring Boot/React project, getting the
               basic structure up and running took a bit of trial and error. I
-              kicked things off on the backend by sketching out a to-do
-              list—tasks like “initial REST API,” “database integration,” “MySQL
-              CRUD operations,” and so on. For varje item, I spun up a dedicated
-              Git branch, knocked it out, then merged back into
-              <code>main</code> once everything was working. This kept my flow
-              tidy and helped avoid merge conflicts. Once I felt the backend was
-              solid, I switched to the frontend and followed the exact same
-              planning process.
+              began with the backend - Spring Boot and MySQL - and made a big
+              to-do list of all the features I needed (API endpoints, CRUD,
+              auth, etc). Each item got its own Git branch, knocked it out, then
+              merged back into
+              <code>main</code> once everything was working. No chaos, no
+              spaghetti, just one step at a time. Once the backend felt solid, I
+              turned to the frontend. That’s where things got interesting. React
+              was brand new to me, and I decided to go full monorepo, which felt
+              very “pro” until I realized how much config it actually needed.
             </p>
           </section>
           <section id="problems" class="mb-6" data-aos="fade-left">
             <h2 class="h4 mb-2">Problems</h2>
             <hr class="section-underline" />
             <p>
-              Diving in solo meant I quickly ran into a handful of errors,
-              especially on the frontend since React was still new to me. I even
-              chose to use a monorepo to keep backend and frontend in one place,
-              which proved trickier to configure than I'd anticipated. I forgot
-              to import components, tripped over simple syntax errors that would
-              break my build, and wrestled with CSS-in-JS to make my UI look the
-              way I'd envisioned.<br />
-              <br />
-              On the backend it was dependency mismatches, CORS errors (I kept
-              forgetting <code>@CrossOrigin</code> here and there), a typo in
-              <code>application.properties</code> that stopped the app from
-              starting, and a missing MySQL table that silently broke my CRUD
-              endpoints. Every error sent me down a rabbit hole of logs,
-              StackOverflow threads, and official docs—whether Spring Boot's
-              guides, React's docs, or eventually the MUI documentation, which
-              turned out to be the key to resolving my headaches.
+              Oh, so many. On the frontend, I broke the build more times than I
+              can count - usually by forgetting imports or putting className in
+              the wrong place. I also fought CSS-in-JS like it personally
+              offended me. Backend-wise? Classic CORS errors, dependency
+              mismatches, typos in application.properties, and mysterious 404s
+              from endpoints that definitely existed (but didn’t, because...
+              wrong route). Every bug came with a free trip to Google and
+              a lesson in patience. Eventually, I learned to love reading
+              official docs instead of random blog posts, and that helped more
+              than I expected.
             </p>
           </section>
           <section id="lessons" class="mb-6" data-aos="fade-left">
@@ -150,44 +144,44 @@
             <hr class="section-underline" />
             <ul class="list-unstyled">
               <li>
-                <strong>Plan before you code:</strong> Sketching endpoints och
-                data models on paper saved me hours later.
+                <strong>Don’t just “wing it”:</strong> Planning endpoints and user flows on paper first saved me tons of rewrites.
               </li>
               <br />
               <li>
-                <strong>Branch often:</strong> Isolating each feature in its own
-                Git branch keeps merges predictable and rollbacks painless.
+                <strong>Feature branches are life:</strong> Isolating each feature in its own
+                Git branch lets me go wild without breaking main.
               </li>
               <br />
               <li>
-                <strong>Docs are your best friend:</strong> I now start every
-                new feature by reading the official guide (whether it’s Spring
-                Boot’s auto-configuration docs or MUI’s theming examples),
-                rather than hunting for random blog posts.
+                <strong>Docs are your best friend:</strong> Reading the official guides (especially Spring Boot and MUI) made debugging 10x easier.
               </li>
               <br />
               <li>
                 <strong>Turn bugs into lessons:</strong> Every typo, missing
-                import, or broken build became a little lesson in patience and
+                import, or broken build and “why isn’t this working” became a little lesson in patience and
                 persistence, and now I view logs and stack traces not as
                 annoyances but as roadmaps to the solution.
               </li>
             </ul>
           </section>
-          <div class="d-flex justify-content-end mt-5 align-items-start text-white">
+          <div
+            class="d-flex justify-content-end mt-5 align-items-start text-white"
+          >
             <div class="d-flex flex-column align-items-end text-end">
               <small class="text-muted mb-1">Next</small>
-              <span class="fw-bold mb-2" style="color: #f6ff4c;">Recipedia</span>
+              <span class="fw-bold mb-2" style="color: #f6ff4c">Recipedia</span>
               <a
                 href="recipedia.html"
                 class="back-btn text-white text-decoration-none d-inline-flex align-items-center"
               >
-                Next <i class="bx bx-arrow-back fs-4 ms-1" style="transform: rotate(180deg);"></i>
+                Next
+                <i
+                  class="bx bx-arrow-back fs-4 ms-1"
+                  style="transform: rotate(180deg)"
+                ></i>
               </a>
             </div>
           </div>
-          
-          
         </div>
 
         <!-- Right: Sidebar -->
@@ -205,7 +199,7 @@
                 >
               </p>
             </div>
-           
+
             <div class="mb-4">
               <h3 class="h5">Video</h3>
               <p>
