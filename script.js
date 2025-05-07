@@ -68,6 +68,16 @@ function loadLanguage(lang) {
       window.location.href = 'portify.html';
     });
 
+    document.getElementById('pastCastSearchBtn')
+    .addEventListener('click', function() {
+      window.location.href = 'pastcast.html';
+    });
+
+    document.getElementById('echoTypeSearchBtn')
+    .addEventListener('click', function() {
+      window.location.href = 'echotype.html';
+    });
+
     
     document.addEventListener('DOMContentLoaded', () => {
       const itemsPerBatch = 3;
