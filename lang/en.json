@@ -12,10 +12,7 @@
     },
     "about": {
       "title": "About me",
-      "paragraph1": "Hey! I'm Matilda, I currently live in Stockholm, Sweden, and I'm studying to become a Java developer. IT felt like a natural fit for me since I've always enjoyed tackling challenges head-on. Even though I had no experience before starting my studies, I quickly fell in love with coding and its endless possibilities. I'm an eager and quick learner, constantly excited to dive into new puzzles and expand my tech skills.",
-      "paragraph2": "As of right now, I'm particularly passionate about backend development and the logic behind it. I would love to explore more about cloud technologies to enhance my understanding of modern software infrastructure.",
-      "paragraph3": "Outside of my tech journey, I'm all about embracing life's little adventures. Whether I'm experimenting with new recipes, exploring quirky corners of Stockholm, or diving into a spontaneous road trip, I believe every experience is a chance to learn something new. I approach every challenge - big or small - with a sense of curiosity and humor, and I'm always ready to take on the next fun project that comes my way.",
-      "paragraph4": "Furthermore, when I'm not glued to my computer, you'll find me lifting weights or out on a long walk - then getting too tired and catch the bus back. I love a good board game night with family or friends (even though I lose about nine out of ten times - hey, at least I'm lucky in love). Otherwise, I'm probably scrubbing the oven, reorganizing the kitchen cabinet, or switching from one screen to another, rewatching Friends for the 11th time - always with a stash of lollies, of course.",
+     
       "cv": "View CV"
     },
     "contact": {
