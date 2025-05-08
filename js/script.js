@@ -78,6 +78,29 @@ function loadLanguage(lang) {
       window.location.href = '/projects/echotype.html';
     });
 
+    document.getElementById('savrSearchBtn')
+    .addEventListener('click', function() {
+      window.location.href = '/projects/savr.html';
+    });
+    document.getElementById('unsubSearchBtn')
+    .addEventListener('click', function() {
+      window.location.href = '/projects/unsub.html';
+    });
+    document.getElementById('mallsySearchBtn')
+    .addEventListener('click', function() {
+      window.location.href = '/projects/mallsy.html';
+    });
+    document.getElementById('beautiqSearchBtn')
+    .addEventListener('click', function() {
+      window.location.href = '/projects/beautiq.html';
+    });
+    document.getElementById('dishdashSearchBtn')
+    .addEventListener('click', function() {
+      window.location.href = '/projects/dishdash.html';
+    });
+
+
+
     
     document.addEventListener('DOMContentLoaded', () => {
       const itemsPerBatch = 3;
