@@ -45,37 +45,37 @@ function loadLanguage(lang) {
 
   document.getElementById('BuzzSearchBtn')
     .addEventListener('click', function() {
-      window.location.href = 'buzz.html';
+      window.location.href = '/projects/buzz.html';
     });
 
     document.getElementById('RecipediaSearchBtn')
     .addEventListener('click', function() {
-      window.location.href = 'recipedia.html';
+      window.location.href = '/projects/recipedia.html';
     });
 
     document.getElementById('sthlmExitSearchBtn')
     .addEventListener('click', function() {
-      window.location.href = 'sthlmExit.html';
+      window.location.href = '/projects/sthlmExit.html';
     });
 
     document.getElementById('revuSearchBtn')
     .addEventListener('click', function() {
-      window.location.href = 'revu.html';
+      window.location.href = '/projects/revu.html';
     });
 
     document.getElementById('portifySearchBtn')
     .addEventListener('click', function() {
-      window.location.href = 'portify.html';
+      window.location.href = '/projects/portify.html';
     });
 
     document.getElementById('pastCastSearchBtn')
     .addEventListener('click', function() {
-      window.location.href = 'pastcast.html';
+      window.location.href = '/projects/pastcast.html';
     });
 
     document.getElementById('echoTypeSearchBtn')
     .addEventListener('click', function() {
-      window.location.href = 'echotype.html';
+      window.location.href = '/projects/echotype.html';
     });
 
     
