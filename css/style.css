@@ -463,6 +463,15 @@ h1.display-1 {
 .project-img:hover {
   transform: scale(1.05);
 }
+.project-card ul li i {
+  transition: color 0.3s ease;
+}
+
+.project-card ul li:hover i {
+  color: #F6FF4C;
+}
+
+
 
 
 
