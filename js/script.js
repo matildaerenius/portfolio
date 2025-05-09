@@ -45,54 +45,54 @@ function loadLanguage(lang) {
 
   document.getElementById('BuzzSearchBtn')
     .addEventListener('click', function() {
-      window.location.href = '/projects/buzz.html';
+      window.location.href = 'projects/buzz.html';
     });
 
     document.getElementById('RecipediaSearchBtn')
     .addEventListener('click', function() {
-      window.location.href = '/projects/recipedia.html';
+      window.location.href = 'projects/recipedia.html';
     });
 
     document.getElementById('sthlmExitSearchBtn')
     .addEventListener('click', function() {
-      window.location.href = '/projects/sthlmExit.html';
+      window.location.href = 'projects/sthlmExit.html';
     });
 
     document.getElementById('revuSearchBtn')
     .addEventListener('click', function() {
-      window.location.href = '/projects/revu.html';
+      window.location.href = 'projects/revu.html';
     });
 
     document.getElementById('portifySearchBtn')
     .addEventListener('click', function() {
-      window.location.href = '/projects/portify.html';
+      window.location.href = 'projects/portify.html';
     });
 
     document.getElementById('pastCastSearchBtn')
     .addEventListener('click', function() {
-      window.location.href = '/projects/pastcast.html';
+      window.location.href = 'projects/pastcast.html';
     });
 
     document.getElementById('echoTypeSearchBtn')
     .addEventListener('click', function() {
-      window.location.href = '/projects/echotype.html';
+      window.location.href = 'projects/echotype.html';
     });
 
     document.getElementById('savrSearchBtn')
     .addEventListener('click', function() {
-      window.location.href = '/projects/savr.html';
+      window.location.href = 'projects/savr.html';
     });
     document.getElementById('unsubSearchBtn')
     .addEventListener('click', function() {
-      window.location.href = '/projects/unsub.html';
+      window.location.href = 'projects/unsub.html';
     });
     document.getElementById('mallsySearchBtn')
     .addEventListener('click', function() {
-      window.location.href = '/projects/mallsy.html';
+      window.location.href = 'projects/mallsy.html';
     });
     document.getElementById('beautiqSearchBtn')
     .addEventListener('click', function() {
-      window.location.href = '/projects/beautiq.html';
+      window.location.href = 'projects/beautiq.html';
     });
     document.getElementById('dishdashSearchBtn')
     .addEventListener('click', function() {
