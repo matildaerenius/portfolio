@@ -402,6 +402,8 @@ h1.display-1 {
 
 .project-icon-btn {
   padding: 0.3rem;
+  position: relative;
+  z-index: 2;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -448,6 +450,19 @@ h1.display-1 {
   box-shadow: 0 6px 12px rgba(246,255,76,0.4);
 }
 
+.project-img-wrapper {
+  overflow: hidden;
+  border-radius: 0.5rem; 
+}
+
+.project-img {
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.project-img:hover {
+  transform: scale(1.05);
+}
 
 
 
