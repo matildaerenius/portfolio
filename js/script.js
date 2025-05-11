@@ -96,7 +96,7 @@ function loadLanguage(lang) {
     });
     document.getElementById('dishdashSearchBtn')
     .addEventListener('click', function() {
-      window.location.href = '/projects/dishdash.html';
+      window.location.href = 'projects/dishdash.html';
     });
 
 
