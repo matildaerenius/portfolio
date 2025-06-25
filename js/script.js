@@ -99,7 +99,8 @@ function loadLanguage(lang) {
       window.location.href = 'projects/dishdash.html';
     });
 
-
+ 
+    
 
     
     document.addEventListener('DOMContentLoaded', () => {

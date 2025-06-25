@@ -48,12 +48,10 @@
           <hr class="section-underline" />
           <p class="date">2000-00-00</p>
           <p class="lead mb-6" data-aos="fade-left">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem ex
-            eaque aut libero possimus totam quae debitis, neque natus nesciunt
-            perferendis autem facilis vel quis amet fugiat tempore soluta
-            assumenda, dolorum perspiciatis impedit exercitationem incidunt
-            sequi! Voluptatem repudiandae culpa, vitae ipsam omnis laborum,
-            possimus aperiam, labore deleniti in consectetur a?
+            A recipe assistant where users can register, manage their personal
+            pantry, generate recipe suggestions using real-time Spoonacular API
+            data, create weekly meal plans, build shopping lists, rate and
+            comment on recipes, and set dietary preferences.
           </p>
 
           <!-- Key Features -->
@@ -66,7 +64,7 @@
                 <p>Add & remove ingredients in categories</p>
               </div>
               <div class="col-6 col-lg-4 mb-4 text-center">
-                <i class="bx bx-restaurant  fs-2 text-warning mb-2"></i>
+                <i class="bx bx-restaurant fs-2 text-warning mb-2"></i>
                 <p>Recommend recipes via API</p>
               </div>
               <div class="col-6 col-lg-4 mb-4 text-center">
@@ -237,18 +235,25 @@
               <p>
                 <a
                   href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onclick="showPopup(event)"
                   class="text-decoration-none text-warning"
-                  >Watch demo →</a
-                >
+                  >Watch demo →</a>
               </p>
+            </div>
+            
+            <!-- Popup -->
+            <div id="popup" class="popup-overlay">
+              <div class="popup-box">
+                <div class="popup-icon" aria-hidden="true">🚧</div>
+                <p>404: Feature not implemented (yet)</p>
+                <button onclick="closePopup()">Abort mission</button>
+              </div>
             </div>
             <div>
               <h3 class="h5">Details</h3>
               <p>
                 <a
-                  href="#"
+                  href="https://github.com/matildaerenius/recipedia/blob/main/README.md"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-decoration-none text-warning"
@@ -263,6 +268,7 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="projects.js"></script>
     <script>
       AOS.init({
         duration: 800,

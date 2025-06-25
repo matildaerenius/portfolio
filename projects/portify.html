@@ -215,12 +215,19 @@
               <p>
                 <a
                   href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onclick="showPopup(event)"
                   class="text-decoration-none text-warning"
-                  >Watch demo →</a
-                >
+                  >Watch demo →</a>
               </p>
+            </div>
+            
+            <!-- Popup -->
+            <div id="popup" class="popup-overlay">
+              <div class="popup-box">
+                <div class="popup-icon" aria-hidden="true">🚧</div>
+                <p>404: Feature not implemented (yet)</p>
+                <button onclick="closePopup()">Abort mission</button>
+              </div>
             </div>
             <div>
               <h3 class="h5">Details</h3>
@@ -241,6 +248,7 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="projects.js"></script>
     <script>
       AOS.init({
         duration: 800,
