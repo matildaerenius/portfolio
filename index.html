@@ -27,7 +27,14 @@
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
     />
   </head>
-
+   <!-- Popup -->
+   <div id="popup" class="popup-overlay">
+    <div class="popup-box">
+      <div class="popup-icon" aria-hidden="true">🚧</div>
+      <p>// TODO: Implement this feature (eventually)</p>
+      <button onclick="closePopup()">ctrl + z</button>
+    </div>
+  </div>
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
@@ -465,7 +472,7 @@
                 alt="Projektbild"
                 class="img-fluid rounded project-img"
               />
-            </div>  
+            </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">Buzz</h3>
             <p class="card-text mb-1">
               Buzz...with your friends on this social media website.
@@ -505,8 +512,8 @@
                 class="btn project-btn"
                 ><i class="bx bxl-github fs-6"></i> code</a
               >
-              <a href="#" class="btn project-btn"
-                ><i class="bx bx-camera-movie fs-6"></i> Demo
+              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+                <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
           </div>
@@ -533,7 +540,7 @@
                 alt="Projektbild"
                 class="img-fluid rounded project-img"
               />
-            </div>  
+            </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">Recipedia</h3>
             <p class="card-text mb-1">
               Get recipe suggestions based on what's already in your kitchen.
@@ -573,8 +580,8 @@
               >
                 <i class="bx bxl-github fs-6"></i> code</a
               >
-              <a href="#" class="btn project-btn"
-                ><i class="bx bx-camera-movie fs-6"></i> Demo
+              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+                <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
           </div>
@@ -602,7 +609,7 @@
                 alt="Projektbild"
                 class="img-fluid rounded project-img"
               />
-            </div>  
+            </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">SthlmExit</h3>
             <p class="card-text mb-1">
               Find the best train seat and the right exit for your subway ride.
@@ -638,8 +645,8 @@
                 class="btn project-btn"
                 ><i class="bx bxl-github fs-6"></i> code</a
               >
-              <a href="#" class="btn project-btn"
-                ><i class="bx bx-link fs-6"></i> Demo
+              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+                <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
           </div>
@@ -668,9 +675,11 @@
                 alt="Projektbild"
                 class="img-fluid rounded project-img"
               />
-            </div>  
+            </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">EchoType</h3>
-            <p class="card-text mb-1">Hear it. Echo it. Type it. With this audio to text transcriber.</p>
+            <p class="card-text mb-1">
+              Hear it. Echo it. Type it. With this audio to text transcriber.
+            </p>
             <div class="d-flex flex-wrap gap-1 my-3">
               <span class="badge project-badge">Java</span>
               <span class="badge project-badge">Spring Boot</span>
@@ -702,8 +711,8 @@
                 class="btn project-btn"
                 ><i class="bx bxl-github fs-6"></i> code</a
               >
-              <a href="#" class="btn project-btn"
-                ><i class="bx bx-camera-movie fs-6"></i> Demo
+              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+                <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
           </div>
@@ -731,7 +740,7 @@
                 alt="Projektbild"
                 class="img-fluid rounded project-img"
               />
-            </div>  
+            </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">PastCast</h3>
             <p class="card-text mb-1">
               View past weather trends and future forecasts in one place.
@@ -766,8 +775,8 @@
               >
                 <i class="bx bxl-github fs-6"></i> code</a
               >
-              <a href="#" class="btn project-btn"
-                ><i class="bx bx-camera-movie fs-6"></i> Demo
+              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+                <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
           </div>
@@ -795,7 +804,7 @@
                 alt="Projektbild"
                 class="img-fluid rounded project-img"
               />
-            </div>  
+            </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">Revu</h3>
             <p class="card-text mb-1">
               Revu your movies on this movie review website.
@@ -829,8 +838,8 @@
               <a href="#" target="_blank" class="btn project-btn"
                 ><i class="bx bxl-github fs-6"></i> code</a
               >
-              <a href="#" class="btn project-btn"
-                ><i class="bx bx-camera-movie fs-6"></i> Demo
+              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+                <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
           </div>
@@ -858,7 +867,7 @@
                 alt="Projektbild"
                 class="img-fluid rounded project-img"
               />
-            </div>  
+            </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">Portify</h3>
             <p class="card-text mb-1">
               Copy your Spotify playlists and download them as MP3s via YouTube.
@@ -890,8 +899,8 @@
               <a href="#" target="_blank" class="btn project-btn"
                 ><i class="bx bxl-github fs-6"></i> code</a
               >
-              <a href="#" class="btn project-btn"
-                ><i class="bx bx-camera-movie fs-6"></i> Demo
+              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+                <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
           </div>
@@ -905,7 +914,7 @@
             <!-- Sökikon -->
             <div class="position-absolute top-0 end-0 p-2">
               <button
-              id="unsubSearchBtn"
+                id="unsubSearchBtn"
                 class="btn project-btn project-icon-btn"
                 title="More info"
               >
@@ -919,7 +928,7 @@
                 alt="Projektbild"
                 class="img-fluid rounded project-img"
               />
-            </div>  
+            </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">UnSub</h3>
             <p class="card-text mb-1">
               Scan your Gmail and unsubscribe from newsletters with one click.
@@ -934,7 +943,7 @@
             <!-- Lista med ikoner och text -->
             <ul class="list-unstyled mb-4">
               <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-mail-send  fs-5 me-2"></i>
+                <i class="bx bx-mail-send fs-5 me-2"></i>
                 <small>Scan Gmail inbox for newsletter senders</small>
               </li>
               <li class="d-flex align-items-center mb-2">
@@ -942,7 +951,7 @@
                 <small>Detect unsubscribe links</small>
               </li>
               <li class="d-flex align-items-center">
-                <i class="bx bx-cog  fs-5 me-2"></i>
+                <i class="bx bx-cog fs-5 me-2"></i>
                 <small>One-click unsubscribe automation</small>
               </li>
             </ul>
@@ -950,8 +959,8 @@
               <a href="#" target="_blank" class="btn project-btn"
                 ><i class="bx bxl-github fs-6"></i> code</a
               >
-              <a href="#" class="btn project-btn"
-                ><i class="bx bx-camera-movie fs-6"></i> Demo
+              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+                <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
           </div>
@@ -965,7 +974,7 @@
             <!-- Sökikon -->
             <div class="position-absolute top-0 end-0 p-2">
               <button
-              id="savrSearchBtn"
+                id="savrSearchBtn"
                 class="btn project-btn project-icon-btn"
                 title="More info"
               >
@@ -978,7 +987,7 @@
                 alt="Projektbild"
                 class="img-fluid rounded project-img"
               />
-            </div>  
+            </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">Savr</h3>
             <p class="card-text mb-1">
               A real time-SAVR - view all weekly ads from major grocery stores
@@ -1002,7 +1011,7 @@
                 <small>Save your favorite stores</small>
               </li>
               <li class="d-flex align-items-center">
-                <i class="bx bx-cart  fs-5 me-2"></i>
+                <i class="bx bx-cart fs-5 me-2"></i>
                 <small>Generate cheapest shopping list</small>
               </li>
             </ul>
@@ -1010,8 +1019,8 @@
               <a href="#" target="_blank" class="btn project-btn"
                 ><i class="bx bxl-github fs-6"></i> code</a
               >
-              <a href="#" class="btn project-btn"
-                ><i class="bx bx-camera-movie fs-6"></i> Demo
+              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+                <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
           </div>
@@ -1026,7 +1035,7 @@
             <!-- Sökikon -->
             <div class="position-absolute top-0 end-0 p-2">
               <button
-              id="mallsySearchBtn"
+                id="mallsySearchBtn"
                 class="btn project-btn project-icon-btn"
                 title="More info"
               >
@@ -1040,9 +1049,11 @@
                 alt="Projektbild"
                 class="img-fluid rounded project-img"
               />
-            </div>  
+            </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">Mallsy</h3>
-            <p class="card-text mb-1">Browse it, bag it, love it - that's Mallsy, an eCommerce website.</p>
+            <p class="card-text mb-1">
+              Browse it, bag it, love it - that's Mallsy, an eCommerce website.
+            </p>
             <div class="d-flex flex-wrap gap-1 my-3">
               <span class="badge project-badge">Java</span>
               <span class="badge project-badge">Spring Boot</span>
@@ -1069,8 +1080,8 @@
               <a href="#" target="_blank" class="btn project-btn"
                 ><i class="bx bxl-github fs-6"></i> code</a
               >
-              <a href="#" class="btn project-btn"
-                ><i class="bx bx-camera-movie fs-6"></i> Demo
+              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+                <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
           </div>
@@ -1084,7 +1095,7 @@
             <!-- Sökikon -->
             <div class="position-absolute top-0 end-0 p-2">
               <button
-              id="beautiqSearchBtn"
+                id="beautiqSearchBtn"
                 class="btn project-btn project-icon-btn"
                 title="More info"
               >
@@ -1098,9 +1109,11 @@
                 alt="Projektbild"
                 class="img-fluid rounded project-img"
               />
-            </div>  
+            </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">BeautiQ</h3>
-            <p class="card-text mb-1">Where beauty meets IQ - that's BeautiQ, a salon booking system.</p>
+            <p class="card-text mb-1">
+              Where beauty meets IQ - that's BeautiQ, a salon booking system.
+            </p>
             <div class="d-flex flex-wrap gap-1 my-3">
               <span class="badge project-badge">Java</span>
               <span class="badge project-badge">Spring Boot</span>
@@ -1127,8 +1140,8 @@
               <a href="#" target="_blank" class="btn project-btn"
                 ><i class="bx bxl-github fs-6"></i> code</a
               >
-              <a href="#" class="btn project-btn"
-                ><i class="bx bx-camera-movie fs-6"></i> Demo
+              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+                <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
           </div>
@@ -1142,7 +1155,7 @@
             <!-- Sökikon -->
             <div class="position-absolute top-0 end-0 p-2">
               <button
-              id="dishdashSearchBtn"
+                id="dishdashSearchBtn"
                 class="btn project-btn project-icon-btn"
                 title="More info"
               >
@@ -1156,7 +1169,7 @@
                 alt="Projektbild"
                 class="img-fluid rounded project-img"
               />
-            </div>  
+            </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">Dishdash</h3>
             <p class="card-text mb-1">
               Dash your dish home with this food-ordering website.
@@ -1191,8 +1204,8 @@
               <a href="#" target="_blank" class="btn project-btn"
                 ><i class="bx bxl-github fs-6"></i> code</a
               >
-              <a href="#" class="btn project-btn"
-                ><i class="bx bx-camera-movie fs-6"></i> Demo
+              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+                <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
           </div>
