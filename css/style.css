@@ -670,3 +670,40 @@ h1.display-1 {
 
   }
 }
+
+.coming-soon-badge {
+  display: inline-block;
+  background-color: #1D0C38; 
+  color: #F6FF4C;
+  font-family: 'Tektur';
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.45rem 1.1rem;
+  border-radius: 30px;
+  border: 1px solid #F6FF4C;
+  box-shadow: inset 0 0 5px rgba(246, 255, 76, 0.2), 0 0 4px rgba(246, 255, 76, 0.2);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.coming-soon-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(246, 255, 76, 0.4);
+}
+
+
+
+
+@keyframes softPulse {
+  0% {
+    box-shadow: 0 0 6px rgba(246, 255, 76, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(246, 255, 76, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 6px rgba(246, 255, 76, 0.3);
+  }
+}
+
+

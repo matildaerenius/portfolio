@@ -138,12 +138,26 @@ function loadLanguage(lang) {
     });
 
     function showPopup(event) {
-      event.preventDefault(); 
+      event.preventDefault();
+    
+      const iconEl = document.getElementById("popupIcon");
+      const messageEl = document.getElementById("popupMessage");
+    
+      if (event.target.closest(".coming-soon-badge")) {
+        iconEl.textContent = "🛠️";
+        messageEl.textContent = "Yeah… I haven’t started yet either";
+      } else {
+        iconEl.textContent = "🚧";
+        messageEl.textContent = "// TODO: Implement this feature (eventually)";
+      }
+      
+    
       document.getElementById("popup").style.display = "flex";
     }
-    
     function closePopup() {
       document.getElementById("popup").style.display = "none";
     }
+    
+    
     
 

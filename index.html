@@ -30,8 +30,8 @@
    <!-- Popup -->
    <div id="popup" class="popup-overlay">
     <div class="popup-box">
-      <div class="popup-icon" aria-hidden="true">🚧</div>
-      <p>// TODO: Implement this feature (eventually)</p>
+      <div class="popup-icon" id="popupIcon" aria-hidden="true">🚧</div>
+      <p id="popupMessage">// TODO: Implement this feature (eventually)</p>
       <button onclick="closePopup()">ctrl + z</button>
     </div>
   </div>
@@ -742,40 +742,20 @@
               />
             </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">PastCast</h3>
-            <p class="card-text mb-1">
+            <p class="card-text mb-3">
               View past weather trends and future forecasts in one place.
             </p>
-            <div class="d-flex flex-wrap gap-1 my-3">
-              <span class="badge project-badge">Java</span>
-              <span class="badge project-badge">Spring Boot</span>
-              <span class="badge project-badge">React</span>
-              <span class="badge project-badge">MongoDB</span>
-              <span class="badge project-badge">GraphQL</span>
+            <div class="mb-3">
+              <span class="coming-soon-badge" onclick="showPopup(event)">
+                <span style="margin-right: 6px;">🛠️</span>Coming soon...
+              </span>
             </div>
-            <!-- Lista med ikoner och text -->
-            <ul class="list-unstyled mb-4">
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-cloud fs-5 me-2"></i>
-                <small>Multiple weather sources in one view</small>
-              </li>
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-line-chart fs-5 me-2"></i>
-                <small>Historical data and trend graphs</small>
-              </li>
-              <li class="d-flex align-items-center">
-                <i class="bx bx-time fs-5 me-2"></i>
-                <small>Scheduled data collection</small>
-              </li>
-            </ul>
+            
             <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-              <a
-                href="https://github.com/matildaerenius/PastCast"
-                target="_blank"
-                class="btn project-btn"
+              <a href="#" target="_blank" class="btn project-btn disabled"
+                ><i class="bx bxl-github fs-6"></i> Code</a
               >
-                <i class="bx bxl-github fs-6"></i> code</a
-              >
-              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+              <a href="#" class="btn project-btn disabled">
                 <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
@@ -806,106 +786,69 @@
               />
             </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">Revu</h3>
-            <p class="card-text mb-1">
+            <p class="card-text mb-3">
               Revu your movies on this movie review website.
             </p>
-            <div class="d-flex flex-wrap gap-1 my-3">
-              <span class="badge project-badge">Java</span>
-              <span class="badge project-badge">Spring Boot</span>
-              <span class="badge project-badge">MongoDB</span>
-              <span class="badge project-badge">React</span>
-              <span class="badge project-badge">Axios</span>
-              <span class="badge project-badge">MUI</span>
-              <span class="badge project-badge">Bootstrap</span>
-              <span class="badge project-badge">Postman</span>
+            <div class="mb-3">
+              <span class="coming-soon-badge">
+                <span style="margin-right: 6px;">🛠️</span>Coming soon...
+              </span>
+              
             </div>
-            <!-- Lista med ikoner och text -->
-            <ul class="list-unstyled mb-4">
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-star fs-5 me-2"></i>
-                <small>Rate & review films</small>
-              </li>
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-search fs-5 me-2"></i>
-                <small>Browse & search titles</small>
-              </li>
-              <li class="d-flex align-items-center">
-                <i class="bx bx-user fs-5 me-2"></i>
-                <small>User profiles & personal ratings</small>
-              </li>
-            </ul>
+            
             <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-              <a href="#" target="_blank" class="btn project-btn"
-                ><i class="bx bxl-github fs-6"></i> code</a
+              <a href="#" target="_blank" class="btn project-btn disabled"
+                ><i class="bx bxl-github fs-6"></i> Code</a
               >
-              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+              <a href="#" class="btn project-btn disabled">
                 <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Projektkort 4 -->
-        <div class="col project-item">
-          <div
-            class="card project-card p-4 text-white h-100"
-            data-aos="fade-up"
-          >
-            <!-- Sökikon -->
-            <div class="position-absolute top-0 end-0 p-2">
-              <button
-                id="portifySearchBtn"
-                class="btn project-btn project-icon-btn"
-                title="More info"
-              >
-                <i class="bx bx-search fs-5"></i>
-              </button>
-            </div>
-            <div class="project-img-wrapper mb-3">
-              <img
-                src="images/holder.png"
-                alt="Projektbild"
-                class="img-fluid rounded project-img"
-              />
-            </div>
-            <h3 class="card-title mb-3" style="color: #f6ff4c">Portify</h3>
-            <p class="card-text mb-1">
-              Copy your Spotify playlists and download them as MP3s via YouTube.
-            </p>
-            <div class="d-flex flex-wrap gap-1 my-3">
-              <span class="badge project-badge">Java</span>
-              <span class="badge project-badge">Spring Boot</span>
-              <span class="badge project-badge">MySQL</span>
-              <span class="badge project-badge">React</span>
-              <span class="badge project-badge">yt-dlp</span>
-              <span class="badge project-badge">Postman</span>
-            </div>
-            <!-- Lista med ikoner och text -->
-            <ul class="list-unstyled mb-4">
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-lock-alt fs-5 me-2"></i>
-                <small>Import Spotify playlists via OAuth</small>
-              </li>
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bxl-youtube fs-5 me-2"></i>
-                <small>Match and fetch songs from YouTube</small>
-              </li>
-              <li class="d-flex align-items-center">
-                <i class="bx bx-download fs-5 me-2"></i>
-                <small>Download and ZIP MP3 files</small>
-              </li>
-            </ul>
-            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-              <a href="#" target="_blank" class="btn project-btn"
-                ><i class="bx bxl-github fs-6"></i> code</a
-              >
-              <a href="#" class="btn project-btn" onclick="showPopup(event)">
-                <i class="bx bx-camera-movie fs-6"></i> Demo
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- Projektkort 5 -->
+       <!-- Projektkort Portify (Coming Soon) -->
+<div class="col project-item">
+  <div class="card project-card p-4 text-white h-100" data-aos="fade-up">
+    <!-- Sökikon -->
+    <div class="position-absolute top-0 end-0 p-2">
+      <button
+        id="portifySearchBtn"
+        class="btn project-btn project-icon-btn"
+        title="More info"
+      >
+        <i class="bx bx-search fs-5"></i>
+      </button>
+    </div>
+    <div class="project-img-wrapper mb-3">
+      <img
+        src="images/holder.png"
+        alt="Projektbild"
+        class="img-fluid rounded project-img"
+      />
+    </div>
+    <h3 class="card-title mb-3" style="color: #f6ff4c">Portify</h3>
+    <p class="card-text mb-3">
+      Copy your Spotify playlists and download them as MP3s via YouTube.
+    </p>
+    <div class="mb-3">
+      <span class="coming-soon-badge">
+        <span style="margin-right: 6px;">🛠️</span>Coming soon...
+      </span>
+      
+    </div>
+    
+    <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+      <a href="#" target="_blank" class="btn project-btn disabled"
+        ><i class="bx bxl-github fs-6"></i> Code</a
+      >
+      <a href="#" class="btn project-btn disabled">
+        <i class="bx bx-camera-movie fs-6"></i> Demo
+      </a>
+    </div>
+  </div>
+</div>
+
         <div class="col project-item">
           <div
             class="card project-card p-4 text-white h-100"
@@ -930,36 +873,21 @@
               />
             </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">UnSub</h3>
-            <p class="card-text mb-1">
+            <p class="card-text mb-3">
               Scan your Gmail and unsubscribe from newsletters with one click.
             </p>
-            <div class="d-flex flex-wrap gap-1 my-3">
-              <span class="badge project-badge">Java</span>
-              <span class="badge project-badge">Spring Boot</span>
-              <span class="badge project-badge">MySQL</span>
-              <span class="badge project-badge">React</span>
-              <span class="badge project-badge">Jsoup</span>
+            <div class="mb-3">
+              <span class="coming-soon-badge">
+                <span style="margin-right: 6px;">🛠️</span>Coming soon...
+              </span>
+              
             </div>
-            <!-- Lista med ikoner och text -->
-            <ul class="list-unstyled mb-4">
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-mail-send fs-5 me-2"></i>
-                <small>Scan Gmail inbox for newsletter senders</small>
-              </li>
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-link-external fs-5 me-2"></i>
-                <small>Detect unsubscribe links</small>
-              </li>
-              <li class="d-flex align-items-center">
-                <i class="bx bx-cog fs-5 me-2"></i>
-                <small>One-click unsubscribe automation</small>
-              </li>
-            </ul>
+            
             <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-              <a href="#" target="_blank" class="btn project-btn"
-                ><i class="bx bxl-github fs-6"></i> code</a
+              <a href="#" target="_blank" class="btn project-btn disabled"
+                ><i class="bx bxl-github fs-6"></i> Code</a
               >
-              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+              <a href="#" class="btn project-btn disabled">
                 <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
@@ -989,37 +917,22 @@
               />
             </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">Savr</h3>
-            <p class="card-text mb-1">
+            <p class="card-text mb-3">
               A real time-SAVR - view all weekly ads from major grocery stores
               in one place.
             </p>
-            <div class="d-flex flex-wrap gap-1 my-3">
-              <span class="badge project-badge">Java</span>
-              <span class="badge project-badge">Spring Boot</span>
-              <span class="badge project-badge">MySQL</span>
-              <span class="badge project-badge">React</span>
-              <span class="badge project-badge">Jsoup</span>
+            <div class="mb-3">
+              <span class="coming-soon-badge">
+                <span style="margin-right: 6px;">🛠️</span>Coming soon...
+              </span>
+              
             </div>
-            <!-- Lista med ikoner och text -->
-            <ul class="list-unstyled mb-4">
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-store-alt fs-5 me-2"></i>
-                <small>Weekly ads from grocery chains in one place</small>
-              </li>
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-heart fs-5 me-2"></i>
-                <small>Save your favorite stores</small>
-              </li>
-              <li class="d-flex align-items-center">
-                <i class="bx bx-cart fs-5 me-2"></i>
-                <small>Generate cheapest shopping list</small>
-              </li>
-            </ul>
+            
             <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-              <a href="#" target="_blank" class="btn project-btn"
-                ><i class="bx bxl-github fs-6"></i> code</a
+              <a href="#" target="_blank" class="btn project-btn disabled"
+                ><i class="bx bxl-github fs-6"></i> Code</a
               >
-              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+              <a href="#" class="btn project-btn disabled">
                 <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
@@ -1051,36 +964,21 @@
               />
             </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">Mallsy</h3>
-            <p class="card-text mb-1">
+            <p class="card-text mb-3">
               Browse it, bag it, love it - that's Mallsy, an eCommerce website.
             </p>
-            <div class="d-flex flex-wrap gap-1 my-3">
-              <span class="badge project-badge">Java</span>
-              <span class="badge project-badge">Spring Boot</span>
-              <span class="badge project-badge">MySQL</span>
-              <span class="badge project-badge">React</span>
-              <span class="badge project-badge">Jsoup</span>
+            <div class="mb-3">
+              <span class="coming-soon-badge">
+                <span style="margin-right: 6px;">🛠️</span>Coming soon...
+              </span>
+              
             </div>
-            <!-- Lista med ikoner och text -->
-            <ul class="list-unstyled mb-4">
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-code fs-5 me-2"></i>
-                <small>Scan Gmail inbox for newsletter senders</small>
-              </li>
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-layer fs-5 me-2"></i>
-                <small>Detect unsubscribe links</small>
-              </li>
-              <li class="d-flex align-items-center">
-                <i class="bx bx-data fs-5 me-2"></i>
-                <small>One-click unsubscribe automation</small>
-              </li>
-            </ul>
+            
             <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-              <a href="#" target="_blank" class="btn project-btn"
-                ><i class="bx bxl-github fs-6"></i> code</a
+              <a href="#" target="_blank" class="btn project-btn disabled"
+                ><i class="bx bxl-github fs-6"></i> Code</a
               >
-              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+              <a href="#" class="btn project-btn disabled">
                 <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
@@ -1111,36 +1009,21 @@
               />
             </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">BeautiQ</h3>
-            <p class="card-text mb-1">
+            <p class="card-text mb-3">
               Where beauty meets IQ - that's BeautiQ, a salon booking system.
             </p>
-            <div class="d-flex flex-wrap gap-1 my-3">
-              <span class="badge project-badge">Java</span>
-              <span class="badge project-badge">Spring Boot</span>
-              <span class="badge project-badge">MySQL</span>
-              <span class="badge project-badge">React</span>
-              <span class="badge project-badge">Jsoup</span>
+            <div class="mb-3">
+              <span class="coming-soon-badge">
+                <span style="margin-right: 6px;">🛠️</span>Coming soon...
+              </span>
+              
             </div>
-            <!-- Lista med ikoner och text -->
-            <ul class="list-unstyled mb-4">
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-code fs-5 me-2"></i>
-                <small>Scan Gmail inbox for newsletter senders</small>
-              </li>
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-layer fs-5 me-2"></i>
-                <small>Detect unsubscribe links</small>
-              </li>
-              <li class="d-flex align-items-center">
-                <i class="bx bx-data fs-5 me-2"></i>
-                <small>One-click unsubscribe automation</small>
-              </li>
-            </ul>
+            
             <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-              <a href="#" target="_blank" class="btn project-btn"
-                ><i class="bx bxl-github fs-6"></i> code</a
+              <a href="#" target="_blank" class="btn project-btn disabled"
+                ><i class="bx bxl-github fs-6"></i> Code</a
               >
-              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+              <a href="#" class="btn project-btn disabled">
                 <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
@@ -1171,40 +1054,21 @@
               />
             </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c">Dishdash</h3>
-            <p class="card-text mb-1">
+            <p class="card-text mb-3">
               Dash your dish home with this food-ordering website.
             </p>
-            <div class="d-flex flex-wrap gap-1 my-3">
-              <span class="badge project-badge">Java</span>
-              <span class="badge project-badge">Spring Boot</span>
-              <span class="badge project-badge">MySQL</span>
-              <span class="badge project-badge">React</span>
-              <span class="badge project-badge">Tailwind</span>
-              <span class="badge project-badge">Mui</span>
-              <span class="badge project-badge">Redux</span>
-              <span class="badge project-badge">Axios</span>
-              <span class="badge project-badge">Strip</span>
+            <div class="mb-3">
+              <span class="coming-soon-badge">
+                <span style="margin-right: 6px;">🛠️</span>Coming soon...
+              </span>
+              
             </div>
-            <!-- Lista med ikoner och text -->
-            <ul class="list-unstyled mb-4">
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-code fs-5 me-2"></i>
-                <small>Scan Gmail inbox for newsletter senders</small>
-              </li>
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-layer fs-5 me-2"></i>
-                <small>Detect unsubscribe links</small>
-              </li>
-              <li class="d-flex align-items-center">
-                <i class="bx bx-data fs-5 me-2"></i>
-                <small>One-click unsubscribe automation</small>
-              </li>
-            </ul>
+            
             <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
-              <a href="#" target="_blank" class="btn project-btn"
-                ><i class="bx bxl-github fs-6"></i> code</a
+              <a href="#" target="_blank" class="btn project-btn disabled"
+                ><i class="bx bxl-github fs-6"></i> Code</a
               >
-              <a href="#" class="btn project-btn" onclick="showPopup(event)">
+              <a href="#" class="btn project-btn disabled">
                 <i class="bx bx-camera-movie fs-6"></i> Demo
               </a>
             </div>
