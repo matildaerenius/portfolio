@@ -1,37 +1,58 @@
 {
-    "nav": {
-      "about": "About",
-      "skills": "Skills",
-      "projects": "Projects",
-      "contact": "Contact"
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "<Matilda\nErenius/>",
+    "subtitle": "Java Developer Student.",
+    "button": "Contact Me"
+  },
+  "about": {
+    "title": "About me",
+    "paragraph1": "Hey! I'm Matilda, currently based in Stockholm and studying to become a Java developer. I didn’t grow up coding in my bedroom or building websites at age 12. Nope, I came into tech with zero experience, just a big curiosity and a love for solving tricky stuff. Fast forward to today, and I’m completely hooked, constantly excited to dive into new puzzles and expand my tech skills.",
+    "paragraph2": "As of right now, I’ve found myself especially drawn to backend development. There’s something really satisfying about making things work behind the scenes — the logic, the structure, the flow. I'm also super eager to explore cloud technologies and figure out how all those moving parts come together in real-world applications.",
+    "paragraph3": "I try to approach both life and code with curiosity, humor, and the mindset that every “oops” is just a disguised learning moment. I'm always up for a new challenge, especially if it involves tech, teamwork, or a really good Spotify playlist.",
+    "paragraph4": "Furthermore, when I'm not glued to my computer, you'll find me lifting weights or out on a long walk - then getting too tired and catching the bus back. I love a good board game night with family or friends (even though I lose about nine out of ten times - hey, at least I'm lucky in love). Otherwise, I'm probably scrubbing the oven, reorganizing the kitchen cabinet, which I find oddly therapeutic. When I need a break you'll find me rewatching Friends for the 11th time - always with a stash of lollies, of course.",
+    "cv": "View CV"
+  },
+  "skills": {
+    "title": "Tech Stack",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools",
+    "socialTitle": "Social Skills",
+    "problemSolver": "Problem Solver",
+    "positive": "Positive",
+    "team": "Team Member",
+    "communicative": "Communicative",
+    "curious": "Curious",
+    "adaptable": "Adaptable"
+  },
+  "projects": {
+    "title": "Projects",
+    "note": "Most of these projects are still under construction and cannot yet be viewed. Click on the magnifying glass to read more about the project. However, feel free to check out my GitHub for mostly school projects."
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "paragraph": "If you want to know more about me, or just like to say hello, send me a message or contact me through my socials. I'd love to hear from you.",
+    "formTitle": "Send a Message",
+    "formText": "Fill out the form below and I'll get back to you as soon as possible.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message"
     },
-    "hero": {
-      "title": "<Matilda\nErenius/>",
-      "subtitle": "Java Developer Student.",
-      "button": "Contact Me"
+    "info": {
+      "title": "Contact Info",
+      "location": "Location",
+      "stockholm": "Stockholm / SWE",
+      "availability": "Availability",
+      "available": "Available for internship"
     },
-    "about": {
-      "title": "About me",
-     
-      "cv": "View CV"
-    },
-    "contact": {
-      "title": "Get In Touch",
-      "paragraph": "If you want to know more about me, or just like to say hello, send me a message or contact me through my socials. I'd love to hear from you.",
-      "formHeader": "Send a Message",
-      "formText": "Fill out the form below and I'll get back to you as soon as possible.",
-      "form": {
-        "name": "Name",
-        "email": "Email",
-        "message": "Message",
-        "button": "Send Message"
-      },
-      "info": {
-        "location": "Location",
-        "stockholm": "Stockholm / SWE",
-        "availability": "Availability",
-        "available": "Available for internship"
-      },
-      "social": "Connect Via Socials"
-    }
+    "social": "Connect Via Socials"
   }
+}
