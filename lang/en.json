@@ -3,7 +3,8 @@
     "about": "About",
     "skills": "Skills",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "download": "Download CV"
   },
   "hero": {
     "title": "<Matilda\nErenius/>",
@@ -33,7 +34,17 @@
   },
   "projects": {
     "title": "Projects",
-    "note": "Most of these projects are still under construction and cannot yet be viewed. Click on the magnifying glass to read more about the project. However, feel free to check out my GitHub for mostly school projects."
+    "note": "Most of these projects are still under construction and cannot yet be viewed. Click on the magnifying glass to read more about the project. However, feel free to check out my GitHub for mostly school projects.",
+
+    "buzz": {
+      "title": "Buzz",
+      "description": "Buzz...with your friends on this social media website.",
+      "feature1": "Create, like, save, repost & comment on posts",
+      "feature2": "Real time message and video/voice calls",
+      "feature3": "Update user profile, follow & unfollow users",
+      "code": "code",
+      "demo": "Demo"
+    }
   },
   "contact": {
     "title": "Get In Touch",

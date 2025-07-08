@@ -3,7 +3,8 @@
     "about": "Om mig",
     "skills": "Skills",
     "projects": "Projekt",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "download": "Ladda ner CV"
   },
   "hero": {
     "title": "<Matilda\nErenius/>",
@@ -33,11 +34,21 @@
   },
   "projects": {
     "title": "Projekt",
-    "note": "De flesta av dessa projekt är fortfarande under utveckling och kan ännu inte visas. Klicka på förstoringsglaset för att läsa mer om projektet. Kika gärna in på min GitHub för främst skolprojekt."
+    "note": "De flesta av dessa projekt är fortfarande under utveckling och kan ännu inte visas. Klicka på förstoringsglaset för att läsa mer om projektet. Kika gärna in på min GitHub för främst skolprojekt.",
+
+    "buzz": {
+      "title": "Buzz",
+      "description": "Buzz... med dina vänner på denna sociala media hemsidan.",
+      "feature1": "Skapa, gilla, spara, dela & kommentera inlägg",
+      "feature2": "Meddelanden i realtid samt video-/röstsamtal",
+      "feature3": "Uppdatera profil, följ & avfölj användare",
+      "code": "Kod",
+      "demo": "Demo"
+    }
   },
   "contact": {
     "title": "Kontakta mig",
-    "paragraph": "Vill du veta mer om mig eller bara säga hej? Skicka ett meddelande eller kontakta mig via mina sociala medier. Jag skulle bli jätteglad att höra från dig.",
+    "paragraph": "Vill du veta mer om mig eller bara säga hej? Skicka ett meddelande eller kontakta mig via mina sociala medier. Ser fram emot att höra från dig.",
     "formTitle": "Skicka ett meddelande",
     "formText": "Fyll i formuläret nedan så hör jag av mig så snart som möjligt.",
     "form": {
@@ -45,6 +56,7 @@
       "email": "E-post",
       "message": "Meddelande",
       "send": "Skicka meddelande"
+      
     },
     "info": {
       "title": "Kontaktinformation",
@@ -55,4 +67,5 @@
     },
     "social": "Via sociala medier"
   }
+  
 }

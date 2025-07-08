@@ -39,10 +39,19 @@ function loadLanguage(lang) {
           }
         }
       });
+      document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        const value = key.split(".").reduce((obj, part) => obj?.[part], translations);
+        if (value !== undefined) {
+          el.placeholder = value;
+        } else {
+          console.warn(`Saknad placeholder-översättning för: ${key}`);
+        }
+      });
     })
     .catch((err) => console.error("Språkfil kunde inte laddas:", err));
 }
-
+    
   document.getElementById('BuzzSearchBtn')
     .addEventListener('click', function() {
       window.location.href = 'projects/buzz.html';
