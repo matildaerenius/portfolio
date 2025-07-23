@@ -44,7 +44,18 @@
       "feature3": "Update user profile, follow & unfollow users",
       "code": "code",
       "demo": "Demo"
+    },
+    "recipedia": {
+      "title": "Recipedia",
+      "description": "Get recipe suggestions based on what's already in your kitchen.",
+      "feature1": "Add & remove ingredients in categories",
+      "feature2": "Recommend recipes via API",
+      "feature3": "Save ingredients in user profile",
+      "code": "code",
+      "demo": "Demo"
     }
+
+    
   },
   "contact": {
     "title": "Get In Touch",

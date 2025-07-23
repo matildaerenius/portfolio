@@ -44,7 +44,18 @@
       "feature3": "Uppdatera profil, följ & avfölj användare",
       "code": "Kod",
       "demo": "Demo"
+    },
+    "recipedia": {
+      "title": "Recipedia",
+      "description": "Få receptförslag baserat på vad du redan har i köket.",
+      "feature1": "Lägg till och ta bort ingredienser i kategorier",
+      "feature2": "Rekommendera recept via API",
+      "feature3": "Spara ingredienser i användarprofil",
+      "code": "Kod",
+      "demo": "Demo"
     }
+
+    
   },
   "contact": {
     "title": "Kontakta mig",
