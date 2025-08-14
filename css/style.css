@@ -475,12 +475,15 @@ h1.display-1 {
 
 .project-img-wrapper {
   overflow: hidden;
+  width: 100%;
+  aspect-ratio: 3 / 2; 
   border-radius: 0.5rem; 
 }
 
 .project-img {
   transition: transform 0.4s ease;
   display: block;
+  object-fit: cover; 
 }
 
 .project-img:hover {
