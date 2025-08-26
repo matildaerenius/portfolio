@@ -18,40 +18,43 @@ function showPopup(event) {
       
           const carousel = bootstrap.Carousel.getOrCreateInstance(el, {
             interval: 3500,
-            ride: 'carousel',
             pause: 'hover',
             touch: true,
             keyboard: true,
             wrap: true
           });
-      
-          
-          if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            carousel.pause();
-            btn.innerHTML = "<i class='bx bx-play me-1' aria-hidden='true'></i> Play";
-            btn.setAttribute('aria-pressed', 'false');
-            btn.setAttribute('aria-label', 'Play gallery');
-          }
-      
-          let playing = btn.getAttribute('aria-pressed') !== 'false';
-      
-          const setState = () => {
+
+          let playing = true; 
+          carousel.cycle();
+
+          const applyPlayback = () => {
+            if (playing) { carousel.cycle(); } else { carousel.pause(); }
+          };
+        
+          const setButton = () => {
             btn.setAttribute('aria-pressed', String(playing));
+            btn.setAttribute('aria-label', playing ? 'Pause gallery' : 'Play gallery');
             btn.innerHTML = playing
               ? "<i class='bx bx-pause me-1' aria-hidden='true'></i> Pause"
               : "<i class='bx bx-play me-1' aria-hidden='true'></i> Play";
-            btn.setAttribute('aria-label', playing ? 'Pause gallery' : 'Play gallery');
           };
-      
+        
+          applyPlayback(); 
+          setButton();     
+        
           btn.addEventListener('click', () => {
-            if (playing) { carousel.pause(); } else { carousel.cycle(); }
             playing = !playing;
-            setState();
+            applyPlayback();
+            setButton();
           });
-      
-          setState();
+        
+          
+          el.addEventListener('slide.bs.carousel', () => { if (!playing) carousel.pause(); });
+          el.addEventListener('slid.bs.carousel', () => { if (!playing) carousel.pause(); });
         };
-      
+         
         init();
       });
+      
+        
       
