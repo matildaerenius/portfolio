@@ -12,6 +12,7 @@ let currentLang = localStorage.getItem("language") || "en";
 
 window.addEventListener("DOMContentLoaded", () => {
   loadLanguage(currentLang);
+  updateCvLinks(currentLang);
   if (flagIcon) flagIcon.src = `images/${currentLang === "en" ? "gb" : "se"}.png`;
 });
 
@@ -21,6 +22,7 @@ langToggle?.addEventListener("click", (e) => {
   localStorage.setItem("language", currentLang);
   flagIcon.src = `images/${currentLang === "en" ? "gb" : "se"}.png`;
   loadLanguage(currentLang);
+  updateCvLinks(currentLang);
 });
 
 function loadLanguage(lang) {
@@ -166,6 +168,23 @@ function loadLanguage(lang) {
     function closePopup() {
       document.getElementById("popup").style.display = "none";
     }
+
+    // --- CV länkar ---
+const CV_FILES = {
+  en: 'files/Matilda_Erenius-CV-en.pdf',
+  sv: 'files/Matilda_Erenius-CV-sv.pdf'
+};
+
+function updateCvLinks(lang) {
+  const url = CV_FILES[lang] || CV_FILES.en;
+  document.querySelectorAll('[data-cv]').forEach(a => {
+    a.setAttribute('href', url);
+    if (a.dataset.cv === 'download') {
+      
+      a.setAttribute('download', url.split('/').pop());
+    }
+  });
+}
     
     
     
