@@ -69,11 +69,9 @@ document
     window.location.href = "projects/recipedia.html";
   });
 
-document
-  .getElementById("sthlmExitSearchBtn")
-  .addEventListener("click", function () {
-    window.location.href = "projects/sthlmExit.html";
-  });
+document.getElementById("stexSearchBtn").addEventListener("click", function () {
+  window.location.href = "projects/stex.html";
+});
 
 document.getElementById("revuSearchBtn").addEventListener("click", function () {
   window.location.href = "projects/revu.html";
