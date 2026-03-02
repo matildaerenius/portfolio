@@ -48,11 +48,11 @@
           <hr class="section-underline" />
           <p class="date">2000-00-00</p>
           <p class="lead mb-6" data-aos="fade-left">
-            Stex stands for Stockholm Exit and is a travel planner for the
-            Stockholm subway that helps optimize a passenger’s position on the
-            train. By matching the user’s destination with the locations of
-            subway exits, the system recommends the optimal position on the
-            platform — front, middle, or back.
+            Stex stands for Stockholm Exit and is a commute planner for the
+            Stockholm subway. Unlike standard travel planners, Stex optimizes
+            your journey by calculating the exact platform position (Front,
+            Middle, or Back) based on the subway exit closest to your final
+            destination—whether it's a station or a specific street address.
           </p>
 
           <!-- Key Features -->
@@ -61,16 +61,20 @@
             <hr class="section-underline" />
             <div class="row">
               <div class="col-6 col-lg-4 mb-4 text-center">
-                <i class="bx bx-train fs-2 text-warning mb-2"></i>
-                <p>Optimized seat recommendation</p>
+                <i class="bx bx-map-pin fs-2 text-warning mb-2"></i>
+                <p>
+                  Calculates optimal exit even when searching by street address
+                </p>
               </div>
               <div class="col-6 col-lg-4 mb-4 text-center">
-                <i class="bx bx-map fs-2 text-warning mb-2"></i>
-                <p>Station data powered by SL's public API</p>
+                <i class="bx bx-shield-quarter fs-2 text-warning mb-2"></i>
+                <p>
+                  Circuit Breakers ensure stability even if external APIs fail
+                </p>
               </div>
               <div class="col-6 col-lg-4 mb-4 text-center">
-                <i class="bx bx-shuffle fs-2 text-warning mb-2"></i>
-                <p>Simplified UI</p>
+                <i class="bx bx-rocket fs-2 text-warning mb-2"></i>
+                <p>Caffeine Caching reduces latency and API calls</p>
               </div>
             </div>
           </section>
@@ -82,10 +86,14 @@
             <ul class="row list-unstyled">
               <li class="col-6">Java</li>
               <li class="col-6">Spring Boot</li>
-              <li class="col-6">Angular</li>
-              <li class="col-6">TypeScript</li>
+              <li class="col-6">React.js</li>
+              <li class="col-6">Docker</li>
               <li class="col-6">PostgreSQL</li>
-              <li class="col-6">Bootstrap</li>
+              <li class="col-6">Resilience4j</li>
+              <li class="col-6">Postman</li>
+              <li class="col-6">Swagger</li>
+              <li class="col-6">GitHub Actions</li>
+              <li class="col-6">Caffeine Cache</li>
             </ul>
           </section>
           <section id="purpose" class="mb-6" data-aos="fade-left">
@@ -102,7 +110,7 @@
               quite complex, and I wasn’t even sure it was fully possible,
               considering API limitations and costs. The frontend wasn’t the
               main focus either, so I decided on a single-page without too much
-              fluff. It's built in Angular, mainly because I wanted to try it
+              fluff. It's built in React.js, mainly because I wanted to try it
               out.
             </p>
           </section>
@@ -133,7 +141,16 @@
           <section id="problems" class="mb-6" data-aos="fade-left">
             <h2 class="h4 mb-2">Problems</h2>
             <hr class="section-underline" />
-            <p>Where do I even begin?</p>
+            <p>
+              Where do I even begin? Initially, fetching a station and all its
+              entrances resulted in excessive database queries. I solved this by
+              implementing <code>JOIN FETCH</code> in JPQL to retrieve all
+              related data in a single optimized query. Relying on external APIs
+              (SL/Trafiklab) meant the app could crash if they went down. I
+              implemented the <strong>Circuit Breaker pattern</strong> using
+              Resilience4j. Now, if the external service fails, the app degrades
+              gracefully or serves cached data instead of hanging.
+            </p>
           </section>
           <section id="lessons" class="mb-6" data-aos="fade-left">
             <h2 class="h4 mb-2">Lessons learned</h2>
@@ -205,7 +222,7 @@
               <h3 class="h5">GitHub</h3>
               <p>
                 <a
-                  href="#"
+                  href="https://github.com/matildaerenius/stex-backend/tree/master"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-decoration-none text-warning"
@@ -257,11 +274,19 @@
               <h3 class="h5">Details</h3>
               <p>
                 <a
-                  href="https://github.com/matildaerenius/sthlm-exit/blob/main/README.md"
+                  href="https://github.com/matildaerenius/stex-backend/blob/master/README.md"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-decoration-none text-warning"
-                  >Read Me →</a
+                  >Read Me BE →</a
+                >
+                <br />
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-decoration-none text-warning"
+                  >Read Me FE →</a
                 >
               </p>
             </div>
