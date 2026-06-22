@@ -35,7 +35,7 @@
   },
   "projects": {
     "title": "Projects",
-    "note": "Most of these projects are still under construction and cannot yet be viewed. Click on the magnifying glass to read more about the project. However, feel free to check out my GitHub for mostly school projects.",
+    "note": "Most of these projects are still under construction and cannot yet be viewed. Feel free to check out my GitHub repositories for more details about each project.",
 
     "buzz": {
       "title": "Buzz",
@@ -54,6 +54,20 @@
       "feature3": "Save ingredients in user profile",
       "code": "code",
       "demo": "Demo"
+    },
+    "bookmap": {
+      "title": "BookMap",
+      "description": "Find books at physical locations around Stockholm with interactive mapping.",
+      "feature1": "Browse books and view their physical locations on an interactive map",
+      "feature2": "Save favorite locations and explore new bookstores",
+      "feature3": "Native Android app built as a thesis project"
+    },
+    "fluxo": {
+      "title": "Fluxo",
+      "description": "Stay focused and organized - manage your tasks with Fluxo",
+      "feature1": "Create & organize tasks into lists",
+      "feature2": "Set priorities & due dates",
+      "feature3": "Full-stack Android app with Spring Boot REST API"
     }
   },
   "contact": {

@@ -592,6 +592,8 @@ ul {
   font-family: 'Tektur';
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
   font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem !important;
 }
 
 .project-card .card-text {
@@ -912,3 +914,18 @@ ul {
 }
 
 
+
+
+/* Consistent spacing for project cards */
+.project-card .d-flex.flex-wrap.gap-1 {
+  margin-bottom: 1rem !important;
+  margin-top: 0 !important;
+}
+
+.project-card .list-unstyled {
+  margin-bottom: auto !important;
+}
+
+.project-card .mt-auto {
+  margin-top: 1rem !important;
+}
