@@ -8,13 +8,13 @@
   },
   "hero": {
     "title": "<Matilda\nErenius/>",
-    "subtitle": "Javautvecklarstudent.",
+    "subtitle": "Junior Android Developer @BookBeat.",
     "button": "Kontakta mig"
   },
   "about": {
     "title": "Om mig",
-    "paragraph1": "Hej! Jag heter Matilda, bor i Stockholm och studerar till Javautvecklare. Jag växte inte upp med att koda på mitt rum eller bygga hemsidor som 12-åring. Jag kom in i techvärlden utan någon erfarenhet alls – bara en stor nyfikenhet och en kärlek för att lösa kluriga problem. Nu är jag helt fast och ständigt ivrig att dyka in i nya utmaningar och bredda mina tekniska färdigheter.",
-    "paragraph2": "Just nu är jag särskilt intresserad av backendutveckling. Det är något väldigt tillfredsställande med att få saker att fungera bakom kulisserna – logiken, strukturen, flödet. Jag är också supernyfiken på molnteknologier och vill förstå hur allt hänger ihop i verkliga applikationer.",
+    "paragraph1": "Hej! Jag heter Matilda och bor i Stockholm där jag jobbar som Junior Android Developer på BookBeat. Min kodningsresa började inte med komplexa algoritmer när jag var 12. Mitt första minnesvärda kodmoment var i mellanstadiet när jag använde 'Inspect Code' för att skoja till det på nyhetssajter och lura mina klasskamrater. Jag tog min examen i maj med fokus på Javautveckling, och omedelbar efter började jag min Android-resa. Mobilutveckling var helt nytt för mig, men helt ärligt? Jag har redan älskat det.",
+    "paragraph2": "Det som fångade mig med IT var insikten att man aldrig riktigt är 'färdig' med lärandet—och det har aldrig varit mer sant än nu. Jag tog examen och trodde att backend och DevOps var min framtid, men sedan upptäckte jag Kotlin och Jetpack Compose. Det finns något magiskt med att bygga vackra, funktionella mobila appar som människor faktiskt använder på sina telefoner. Kombinationen av kreativt UI-arbete och solid logik är bara fantastisk. Jag är konstant imponerad över hur roligt och engagerande mobilutveckling är, och jag är supertadd på att fortsätta växa inom detta område.",
     "paragraph3": "Jag försöker möta både livet och kod med nyfikenhet, humor och inställningen att varje 'oj då' bara är ett maskerat lärmoment. Jag är alltid redo för nya utmaningar – särskilt om de innehåller tech, samarbete eller en riktigt bra spellista på Spotify.",
     "paragraph4": "När jag inte är fastklistrad vid datorn hittar du mig troligen lyftandes vikter eller på en lång promenad – som ofta slutar med att jag tar bussen hem. Jag älskar spelkvällar med familj eller vänner (även om jag förlorar 9 av 10 gånger – tur i kärlek, eller hur?). Annars skrubbar jag ugnen, organiserar köksskåp (ja, det är terapi för mig) eller ser om Friends för elfte gången – med en godispåse i handen, såklart.",
     "cv": "Visa CV"
@@ -24,6 +24,7 @@
     "frontend": "Frontend",
     "backend": "Backend",
     "tools": "Verktyg",
+    "mobile": "Mobil",
     "socialTitle": "Sociala Färdigheter",
     "problemSolver": "Problemlösare",
     "positive": "Positiv",
@@ -54,8 +55,6 @@
       "code": "Kod",
       "demo": "Demo"
     }
-
-    
   },
   "contact": {
     "title": "Kontakta mig",
@@ -67,7 +66,6 @@
       "email": "E-post",
       "message": "Meddelande",
       "send": "Skicka meddelande"
-      
     },
     "info": {
       "title": "Kontaktinformation",
@@ -78,5 +76,4 @@
     },
     "social": "Via sociala medier"
   }
-  
 }

@@ -8,13 +8,13 @@
   },
   "hero": {
     "title": "<Matilda\nErenius/>",
-    "subtitle": "Java Developer Student.",
+    "subtitle": "Junior Android Developer @BookBeat.",
     "button": "Contact Me"
   },
   "about": {
     "title": "About me",
-    "paragraph1": " Hey! I'm Matilda, currently based in Stockholm and studying to become a Java developer. My coding journey didn't start with complex algorithms at age 12. My first memory of code was in middleschool using 'Inspect Code' to mess with news websites and trick my classmates.",
-    "paragraph2": "Finding my way to IT was a happy accident, but turned out to be the perfect fit. What hooked me was the realization that you are never truly 'done' learning. Today, I'm all in and I feel like I've found my calling. The more experience I've gained, the more I've realized that backend and DevOps is what intrests me the most.",
+    "paragraph1": " Hey! I'm Matilda, based in Stockholm and working as a Junior Android Developer at BookBeat. My coding journey didn't start with complex algorithms at age 12. My first memory of code was in middleschool using 'Inspect Code' to mess with news websites and trick my classmates. I graduated in May with my degree in Java development, and immediately jumped into Android—something I'd never done before. Honestly? I've instantly fallen in love with it.",
+    "paragraph2": "What hooked me on IT was the realization that you're never truly 'done' learning—and that's been proven right again. I graduated thinking backend and DevOps was my calling, but then I discovered Kotlin and Jetpack Compose. There's something genuinely magical about building beautiful, functional mobile apps that people actually use on their phones. The mix of creative UI work and solid logic is just incredible. I'm constantly amazed by how fun and engaging mobile development is, and I'm excited to keep learning and growing in this space.",
     "paragraph3": "I try to approach both life and code with curiosity, humor, and the mindset that every “oops” is just a disguised learning moment. I'm always up for a new challenge, especially if it involves tech, teamwork, or a really good Spotify playlist.",
     "paragraph4": "Furthermore, when I'm not glued to my computer, you'll find me lifting weights or out on a long walk - then getting too tired and catching the bus back. I love a good board game night with family or friends (even though I lose about nine out of ten times - hey, at least I'm lucky in love). Otherwise, I'm probably scrubbing the oven, reorganizing the kitchen cabinet, which I find oddly therapeutic. When I need a break you'll find me rewatching Friends for the 11th time - always with a stash of lollies, of course.",
     "cv": "View CV"
@@ -24,6 +24,7 @@
     "frontend": "Frontend",
     "backend": "Backend",
     "tools": "Tools",
+    "mobile": "Mobile",
     "socialTitle": "Social Skills",
     "problemSolver": "Problem Solver",
     "positive": "Positive",
