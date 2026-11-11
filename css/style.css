@@ -1031,3 +1031,31 @@ ul {
 .project-features li i {
   margin-top: 2px;
 }
+
+/* Highlighted project: yellow star over the card's top-left corner.
+   The star sits outside the card (which clips its content) so it can overlap the edge. */
+.project-item--featured {
+  position: relative;
+}
+
+.project-item--featured .project-card {
+  box-shadow: 0 0 0 2px #F6FF4C, 0 0 14px rgba(246, 255, 76, 0.35);
+}
+
+.project-star {
+  position: absolute;
+  top: -16px;
+  left: -12px;
+  z-index: 3;
+  color: #F6FF4C;
+  font-size: 2.6rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 2px #130824) drop-shadow(0 0 8px rgba(246, 255, 76, 0.6));
+  pointer-events: none;
+}
+
+/* tilt lives on the icon so the AOS fade-in transform doesn't override it */
+.project-star i {
+  display: block;
+  transform: rotate(-12deg);
+}
