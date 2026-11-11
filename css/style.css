@@ -883,11 +883,14 @@ ul {
   border-radius: 2rem;
   margin-right: 0.5rem;
   font-weight: 500;
-  transition: background-color 0.3s ease;
+  /* invisible until hover, so the pill doesn't change size */
+  border: 1px dashed transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
+/* same dashed yellow outline as the "+N" chip */
 .project-badge:hover {
-  background-color: #495057;
+  border-color: #F6FF4C;
 }
 
 #loadMoreBtn {
