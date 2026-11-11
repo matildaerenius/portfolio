@@ -90,15 +90,29 @@
               class="ms-2"
               aria-label="Change language"
             >
-              <img
-                id="flagIcon"
-                src="images/gb.png"
-                alt="English flag"
-                data-i18n-alt="nav.flagAlt"
-                width="24"
-                height="24"
-                style="border-radius: 50%"
-              />
+              <span class="flag-flipper">
+                <img
+                  id="flagIcon"
+                  class="flag-face"
+                  src="images/gb.png"
+                  alt="English flag"
+                  data-i18n-alt="nav.flagAlt"
+                  width="24"
+                  height="24"
+                  style="border-radius: 50%"
+                />
+                <!-- back of the flag: the language you switch to -->
+                <img
+                  id="flagIconNext"
+                  class="flag-face flag-back"
+                  src="images/se.png"
+                  alt=""
+                  aria-hidden="true"
+                  width="24"
+                  height="24"
+                  style="border-radius: 50%"
+                />
+              </span>
             </a>
           </div>
         </div>

@@ -7,21 +7,28 @@ document.querySelectorAll(".skill-card").forEach((card) => {
 
 const langToggle = document.getElementById("langToggle");
 const flagIcon = document.getElementById("flagIcon");
+const flagIconNext = document.getElementById("flagIconNext");
+
+// Front shows the current language, back (seen on hover) the one you switch to
+function updateFlags(lang) {
+  const flag = (l) => `images/${l === "en" ? "gb" : "se"}.png`;
+  if (flagIcon) flagIcon.src = flag(lang);
+  if (flagIconNext) flagIconNext.src = flag(lang === "en" ? "sv" : "en");
+}
 
 let currentLang = localStorage.getItem("language") || "en";
 
 window.addEventListener("DOMContentLoaded", () => {
   loadLanguage(currentLang);
   updateCvLinks(currentLang);
-  if (flagIcon)
-    flagIcon.src = `images/${currentLang === "en" ? "gb" : "se"}.png`;
+  updateFlags(currentLang);
 });
 
 langToggle?.addEventListener("click", (e) => {
   e.preventDefault();
   currentLang = currentLang === "en" ? "sv" : "en";
   localStorage.setItem("language", currentLang);
-  flagIcon.src = `images/${currentLang === "en" ? "gb" : "se"}.png`;
+  updateFlags(currentLang);
   loadLanguage(currentLang);
   updateCvLinks(currentLang);
 });

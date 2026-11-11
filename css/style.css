@@ -95,6 +95,90 @@ body {
   color: #F6FF4C;
 }
 
+/* === Language toggle hover animation ===
+   The flag flips like a coin to preview the language you'll switch to,
+   while a yellow arc spins around it with a soft glow. */
+#langToggle {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  perspective: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#langToggle .flag-flipper {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 1.6, 0.5, 1);
+}
+
+#langToggle .flag-face {
+  position: absolute;
+  inset: 0;
+  display: block;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+#langToggle .flag-back {
+  transform: rotateY(180deg);
+}
+
+#langToggle::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #F6FF4C;
+  border-right-color: #F6FF4C;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+#langToggle:hover,
+#langToggle:focus-visible {
+  box-shadow: 0 0 12px rgba(246, 255, 76, 0.55);
+}
+
+#langToggle:hover .flag-flipper,
+#langToggle:focus-visible .flag-flipper {
+  transform: rotateY(180deg);
+}
+
+#langToggle:hover::after,
+#langToggle:focus-visible::after {
+  opacity: 1;
+  transform: scale(1);
+  animation: lang-arc-spin 0.9s linear infinite;
+}
+
+@keyframes lang-arc-spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #langToggle .flag-flipper,
+  #langToggle::after {
+    transition: none;
+  }
+
+  #langToggle:hover::after,
+  #langToggle:focus-visible::after {
+    animation: none;
+  }
+}
+
 
 /* === Hero sektion === */
 @keyframes subtlePan {
