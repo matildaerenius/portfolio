@@ -283,9 +283,9 @@
         "
       />
 
-      <div class="row g-4 justify-content-center">
+      <div class="equal-grid skills-grid">
         <!-- Kort 1: Frontend -->
-        <div class="col-md-4">
+        <div>
           <div class="skill-card text-center p-3" data-skill="frontend">
             <hr class="skill-divider" />
             <h3 class="skill-title mb-0" data-i18n="skills.frontend">
@@ -341,7 +341,7 @@
         </div>
 
         <!-- Kort 2: Backend -->
-        <div class="col-md-4">
+        <div>
           <div class="skill-card text-center p-3" data-skill="backend">
             <hr class="skill-divider" />
             <h3 class="skill-title mb-0" data-i18n="skills.backend">Backend</h3>
@@ -387,7 +387,7 @@
         </div>
 
         <!-- Kort 3: Tools, icons8 -->
-        <div class="col-md-4">
+        <div>
           <div class="skill-card text-center p-3" data-skill="tools">
             <hr class="skill-divider" />
             <h3 class="skill-title mb-0" data-i18n="skills.tools">Tools</h3>
@@ -433,7 +433,7 @@
         </div>
 
         <!-- Kort 4: Mobile -->
-        <div class="col-md-4">
+        <div>
           <div class="skill-card text-center p-3" data-skill="mobile">
             <hr class="skill-divider" />
             <h3 class="skill-title mb-0" data-i18n="skills.mobile">Mobile</h3>
@@ -552,44 +552,40 @@
         style="width: 180px; border-top: 3px solid #f6ff4c; opacity: 1"
       />
 
-      <div class="row row-cols-1 row-cols-md-3 g-4 h-100" id="projectsRow">
+      <div class="equal-grid projects-grid" id="projectsRow">
         <!-- Bookmap Project -->
-        <div class="col project-item">
+        <div class="project-item">
           <div
             class="card project-card p-4 text-white h-100"
             data-aos="fade-up"
           >
-            <div class="d-flex gap-2 mb-3" style="height: 200px; overflow-x: auto;">
-              <div class="project-img-wrapper" style="flex: 0 0 22%; min-width: 0;">
+            <div class="project-media project-gallery d-flex gap-2 mb-3">
+              <div class="project-img-wrapper">
                 <img
                   src="https://raw.githubusercontent.com/matildaerenius/bookmap/main/docs/images/onboarding_screen.png"
                   alt="BookMap Onboarding Screen"
                   class="img-fluid rounded project-img"
-                  style="height: 100%; object-fit: contain;"
                 />
               </div>
-              <div class="project-img-wrapper" style="flex: 0 0 22%; min-width: 0;">
+              <div class="project-img-wrapper">
                 <img
                   src="https://raw.githubusercontent.com/matildaerenius/bookmap/main/docs/images/map_screen.png"
                   alt="BookMap Map Screen"
                   class="img-fluid rounded project-img"
-                  style="height: 100%; object-fit: contain;"
                 />
               </div>
-              <div class="project-img-wrapper" style="flex: 0 0 22%; min-width: 0;">
+              <div class="project-img-wrapper">
                 <img
                   src="https://raw.githubusercontent.com/matildaerenius/bookmap/main/docs/images/detail_sheet.png"
                   alt="BookMap Detail Sheet"
                   class="img-fluid rounded project-img"
-                  style="height: 100%; object-fit: contain;"
                 />
               </div>
-              <div class="project-img-wrapper" style="flex: 0 0 22%; min-width: 0;">
+              <div class="project-img-wrapper">
                 <img
                   src="https://raw.githubusercontent.com/matildaerenius/bookmap/main/docs/images/favorite_screen.png"
                   alt="BookMap Favorites Screen"
                   class="img-fluid rounded project-img"
-                  style="height: 100%; object-fit: contain;"
                 />
               </div>
             </div>
@@ -603,7 +599,7 @@
             <p class="card-text mb-3" data-i18n="projects.bookmap.description">
               Find books at physical locations around Stockholm with interactive mapping.
             </p>
-            <div class="d-flex flex-wrap gap-1 my-3">
+            <div class="project-badges d-flex flex-wrap gap-1 my-3">
               <span class="badge project-badge">Kotlin</span>
               <span class="badge project-badge">Jetpack Compose</span>
               <span class="badge project-badge">Android Studio</span>
@@ -611,7 +607,7 @@
               <span class="badge project-badge">Google Maps API</span>
               <span class="badge project-badge">MVVM</span>
             </div>
-            <ul class="list-unstyled mb-4">
+            <ul class="project-features list-unstyled mb-4">
               <li class="d-flex align-items-center mb-2">
                 <i class="bx bx-map-pin fs-5 me-2"></i>
                 <small data-i18n="projects.bookmap.feature1">Browse books and view their physical locations on an interactive map</small>
@@ -625,7 +621,7 @@
                 <small data-i18n="projects.bookmap.feature3">Native Android app built as a thesis project</small>
               </li>
             </ul>
-            <div class="mt-auto d-flex justify-content-start gap-2 mt-4">
+            <div class="project-actions mt-auto d-flex justify-content-start gap-2 mt-4">
               <a
                 href="https://github.com/matildaerenius/bookmap"
                 target="_blank"
@@ -637,12 +633,12 @@
         </div>
 
         <!-- Projektkort 9 -->
-        <div class="col project-item">
+        <div class="project-item">
           <div
             class="card project-card p-4 text-white h-100"
             data-aos="fade-up"
           >
-            <div class="project-img-wrapper mb-3">
+            <div class="project-img-wrapper project-media mb-3">
               <img
                 src="images/backenddone.png"
                 alt="Project image" data-i18n-alt="projects.imageAlt"
@@ -659,7 +655,7 @@
             <p class="card-text mb-3" data-i18n="projects.buzz.description">
               Buzz...with your friends on this social media website.
             </p>
-            <div class="d-flex flex-wrap gap-1 my-3">
+            <div class="project-badges d-flex flex-wrap gap-1 my-3">
               <span class="badge project-badge">Java</span>
               <span class="badge project-badge">Spring Boot</span>
               <span class="badge project-badge">MySQL</span>
@@ -673,7 +669,7 @@
               <span class="badge project-badge">Postman</span>
             </div>
             <!-- Lista med ikoner och text -->
-            <ul class="list-unstyled mb-4">
+            <ul class="project-features list-unstyled mb-4">
               <li class="d-flex align-items-center mb-2">
                 <i class="bx bx-code fs-5 me-2"></i>
                 <small data-i18n="projects.buzz.feature1"
@@ -693,7 +689,7 @@
                 >
               </li>
             </ul>
-            <div class="mt-auto d-flex justify-content-start gap-2 mt-4">
+            <div class="project-actions mt-auto d-flex justify-content-start gap-2 mt-4">
               <a
                 href="https://github.com/matildaerenius/Buzz"
                 target="_blank"
@@ -704,12 +700,12 @@
           </div>
         </div>
         <!-- Projektkort 1 -->
-        <div class="col project-item">
+        <div class="project-item">
           <div
             class="card project-card p-4 text-white h-100"
             data-aos="fade-up"
           >
-            <div class="project-img-wrapper mb-3">
+            <div class="project-img-wrapper project-media mb-3">
               <img
                 src="images/recipedia.png"
                 alt="Project image" data-i18n-alt="projects.imageAlt"
@@ -730,7 +726,7 @@
               Get recipe suggestions based on what's already in your kitchen.
             </p>
             <!-- ikoner -->
-            <div class="d-flex flex-wrap gap-1 mb-3">
+            <div class="project-badges d-flex flex-wrap gap-1 my-3">
               <span class="badge project-badge">Java</span>
               <span class="badge project-badge">Spring Boot</span>
               <span class="badge project-badge">MySQL</span>
@@ -742,7 +738,7 @@
               <span class="badge project-badge">Postman</span>
             </div>
             <!-- Lista med ikoner och text -->
-            <ul class="list-unstyled mb-4">
+            <ul class="project-features list-unstyled mb-4">
               <li class="d-flex align-items-center mb-2">
                 <i class="bx bx-basket fs-5 me-2"></i>
                 <small data-i18n="projects.recipedia.feature1"
@@ -763,7 +759,7 @@
               </li>
             </ul>
             <!-- Knapp -->
-            <div class="mt-auto d-flex justify-content-start gap-2 mt-4">
+            <div class="project-actions mt-auto d-flex justify-content-start gap-2 mt-4">
               <a
                 href="https://github.com/matildaerenius/recipedia"
                 target="_blank"
@@ -776,12 +772,12 @@
         </div>
 
         <!-- Projektkort 2 -->
-        <div class="col project-item">
+        <div class="project-item">
           <div
             class="card project-card p-4 text-white h-100"
             data-aos="fade-up"
           >
-            <div class="project-img-wrapper mb-3">
+            <div class="project-img-wrapper project-media mb-3">
               <img
                 src="images/holder.png"
                 alt="Project image" data-i18n-alt="projects.imageAlt"
@@ -792,7 +788,7 @@
             <p class="card-text mb-3" data-i18n="projects.stex.description">
               Find the best train seat and the right exit for your subway ride.
             </p>
-            <div class="d-flex flex-wrap gap-1 my-3">
+            <div class="project-badges d-flex flex-wrap gap-1 my-3">
               <span class="badge project-badge">Java</span>
               <span class="badge project-badge">Spring Boot</span>
               <span class="badge project-badge">Docker</span>
@@ -807,7 +803,7 @@
               <span class="badge project-badge">SL API</span>
             </div>
             <!-- Lista med ikoner och text -->
-            <ul class="list-unstyled mb-4">
+            <ul class="project-features list-unstyled mb-4">
               <li class="d-flex align-items-center mb-2">
                 <i class="bx bx-map-pin fs-5 me-2"></i>
                 <small data-i18n="projects.stex.feature1">Calculates optimal exit even when searching by street address</small>
@@ -821,7 +817,7 @@
                 <small data-i18n="projects.stex.feature3">Caffeine Caching reduces latency and API calls</small>
               </li>
             </ul>
-            <div class="mt-auto d-flex justify-content-start gap-2 mt-4">
+            <div class="project-actions mt-auto d-flex justify-content-start gap-2 mt-4">
               <a
                 href="https://github.com/matildaerenius/stex"
                 target="_blank"
@@ -833,13 +829,13 @@
         </div>
 
         <!-- Projektkort 8 -->
-        <div class="col project-item">
+        <div class="project-item">
           <div
             class="card project-card p-4 text-white h-100"
             data-aos="fade-up"
           >
 
-            <div class="project-img-wrapper mb-3">
+            <div class="project-img-wrapper project-media mb-3">
               <img
                 src="images/echotype.png"
                 alt="Project image" data-i18n-alt="projects.imageAlt"
@@ -850,7 +846,7 @@
             <p class="card-text mb-3" data-i18n="projects.echotype.description">
               Hear it. Echo it. Type it. With this audio to text transcriber.
             </p>
-            <div class="d-flex flex-wrap gap-1 my-3">
+            <div class="project-badges d-flex flex-wrap gap-1 my-3">
               <span class="badge project-badge">Java</span>
               <span class="badge project-badge">Spring Boot</span>
               <span class="badge project-badge">OpenAI API</span>
@@ -860,7 +856,7 @@
               <span class="badge project-badge">Postman</span>
             </div>
             <!-- Lista med ikoner och text -->
-            <ul class="list-unstyled mb-4">
+            <ul class="project-features list-unstyled mb-4">
               <li class="d-flex align-items-center mb-2">
                 <i class="bx bx-upload fs-5 me-2"></i>
                 <small data-i18n="projects.echotype.feature1">Upload audio files directly in the browser</small>
@@ -874,7 +870,7 @@
                 <small data-i18n="projects.echotype.feature3">Clean, minimal and user-friendly UI</small>
               </li>
             </ul>
-            <div class="mt-auto d-flex justify-content-start gap-2 mt-4">
+            <div class="project-actions mt-auto d-flex justify-content-start gap-2 mt-4">
               <a
                 href="https://github.com/matildaerenius/echotype"
                 target="_blank"
@@ -886,7 +882,7 @@
         </div>
 
         <!-- Projektkort 3
-        <div class="col project-item">
+        <div class="project-item">
           <div
             class="card project-card p-4 text-white h-100"
             data-aos="fade-up"
@@ -901,7 +897,7 @@
                 <i class="bx bx-search fs-5"></i>
               </button>
             </div>
-            <div class="project-img-wrapper mb-3">
+            <div class="project-img-wrapper project-media mb-3">
               <img
                 src="images/holder.png"
                 alt="Projektbild"
@@ -918,7 +914,7 @@
               </span>
             </div>
 
-            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+            <div class="project-actions mt-auto d-flex justify-content-between gap-2 mt-4">
               <a href="#" target="_blank" class="btn project-btn disabled"
                 ><i class="bx bxl-github fs-6"></i> Code</a
               >
@@ -929,7 +925,7 @@
           </div>
         </div>
         
-        <div class="col project-item">
+        <div class="project-item">
           <div
             class="card project-card p-4 text-white h-100"
             data-aos="fade-up"
@@ -945,7 +941,7 @@
               </button>
             </div>
 
-            <div class="project-img-wrapper mb-3">
+            <div class="project-img-wrapper project-media mb-3">
               <img
                 src="images/holder.png"
                 alt="Projektbild"
@@ -962,7 +958,7 @@
               </span>
             </div>
 
-            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+            <div class="project-actions mt-auto d-flex justify-content-between gap-2 mt-4">
               <a href="#" target="_blank" class="btn project-btn disabled"
                 ><i class="bx bxl-github fs-6"></i> Code</a
               >
@@ -974,7 +970,7 @@
         </div>
 
         
-        <div class="col project-item">
+        <div class="project-item">
           <div
             class="card project-card p-4 text-white h-100"
             data-aos="fade-up"
@@ -989,7 +985,7 @@
                 <i class="bx bx-search fs-5"></i>
               </button>
             </div>
-            <div class="project-img-wrapper mb-3">
+            <div class="project-img-wrapper project-media mb-3">
               <img
                 src="images/holder.png"
                 alt="Projektbild"
@@ -1001,7 +997,7 @@
               Write, manage, and share your posts - all in one blogging
               platform.
             </p>
-            <div class="d-flex flex-wrap gap-1 my-3">
+            <div class="project-badges d-flex flex-wrap gap-1 my-3">
               <span class="badge project-badge">Java</span>
               <span class="badge project-badge">Spring Boot</span>
               <span class="badge project-badge">PostgreSQL</span>
@@ -1011,7 +1007,7 @@
               <span class="badge project-badge">Postman</span>
               <span class="badge project-badge">Docker</span>
             </div>
-            <ul class="list-unstyled mb-4">
+            <ul class="project-features list-unstyled mb-4">
               <li class="d-flex align-items-center mb-2">
                 <i class="bx bx-pencil fs-5 me-2"></i>
                 <small>Create & manage blog posts</small>
@@ -1025,7 +1021,7 @@
                 <small>Secure JWT authentication</small>
               </li>
             </ul>
-            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+            <div class="project-actions mt-auto d-flex justify-content-between gap-2 mt-4">
               <a href="#" target="_blank" class="btn project-btn disabled"
                 ><i class="bx bxl-github fs-6"></i> Code</a
               >
@@ -1037,13 +1033,13 @@
         </div>
        -->
 
-        <div class="col project-item">
+        <div class="project-item">
           <div
             class="card project-card p-4 text-white h-100"
             data-aos="fade-up"
           >
 
-            <div class="project-img-wrapper mb-3">
+            <div class="project-img-wrapper project-media mb-3">
               <img
                 src="images/backenddone.png"
                 alt="Project image" data-i18n-alt="projects.imageAlt"
@@ -1060,7 +1056,7 @@
             <p class="card-text mb-3" data-i18n="projects.fluxo.description">
               Stay focused and organized - manage your tasks with Fluxo
             </p>
-            <div class="d-flex flex-wrap gap-1 my-3">
+            <div class="project-badges d-flex flex-wrap gap-1 my-3">
               <span class="badge project-badge">Kotlin</span>
               <span class="badge project-badge">Jetpack Compose</span>
               <span class="badge project-badge">Android Studio</span>
@@ -1069,7 +1065,7 @@
               <span class="badge project-badge">MVVM</span>
               <span class="badge project-badge">Clean Architecture</span>
             </div>
-            <ul class="list-unstyled mb-4">
+            <ul class="project-features list-unstyled mb-4">
               <li class="d-flex align-items-center mb-2">
                 <i class="bx bx-list-check fs-5 me-2"></i>
                 <small data-i18n="projects.fluxo.feature1">Create & organize tasks into lists</small>
@@ -1083,7 +1079,7 @@
                 <small data-i18n="projects.fluxo.feature3">Full-stack Android app with Spring Boot REST API</small>
               </li>
             </ul>
-            <div class="mt-auto d-flex justify-content-start gap-2 mt-4">
+            <div class="project-actions mt-auto d-flex justify-content-start gap-2 mt-4">
               <a
                 href="https://github.com/matildaerenius/fluxo"
                 target="_blank"
@@ -1094,7 +1090,7 @@
           </div>
         </div>
         <!-- Projektkort 6
-        <div class="col project-item">
+        <div class="project-item">
           <div
             class="card project-card p-4 text-white h-100"
             data-aos="fade-up"
@@ -1109,7 +1105,7 @@
                 <i class="bx bx-search fs-5"></i>
               </button>
             </div>
-            <div class="project-img-wrapper mb-3">
+            <div class="project-img-wrapper project-media mb-3">
               <img
                 src="images/holder.png"
                 alt="Projektbild"
@@ -1127,7 +1123,7 @@
               </span>
             </div>
 
-            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+            <div class="project-actions mt-auto d-flex justify-content-between gap-2 mt-4">
               <a href="#" target="_blank" class="btn project-btn disabled"
                 ><i class="bx bxl-github fs-6"></i> Code</a
               >
@@ -1139,7 +1135,7 @@
         </div>
 
         
-        <div class="col project-item">
+        <div class="project-item">
           <div
             class="card project-card p-4 text-white h-100"
             data-aos="fade-up"
@@ -1155,7 +1151,7 @@
               </button>
             </div>
 
-            <div class="project-img-wrapper mb-3">
+            <div class="project-img-wrapper project-media mb-3">
               <img
                 src="images/holder.png"
                 alt="Projektbild"
@@ -1172,7 +1168,7 @@
               </span>
             </div>
 
-            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+            <div class="project-actions mt-auto d-flex justify-content-between gap-2 mt-4">
               <a href="#" target="_blank" class="btn project-btn disabled"
                 ><i class="bx bxl-github fs-6"></i> Code</a
               >
@@ -1182,7 +1178,7 @@
             </div>
           </div>
         </div>       
-        <div class="col project-item">
+        <div class="project-item">
           <div
             class="card project-card p-4 text-white h-100"
             data-aos="fade-up"
@@ -1198,7 +1194,7 @@
               </button>
             </div>
 
-            <div class="project-img-wrapper mb-3">
+            <div class="project-img-wrapper project-media mb-3">
               <img
                 src="images/holder.png"
                 alt="Projektbild"
@@ -1215,7 +1211,7 @@
               </span>
             </div>
 
-            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+            <div class="project-actions mt-auto d-flex justify-content-between gap-2 mt-4">
               <a href="#" target="_blank" class="btn project-btn disabled"
                 ><i class="bx bxl-github fs-6"></i> Code</a
               >
@@ -1226,7 +1222,7 @@
           </div>
         </div>
         
-        <div class="col project-item">
+        <div class="project-item">
           <div
             class="card project-card p-4 text-white h-100"
             data-aos="fade-up"
@@ -1242,7 +1238,7 @@
               </button>
             </div>
 
-            <div class="project-img-wrapper mb-3">
+            <div class="project-img-wrapper project-media mb-3">
               <img
                 src="images/holder.png"
                 alt="Projektbild"
@@ -1259,7 +1255,7 @@
               </span>
             </div>
 
-            <div class="mt-auto d-flex justify-content-between gap-2 mt-4">
+            <div class="project-actions mt-auto d-flex justify-content-between gap-2 mt-4">
               <a href="#" target="_blank" class="btn project-btn disabled"
                 ><i class="bx bxl-github fs-6"></i> Code</a
               >

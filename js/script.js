@@ -79,6 +79,9 @@ function loadLanguage(lang) {
           el.appendChild(span);
         });
       });
+
+      // Translated text wraps differently, so re-align the project cards
+      equalizeProjectCards();
     })
     .catch((err) => console.error("Could not load language file:", err));
 }
@@ -179,3 +182,99 @@ function updateCvLinks(lang) {
     }
   });
 }
+
+// --- Symmetric project cards ---
+const MAX_BADGE_ROWS = 2;
+
+// Number of wrapped lines the visible badges in a block take up
+function badgeRows(block) {
+  const tops = new Set(
+    [...block.children]
+      .filter((el) => el.offsetParent !== null)
+      .map((el) => el.offsetTop)
+  );
+  return tops.size;
+}
+
+// Shows as many badges as fit on MAX_BADGE_ROWS lines and folds the rest into
+// a "+N" chip. Clicking the chip shows all badges (and "−" folds them again).
+function fitBadges(block) {
+  const badges = [...block.querySelectorAll(".project-badge:not(.project-badge-more)")];
+  let chip = block.querySelector(".project-badge-more");
+
+  badges.forEach((b) => (b.hidden = false));
+  if (chip) chip.hidden = true;
+  if (block.classList.contains("expanded") || badgeRows(block) <= MAX_BADGE_ROWS) {
+    if (chip && block.classList.contains("expanded")) {
+      chip.hidden = false;
+      chip.textContent = "−";
+      chip.title = "";
+    }
+    return;
+  }
+
+  if (!chip) {
+    chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "badge project-badge project-badge-more";
+    chip.addEventListener("click", () => {
+      block.classList.toggle("expanded");
+      equalizeProjectCards();
+    });
+    block.appendChild(chip);
+  }
+  chip.hidden = false;
+
+  let visible = badges.length;
+  do {
+    badges[--visible].hidden = true;
+    const rest = badges.slice(visible);
+    chip.textContent = `+${rest.length}`;
+    chip.title = rest.map((b) => b.textContent.trim()).join(", ");
+  } while (visible > 1 && badgeRows(block) > MAX_BADGE_ROWS);
+}
+
+// Lines up the description and badges of cards that sit side by side, so the
+// badges, bullet lists and buttons start at the same height within each row.
+// On phones every card is on its own row and keeps its natural layout.
+const ALIGNED_SECTIONS = [".card-title", ".card-text", ".project-badges"];
+
+function equalizeProjectCards() {
+  const cards = [...document.querySelectorAll(".project-card")].filter(
+    (card) => card.offsetParent !== null
+  );
+
+  cards.forEach((card) => {
+    ALIGNED_SECTIONS.forEach((sel) => {
+      const el = card.querySelector(sel);
+      if (el) el.style.minHeight = "";
+    });
+    const badges = card.querySelector(".project-badges");
+    if (badges) fitBadges(badges);
+  });
+
+  // Group cards by the row they are rendered in
+  const rows = new Map();
+  cards.forEach((card) => {
+    const top = Math.round(card.getBoundingClientRect().top + window.scrollY);
+    if (!rows.has(top)) rows.set(top, []);
+    rows.get(top).push(card);
+  });
+
+  rows.forEach((rowCards) => {
+    if (rowCards.length < 2) return;
+    ALIGNED_SECTIONS.forEach((sel) => {
+      const els = rowCards.map((card) => card.querySelector(sel)).filter(Boolean);
+      const tallest = Math.max(0, ...els.map((el) => el.offsetHeight));
+      els.forEach((el) => (el.style.minHeight = `${tallest}px`));
+    });
+  });
+}
+
+let equalizeFrame = null;
+window.addEventListener("resize", () => {
+  if (equalizeFrame) cancelAnimationFrame(equalizeFrame);
+  equalizeFrame = requestAnimationFrame(equalizeProjectCards);
+});
+document.addEventListener("DOMContentLoaded", equalizeProjectCards);
+document.fonts?.ready.then(equalizeProjectCards);
