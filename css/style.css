@@ -1059,3 +1059,75 @@ ul {
   display: block;
   transform: rotate(-12deg);
 }
+
+/* === Code button hover animation (project cards) ===
+   A dark fill sweeps in from the left, the text turns yellow, the button
+   lifts with a glow and the GitHub icon does a quick spin. */
+.project-actions .project-btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.35s ease, box-shadow 0.35s ease, transform 0.25s ease,
+    letter-spacing 0.35s ease;
+}
+
+.project-actions .project-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: #130824;
+  border-radius: inherit;
+  transform: translateX(-101%);
+  transition: transform 0.4s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.project-actions .project-btn:hover,
+.project-actions .project-btn:focus-visible {
+  background-color: #F6FF4C;
+  color: #F6FF4C;
+  letter-spacing: 0.06em;
+  transform: translateY(-3px);
+  box-shadow: 0 0 0 2px #F6FF4C, 0 6px 16px rgba(246, 255, 76, 0.45);
+}
+
+.project-actions .project-btn:hover::before,
+.project-actions .project-btn:focus-visible::before {
+  transform: translateX(0);
+}
+
+.project-actions .project-btn i {
+  display: inline-block;
+}
+
+.project-actions .project-btn:hover i,
+.project-actions .project-btn:focus-visible i {
+  animation: code-btn-icon 0.6s ease;
+}
+
+@keyframes code-btn-icon {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  50% {
+    transform: rotate(200deg) scale(1.3);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-actions .project-btn,
+  .project-actions .project-btn::before {
+    transition: none;
+  }
+
+  .project-actions .project-btn:hover i,
+  .project-actions .project-btn:focus-visible i {
+    animation: none;
+  }
+}
