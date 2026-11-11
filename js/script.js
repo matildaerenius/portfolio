@@ -83,65 +83,28 @@ function loadLanguage(lang) {
     .catch((err) => console.error("Could not load language file:", err));
 }
 
-document.getElementById("BuzzSearchBtn").addEventListener("click", function () {
-  window.location.href = "projects/buzz.html";
+// Magnifying-glass buttons that open a project's detail page.
+// Some cards are commented out in index.html, so skip buttons that don't exist.
+const PROJECT_PAGES = {
+  BuzzSearchBtn: "buzz",
+  RecipediaSearchBtn: "recipedia",
+  stexSearchBtn: "stex",
+  revuSearchBtn: "revu",
+  bytelogSearchBtn: "bytelog",
+  pastCastSearchBtn: "pastcast",
+  echoTypeSearchBtn: "echotype",
+  savrSearchBtn: "savr",
+  fluxoSearchBtn: "fluxo",
+  mallsySearchBtn: "mallsy",
+  beautiqSearchBtn: "beautiq",
+  dishdashSearchBtn: "dishdash",
+};
+
+Object.entries(PROJECT_PAGES).forEach(([id, page]) => {
+  document.getElementById(id)?.addEventListener("click", () => {
+    window.location.href = `projects/${page}.html`;
+  });
 });
-
-document
-  .getElementById("RecipediaSearchBtn")
-  .addEventListener("click", function () {
-    window.location.href = "projects/recipedia.html";
-  });
-
-document.getElementById("stexSearchBtn").addEventListener("click", function () {
-  window.location.href = "projects/stex.html";
-});
-
-document.getElementById("revuSearchBtn").addEventListener("click", function () {
-  window.location.href = "projects/revu.html";
-});
-
-document
-  .getElementById("bytelogSearchBtn")
-  .addEventListener("click", function () {
-    window.location.href = "projects/bytelog.html";
-  });
-
-document
-  .getElementById("pastCastSearchBtn")
-  .addEventListener("click", function () {
-    window.location.href = "projects/pastcast.html";
-  });
-
-document
-  .getElementById("echoTypeSearchBtn")
-  .addEventListener("click", function () {
-    window.location.href = "projects/echotype.html";
-  });
-
-document.getElementById("savrSearchBtn").addEventListener("click", function () {
-  window.location.href = "projects/savr.html";
-});
-document
-  .getElementById("fluxoSearchBtn")
-  .addEventListener("click", function () {
-    window.location.href = "projects/fluxo.html";
-  });
-document
-  .getElementById("mallsySearchBtn")
-  .addEventListener("click", function () {
-    window.location.href = "projects/mallsy.html";
-  });
-document
-  .getElementById("beautiqSearchBtn")
-  .addEventListener("click", function () {
-    window.location.href = "projects/beautiq.html";
-  });
-document
-  .getElementById("dishdashSearchBtn")
-  .addEventListener("click", function () {
-    window.location.href = "projects/dishdash.html";
-  });
 
 document.addEventListener("DOMContentLoaded", () => {
   const itemsPerBatch = 3;
@@ -149,6 +112,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const projects = Array.from(document.querySelectorAll(".project-item"));
   const loadMoreBtn = document.getElementById("loadMoreBtn");
   let visibleCount = initialVisible;
+
+  // Without a "Show More" button, hidden projects could never be revealed
+  if (!loadMoreBtn) return;
+
+  if (projects.length <= visibleCount) {
+    loadMoreBtn.style.display = "none";
+  }
 
   projects.forEach((item, i) => {
     if (i >= visibleCount) item.style.display = "none";
