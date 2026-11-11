@@ -4,7 +4,8 @@
     "skills": "Skills",
     "projects": "Projects",
     "contact": "Contact",
-    "download": "Download CV"
+    "download": "Download CV",
+    "flagAlt": "English flag"
   },
   "hero": {
     "title": "<Matilda\nErenius/>",
@@ -36,7 +37,6 @@
   "projects": {
     "title": "Projects",
     "note": "Most of these projects are still under construction and cannot yet be viewed. Feel free to check out my GitHub repositories for more details about each project.",
-
     "buzz": {
       "title": "Buzz",
       "description": "Buzz...with your friends on this social media website.",
@@ -68,7 +68,23 @@
       "feature1": "Create & organize tasks into lists",
       "feature2": "Set priorities & due dates",
       "feature3": "Full-stack Android app with Spring Boot REST API"
-    }
+    },
+    "stex": {
+      "title": "Stex",
+      "description": "Find the best train seat and the right exit for your subway ride.",
+      "feature1": "Calculates optimal exit even when searching by street address",
+      "feature2": "Circuit Breakers ensure stability even if external APIs fail",
+      "feature3": "Caffeine Caching reduces latency and API calls"
+    },
+    "echotype": {
+      "title": "EchoType",
+      "description": "Hear it. Echo it. Type it. With this audio to text transcriber.",
+      "feature1": "Upload audio files directly in the browser",
+      "feature2": "Powered by OpenAI Whisper for transcription",
+      "feature3": "Clean, minimal and user-friendly UI"
+    },
+    "code": "Code",
+    "imageAlt": "Project image"
   },
   "contact": {
     "title": "Get In Touch",
@@ -79,7 +95,10 @@
       "name": "Name",
       "email": "Email",
       "message": "Message",
-      "send": "Send Message"
+      "send": "Send Message",
+      "namePlaceholder": "Jane Doe",
+      "emailPlaceholder": "janedoe@gmail.com",
+      "messagePlaceholder": "Your message...."
     },
     "info": {
       "title": "Contact Info",
@@ -88,6 +107,10 @@
       "availability": "Availability",
       "available": "Available for junior positions"
     },
-    "social": "Connect Via Socials"
+    "social": "Connect Via Socials",
+    "emailLink": "Email"
+  },
+  "footer": {
+    "text": "&copy;2026 | Made with &hearts; by Matilda Erenius"
   }
 }

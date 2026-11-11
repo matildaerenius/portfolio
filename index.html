@@ -94,6 +94,7 @@
                 id="flagIcon"
                 src="images/gb.png"
                 alt="English flag"
+                data-i18n-alt="nav.flagAlt"
                 width="24"
                 height="24"
                 style="border-radius: 50%"
@@ -184,8 +185,8 @@
                 </li>
               </ul>
               <a href="#contact" class="btn-53 contact-me-btn ms-1">
-                <div class="original">Contact Me</div>
-                <div class="letters">
+                <div class="original" data-i18n="hero.button">Contact Me</div>
+                <div class="letters" data-i18n-letters="hero.button">
                   <span>C</span>
                   <span>o</span>
                   <span>n</span>
@@ -629,7 +630,7 @@
                 href="https://github.com/matildaerenius/bookmap"
                 target="_blank"
                 class="btn project-btn"
-                ><i class="bx bxl-github fs-6"></i> Code</a
+                ><i class="bx bxl-github fs-6"></i> <span data-i18n="projects.code">Code</span></a
               >
             </div>
           </div>
@@ -644,7 +645,7 @@
             <div class="project-img-wrapper mb-3">
               <img
                 src="images/backenddone.png"
-                alt="Projektbild"
+                alt="Project image" data-i18n-alt="projects.imageAlt"
                 class="img-fluid rounded project-img"
               />
             </div>
@@ -697,7 +698,7 @@
                 href="https://github.com/matildaerenius/Buzz"
                 target="_blank"
                 class="btn project-btn"
-                ><i class="bx bxl-github fs-6"></i> Code</a
+                ><i class="bx bxl-github fs-6"></i> <span data-i18n="projects.code">Code</span></a
               >
             </div>
           </div>
@@ -711,7 +712,7 @@
             <div class="project-img-wrapper mb-3">
               <img
                 src="images/recipedia.png"
-                alt="Projektbild"
+                alt="Project image" data-i18n-alt="projects.imageAlt"
                 class="img-fluid rounded project-img"
               />
             </div>
@@ -768,7 +769,7 @@
                 target="_blank"
                 class="btn project-btn"
               >
-                <i class="bx bxl-github fs-6"></i> Code</a
+                <i class="bx bxl-github fs-6"></i> <span data-i18n="projects.code">Code</span></a
               >
             </div>
           </div>
@@ -783,12 +784,12 @@
             <div class="project-img-wrapper mb-3">
               <img
                 src="images/holder.png"
-                alt="Projektbild"
+                alt="Project image" data-i18n-alt="projects.imageAlt"
                 class="img-fluid rounded project-img"
               />
             </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c" data-i18n="projects.stex.title">Stex</h3>
-            <p class="card-text mb-3">
+            <p class="card-text mb-3" data-i18n="projects.stex.description">
               Find the best train seat and the right exit for your subway ride.
             </p>
             <div class="d-flex flex-wrap gap-1 my-3">
@@ -809,15 +810,15 @@
             <ul class="list-unstyled mb-4">
               <li class="d-flex align-items-center mb-2">
                 <i class="bx bx-map-pin fs-5 me-2"></i>
-                <small>Calculates optimal exit even when searching by street address</small>
+                <small data-i18n="projects.stex.feature1">Calculates optimal exit even when searching by street address</small>
               </li>
               <li class="d-flex align-items-center mb-2">
                 <i class="bx bx-shield-quarter fs-5 me-2"></i>
-                <small>Circuit Breakers ensure stability even if external APIs fail</small>
+                <small data-i18n="projects.stex.feature2">Circuit Breakers ensure stability even if external APIs fail</small>
               </li>
               <li class="d-flex align-items-center">
                 <i class="bx bx-rocket fs-5 me-2"></i>
-                <small>Caffeine Caching reduces latency and API calls</small>
+                <small data-i18n="projects.stex.feature3">Caffeine Caching reduces latency and API calls</small>
               </li>
             </ul>
             <div class="mt-auto d-flex justify-content-start gap-2 mt-4">
@@ -825,7 +826,7 @@
                 href="https://github.com/matildaerenius/stex"
                 target="_blank"
                 class="btn project-btn"
-                ><i class="bx bxl-github fs-6"></i> Code</a
+                ><i class="bx bxl-github fs-6"></i> <span data-i18n="projects.code">Code</span></a
               >
             </div>
           </div>
@@ -841,12 +842,12 @@
             <div class="project-img-wrapper mb-3">
               <img
                 src="images/echotype.png"
-                alt="Projektbild"
+                alt="Project image" data-i18n-alt="projects.imageAlt"
                 class="img-fluid rounded project-img"
               />
             </div>
             <h3 class="card-title mb-3" style="color: #f6ff4c" data-i18n="projects.echotype.title">EchoType</h3>
-            <p class="card-text mb-3">
+            <p class="card-text mb-3" data-i18n="projects.echotype.description">
               Hear it. Echo it. Type it. With this audio to text transcriber.
             </p>
             <div class="d-flex flex-wrap gap-1 my-3">
@@ -862,15 +863,15 @@
             <ul class="list-unstyled mb-4">
               <li class="d-flex align-items-center mb-2">
                 <i class="bx bx-upload fs-5 me-2"></i>
-                <small>Upload audio files directly in the browser</small>
+                <small data-i18n="projects.echotype.feature1">Upload audio files directly in the browser</small>
               </li>
               <li class="d-flex align-items-center mb-2">
                 <i class="bx bx-microphone fs-5 me-2"></i>
-                <small>Powered by OpenAI Whisper for transcription</small>
+                <small data-i18n="projects.echotype.feature2">Powered by OpenAI Whisper for transcription</small>
               </li>
               <li class="d-flex align-items-center">
                 <i class="bx bx-desktop fs-5 me-2"></i>
-                <small>Clean, minimal and user-friendly UI</small>
+                <small data-i18n="projects.echotype.feature3">Clean, minimal and user-friendly UI</small>
               </li>
             </ul>
             <div class="mt-auto d-flex justify-content-start gap-2 mt-4">
@@ -878,7 +879,7 @@
                 href="https://github.com/matildaerenius/echotype"
                 target="_blank"
                 class="btn project-btn"
-                ><i class="bx bxl-github fs-6"></i> Code</a
+                ><i class="bx bxl-github fs-6"></i> <span data-i18n="projects.code">Code</span></a
               >
             </div>
           </div>
@@ -1045,7 +1046,7 @@
             <div class="project-img-wrapper mb-3">
               <img
                 src="images/backenddone.png"
-                alt="Projektbild"
+                alt="Project image" data-i18n-alt="projects.imageAlt"
                 class="img-fluid rounded project-img"
               />
             </div>
@@ -1087,7 +1088,7 @@
                 href="https://github.com/matildaerenius/fluxo"
                 target="_blank"
                 class="btn project-btn"
-                ><i class="bx bxl-github fs-6"></i> Code</a
+                ><i class="bx bxl-github fs-6"></i> <span data-i18n="projects.code">Code</span></a
               >
             </div>
           </div>
@@ -1324,6 +1325,7 @@
                   id="contactName"
                   name="name"
                   placeholder="Jane Doe"
+                  data-i18n-placeholder="contact.form.namePlaceholder"
                 />
               </div>
               <div class="mb-3">
@@ -1339,6 +1341,7 @@
                   id="contactEmail"
                   name="_replyto"
                   placeholder="janedoe@gmail.com"
+                  data-i18n-placeholder="contact.form.emailPlaceholder"
                 />
               </div>
               <div class="mb-3">
@@ -1354,6 +1357,7 @@
                   name="message"
                   rows="5"
                   placeholder="Your message...."
+                  data-i18n-placeholder="contact.form.messagePlaceholder"
                 ></textarea>
               </div>
               <button type="submit" class="btn btn-primary px-4 py-2">
@@ -1462,7 +1466,7 @@
                       class="contact-icon email-link text-decoration-none"
                     >
                       <i class="bx bxl-gmail fs-5 me-2"></i>
-                      Email
+                      <span data-i18n="contact.emailLink">Email</span>
                     </a>
                   </li>
                   <!-- 6. CV -->
@@ -1490,7 +1494,7 @@
     <!-- Footer sektion -->
     <footer class="footer-custom text-white py-3">
       <div class="container text-center">
-        <p class="mb-0">&copy;2026 | Made with &hearts; by Matilda Erenius</p>
+        <p class="mb-0" data-i18n="footer.text">&copy;2026 | Made with &hearts; by Matilda Erenius</p>
       </div>
     </footer>
 

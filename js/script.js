@@ -30,11 +30,14 @@ function loadLanguage(lang) {
   fetch(`lang/${lang}.json`)
     .then((res) => res.json())
     .then((translations) => {
+      const t = (key) =>
+        key.split(".").reduce((obj, part) => obj?.[part], translations);
+
+      document.documentElement.lang = lang;
+
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const key = el.getAttribute("data-i18n");
-        const value = key
-          .split(".")
-          .reduce((obj, part) => obj && obj[part], translations);
+        const value = t(key);
 
         if (value) {
           if (["input", "textarea"].includes(el.tagName.toLowerCase())) {
@@ -42,21 +45,42 @@ function loadLanguage(lang) {
           } else {
             el.innerHTML = value;
           }
+        } else {
+          console.warn(`Missing translation for: ${key}`);
         }
       });
       document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
         const key = el.getAttribute("data-i18n-placeholder");
-        const value = key
-          .split(".")
-          .reduce((obj, part) => obj?.[part], translations);
+        const value = t(key);
         if (value !== undefined) {
           el.placeholder = value;
         } else {
-          console.warn(`Saknad placeholder-översättning för: ${key}`);
+          console.warn(`Missing placeholder translation for: ${key}`);
         }
       });
+      document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+        const key = el.getAttribute("data-i18n-alt");
+        const value = t(key);
+        if (value !== undefined) {
+          el.alt = value;
+        } else {
+          console.warn(`Missing alt translation for: ${key}`);
+        }
+      });
+      // Animated buttons that render one <span> per letter
+      document.querySelectorAll("[data-i18n-letters]").forEach((el) => {
+        const value = t(el.getAttribute("data-i18n-letters"));
+        if (!value) return;
+        el.innerHTML = "";
+        [...value].forEach((char) => {
+          const span = document.createElement("span");
+          if (char === " ") span.innerHTML = "&nbsp;";
+          else span.textContent = char;
+          el.appendChild(span);
+        });
+      });
     })
-    .catch((err) => console.error("Språkfil kunde inte laddas:", err));
+    .catch((err) => console.error("Could not load language file:", err));
 }
 
 document.getElementById("BuzzSearchBtn").addEventListener("click", function () {
