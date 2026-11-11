@@ -388,6 +388,107 @@ ul {
 .btn-53:hover span:nth-child(9) { transition-delay: 0.8s; }
 .btn-53:hover span:nth-child(10) { transition-delay: 0.9s; }
 
+/* === Contact Me hover animation ===
+   The text stays readable: a dark fill grows from the centre, the letters
+   turn yellow and ripple in a wave, and a yellow ring pulses out from the button.
+   .original is kept only for screen readers; the visible text is .letters. */
+.btn-53.contact-me-btn {
+  flex-shrink: 0; /* never squeeze the text on narrow screens */
+  isolation: isolate;
+  background-color: #F6FF4C;
+  border-color: #F6FF4C;
+  color: #130824;
+  -webkit-mask-image: none;
+  transition: color 0.3s ease, transform 0.25s ease, border-color 0.3s ease;
+}
+
+.btn-53.contact-me-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: #130824;
+  border-radius: inherit;
+  transform: scale(0, 0.2);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.7, 0, 0.2, 1), opacity 0.2s ease;
+}
+
+.btn-53.contact-me-btn .original {
+  position: absolute;
+  inset: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.btn-53.contact-me-btn .letters span {
+  display: inline-block;
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.btn-53.contact-me-btn:hover,
+.btn-53.contact-me-btn:focus-visible {
+  color: #F6FF4C;
+  border-color: #F6FF4C;
+  transform: translateY(-2px);
+  animation: contact-btn-ring 0.9s ease-out;
+}
+
+.btn-53.contact-me-btn:hover::before,
+.btn-53.contact-me-btn:focus-visible::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.btn-53.contact-me-btn:hover .letters span,
+.btn-53.contact-me-btn:focus-visible .letters span {
+  animation: contact-btn-wave 0.5s ease calc(var(--i, 0) * 45ms) both;
+}
+
+@keyframes contact-btn-wave {
+  0% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(-6px) rotate(-6deg);
+    text-shadow: 0 0 8px rgba(246, 255, 76, 0.9);
+  }
+  65% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes contact-btn-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(246, 255, 76, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 14px rgba(246, 255, 76, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-53.contact-me-btn,
+  .btn-53.contact-me-btn::before {
+    transition: none;
+  }
+
+  .btn-53.contact-me-btn:hover,
+  .btn-53.contact-me-btn:focus-visible,
+  .btn-53.contact-me-btn:hover .letters span,
+  .btn-53.contact-me-btn:focus-visible .letters span {
+    animation: none;
+  }
+}
+
 /* === About sektion === */
 #about {
   background: #1D0C38;
@@ -764,6 +865,120 @@ ul {
   transform: scale(1.1);
 }
 
+/* === Send Message button hover animation ===
+   The paper plane takes off to the top-right and lands back from the left,
+   a light shine sweeps across, and the button lifts with a yellow glow. */
+.send-btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  color: #130824;
+  transition: transform 0.25s ease, box-shadow 0.35s ease;
+}
+
+.send-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: -1;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.75) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+}
+
+.send-btn i {
+  display: inline-block;
+}
+
+.send-btn span {
+  display: inline-block;
+  transition: transform 0.35s ease;
+}
+
+.send-btn:hover,
+.send-btn:focus-visible {
+  background-color: #F6FF4C;
+  border-color: #F6FF4C;
+  color: #130824;
+  transform: translateY(-3px);
+  box-shadow: 0 0 0 2px #130824, 0 0 0 4px #F6FF4C,
+    0 8px 20px rgba(246, 255, 76, 0.45);
+}
+
+.send-btn:hover::after,
+.send-btn:focus-visible::after {
+  animation: send-btn-shine 0.7s ease;
+}
+
+.send-btn:hover i,
+.send-btn:focus-visible i {
+  animation: send-btn-plane 0.9s ease-in-out;
+}
+
+.send-btn:hover span,
+.send-btn:focus-visible span {
+  transform: translateX(3px);
+}
+
+/* pressed: stay yellow (Bootstrap would switch to its blue) and sink back slightly */
+.btn.send-btn:active,
+.btn.send-btn:first-child:active {
+  background-color: #F6FF4C;
+  border-color: #F6FF4C;
+  color: #130824;
+  transform: translateY(-1px);
+}
+
+@keyframes send-btn-shine {
+  to {
+    left: 125%;
+  }
+}
+
+@keyframes send-btn-plane {
+  0% {
+    transform: translate(0, 0) rotate(0);
+    opacity: 1;
+  }
+  40% {
+    transform: translate(28px, -22px) rotate(-20deg) scale(0.8);
+    opacity: 0;
+  }
+  41% {
+    transform: translate(-22px, 14px) rotate(0);
+    opacity: 0;
+  }
+  75% {
+    transform: translate(2px, -2px) rotate(8deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .send-btn,
+  .send-btn span {
+    transition: none;
+  }
+
+  .send-btn:hover::after,
+  .send-btn:focus-visible::after,
+  .send-btn:hover i,
+  .send-btn:focus-visible i {
+    animation: none;
+  }
+}
+
 .bx-envelope {
   color: #3d3ddb;
 }
@@ -773,6 +988,14 @@ ul {
 }
 
 .connect-list a {
+  /* brand colours per link, overridden below; same palette as the hero icons */
+  --brand-bg: #F6FF4C;
+  --brand-text: #130824;
+  --brand-glow: rgba(246, 255, 76, 0.45);
+
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   display: inline-flex;
   align-items: center;
   text-decoration: none;
@@ -780,22 +1003,108 @@ ul {
   font-family: 'Tektur';
   padding: 0.4rem 0.8rem;
   border-radius: 2rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: color 0.35s ease, transform 0.25s ease, box-shadow 0.35s ease;
 }
 
 .connect-list a i {
+  display: inline-block;
   margin-right: 0.5rem;
   font-family: 'Tektur';
+  transition: transform 0.35s ease;
 }
 
-.connect-list a:hover {
-  background-color: #3a3a3a;
-  color: #fff;
+/* Brand colour that rises up from the bottom on hover */
+.connect-list a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--brand-bg);
+  border-radius: inherit;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.35s cubic-bezier(0.7, 0, 0.2, 1);
 }
 
-.connect-list a:hover i {
-  background-color: #3a3a3a;
-  color: #fff;
+.connect-list a:hover,
+.connect-list a:focus-visible {
+  color: var(--brand-text);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px var(--brand-glow);
+}
+
+.connect-list a:hover::before,
+.connect-list a:focus-visible::before {
+  transform: scaleY(1);
+}
+
+.connect-list a:hover i,
+.connect-list a:focus-visible i {
+  animation: social-icon-hop 0.55s ease;
+}
+
+@keyframes social-icon-hop {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  35% {
+    transform: translateY(-6px) rotate(-15deg) scale(1.2);
+  }
+  65% {
+    transform: translateY(1px) rotate(8deg) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+.connect-list .github-link {
+  --brand-bg: #24262a;
+  --brand-text: #ffffff;
+  --brand-glow: rgba(255, 255, 255, 0.25);
+}
+
+.connect-list .linkedin-link {
+  --brand-bg: #0274b3;
+  --brand-text: #ffffff;
+  --brand-glow: rgba(2, 116, 179, 0.55);
+}
+
+.connect-list .instagram-link {
+  --brand-bg: linear-gradient(45deg, #405de6, #5b51db, #b33ab4, #c135b4, #e1306c, #fd1f1f);
+  --brand-text: #ffffff;
+  --brand-glow: rgba(225, 48, 108, 0.5);
+}
+
+.connect-list .facebook-link {
+  --brand-bg: #1877f2;
+  --brand-text: #ffffff;
+  --brand-glow: rgba(24, 119, 242, 0.55);
+}
+
+.connect-list .email-link {
+  --brand-bg: #ea4335;
+  --brand-text: #ffffff;
+  --brand-glow: rgba(234, 67, 53, 0.55);
+}
+
+/* CV keeps the site's own yellow (defaults above) */
+
+/* translated link text (e.g. Email) uses the same font as the other links */
+#contact .card-body .connect-list a span {
+  font-family: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .connect-list a,
+  .connect-list a::before {
+    transition: none;
+  }
+
+  .connect-list a:hover i,
+  .connect-list a:focus-visible i {
+    animation: none;
+  }
 }
 
 #contact p,

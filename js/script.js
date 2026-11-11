@@ -72,10 +72,11 @@ function loadLanguage(lang) {
         const value = t(el.getAttribute("data-i18n-letters"));
         if (!value) return;
         el.innerHTML = "";
-        [...value].forEach((char) => {
+        [...value].forEach((char, i) => {
           const span = document.createElement("span");
           if (char === " ") span.innerHTML = "&nbsp;";
           else span.textContent = char;
+          span.style.setProperty("--i", i); // staggers the hover wave
           el.appendChild(span);
         });
       });
