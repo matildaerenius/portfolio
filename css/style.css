@@ -82,6 +82,72 @@ body {
   color: #F6FF4C;
 }
 
+/* === Download CV hover animation (subtle) ===
+   The arrow drops down "into" the tray and slides back in from above,
+   and a thin yellow line grows out from the centre under the text. */
+.nav-icon.cv-download-btn:hover,
+.nav-icon.cv-download-btn:focus-visible {
+  transform: none;
+  color: #F6FF4C;
+}
+
+.cv-download-btn i {
+  display: inline-block;
+}
+
+.cv-download-btn:hover i,
+.cv-download-btn:focus-visible i {
+  animation: cv-arrow-drop 0.7s ease;
+}
+
+.cv-download-btn span {
+  position: relative;
+}
+
+.cv-download-btn span::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: #F6FF4C;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.cv-download-btn:hover span::after,
+.cv-download-btn:focus-visible span::after {
+  width: 100%;
+}
+
+@keyframes cv-arrow-drop {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(6px);
+    opacity: 0;
+  }
+  41% {
+    transform: translateY(-6px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cv-download-btn:hover i,
+  .cv-download-btn:focus-visible i {
+    animation: none;
+  }
+}
+
 #langToggle i {
   color: #ffffff;
 }
