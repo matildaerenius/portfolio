@@ -39,7 +39,7 @@
     "note": "Most of these projects are still under construction and cannot yet be viewed. Feel free to check out my GitHub repositories for more details about each project.",
     "buzz": {
       "title": "Buzz",
-      "description": "Buzz...with your friends on this social media website.",
+      "description": "Share content on a social platform built with real-time chat, video calling, and interactive short-form reels.",
       "feature1": "Create, like, save, repost & comment on posts",
       "feature2": "Real time message and video/voice calls",
       "feature3": "Update user profile, follow & unfollow users",
@@ -88,7 +88,7 @@
   },
   "contact": {
     "title": "Get In Touch",
-    "paragraph": "If you want to know more about me, or just like to say hello, send me a message or contact me through my socials. I'd love to hear from you.",
+    "paragraph": "If you want to know more about me, or just like to say hello, send me a message or contact me through my socials.",
     "formTitle": "Send a Message",
     "formText": "Fill out the form below and I'll get back to you as soon as possible.",
     "form": {

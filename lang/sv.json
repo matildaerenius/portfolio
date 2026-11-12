@@ -39,7 +39,7 @@
     "note": "De flesta av dessa projekt är fortfarande under utveckling och kan ännu inte visas. Kika gärna in på mina GitHub-repon för mer information om varje projekt.",
     "buzz": {
       "title": "Buzz",
-      "description": "Buzz... med dina vänner på den här sociala medie-sajten.",
+      "description": "Dela innehåll på en social plattform med chatt i realtid, videosamtal och interaktiva korta reels.",
       "feature1": "Skapa, gilla, spara, dela & kommentera inlägg",
       "feature2": "Meddelanden i realtid samt video-/röstsamtal",
       "feature3": "Uppdatera profil, följ & avfölj användare",
@@ -88,7 +88,7 @@
   },
   "contact": {
     "title": "Kontakta mig",
-    "paragraph": "Vill du veta mer om mig eller bara säga hej? Skicka ett meddelande eller kontakta mig via mina sociala medier. Ser fram emot att höra från dig.",
+    "paragraph": "Vill du veta mer om mig eller bara säga hej? Skicka ett meddelande eller kontakta mig via mina sociala medier.",
     "formTitle": "Skicka ett meddelande",
     "formText": "Fyll i formuläret nedan så hör jag av mig så snart som möjligt.",
     "form": {
