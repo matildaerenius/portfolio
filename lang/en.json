@@ -98,7 +98,11 @@
       "send": "Send Message",
       "namePlaceholder": "Jane Doe",
       "emailPlaceholder": "janedoe@gmail.com",
-      "messagePlaceholder": "Your message...."
+      "messagePlaceholder": "Your message....",
+      "sending": "Sending…",
+      "success": "Thanks! Your message has been sent, I'll get back to you soon.",
+      "error": "Something went wrong. Please try again or email me directly.",
+      "invalid": "Please fill in your name, a valid email and a message."
     },
     "info": {
       "title": "Contact Info",

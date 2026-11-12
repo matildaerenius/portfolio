@@ -98,7 +98,11 @@
       "send": "Skicka meddelande",
       "namePlaceholder": "Anna Andersson",
       "emailPlaceholder": "anna@gmail.com",
-      "messagePlaceholder": "Ditt meddelande...."
+      "messagePlaceholder": "Ditt meddelande....",
+      "sending": "Skickar…",
+      "success": "Tack! Ditt meddelande har skickats, jag hör av mig snart.",
+      "error": "Något gick fel. Försök igen eller mejla mig direkt.",
+      "invalid": "Fyll i ditt namn, en giltig e-postadress och ett meddelande."
     },
     "info": {
       "title": "Kontaktinformation",

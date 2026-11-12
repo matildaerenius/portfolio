@@ -17,6 +17,15 @@ function updateFlags(lang) {
 }
 
 let currentLang = localStorage.getItem("language") || "en";
+let currentTranslations = {};
+
+// Looks up a key in the most recently loaded language file
+function translate(key, fallback = "") {
+  const value = key
+    .split(".")
+    .reduce((obj, part) => obj?.[part], currentTranslations);
+  return value ?? fallback;
+}
 
 window.addEventListener("DOMContentLoaded", () => {
   loadLanguage(currentLang);
@@ -37,6 +46,7 @@ function loadLanguage(lang) {
   fetch(`lang/${lang}.json`)
     .then((res) => res.json())
     .then((translations) => {
+      currentTranslations = translations;
       const t = (key) =>
         key.split(".").reduce((obj, part) => obj?.[part], translations);
 
@@ -286,3 +296,50 @@ window.addEventListener("resize", () => {
 });
 document.addEventListener("DOMContentLoaded", equalizeProjectCards);
 document.fonts?.ready.then(equalizeProjectCards);
+
+// --- Contact form: send without leaving the page ---
+const contactForm = document.getElementById("contactForm");
+const formStatus = document.getElementById("formStatus");
+
+function showFormStatus(type, key, fallback) {
+  if (!formStatus) return;
+  formStatus.textContent = translate(`contact.form.${key}`, fallback);
+  formStatus.classList.remove("is-success", "is-error");
+  formStatus.classList.add(type === "success" ? "is-success" : "is-error");
+}
+
+contactForm?.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  contactForm.classList.add("was-submitted"); // shows invalid fields
+
+  if (!contactForm.checkValidity()) {
+    showFormStatus("error", "invalid", "Please fill in your name, a valid email and a message.");
+    contactForm.querySelector(":invalid")?.focus();
+    return;
+  }
+
+  const button = contactForm.querySelector('button[type="submit"]');
+  const label = button?.querySelector("span");
+  if (button) button.disabled = true;
+  if (label) label.textContent = translate("contact.form.sending", "Sending…");
+  formStatus?.classList.remove("is-success", "is-error");
+  if (formStatus) formStatus.textContent = "";
+
+  try {
+    const res = await fetch(contactForm.action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: { Accept: "application/json" },
+    });
+    if (!res.ok) throw new Error(`Formspree responded ${res.status}`);
+    contactForm.reset();
+    contactForm.classList.remove("was-submitted");
+    showFormStatus("success", "success", "Thanks! Your message has been sent.");
+  } catch (err) {
+    console.error("Could not send message:", err);
+    showFormStatus("error", "error", "Something went wrong. Please try again or email me directly.");
+  } finally {
+    if (button) button.disabled = false;
+    if (label) label.textContent = translate("contact.form.send", "Send Message");
+  }
+});
