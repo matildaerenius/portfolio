@@ -816,40 +816,65 @@ ul {
   transform: translateY(0);
 }
 
+/* Tech stack icons, hover (subtle): the icon lifts a little with a faint
+   yellow glow, the other icons in the card fade back slightly, and the
+   name tag slides up into view. */
 .skill-icon-container {
   position: relative;
   display: inline-block;
   margin: 0.5rem;
+  transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
 .skill-icon {
   width: 48px;
   height: 48px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
 }
 
-.skill-icon:hover {
-  transform: scale(1.1);
+.skill-icon-container:hover .skill-icon {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 6px rgba(246, 255, 76, 0.25));
+}
+
+/* spotlight: dim the icons you're not pointing at */
+.skill-icons:hover .skill-icon-container:not(:hover) {
+  opacity: 0.7;
 }
 
 .tooltip-text {
-  display: none;
   position: absolute;
   bottom: 100%;
   left: 50%;
-  transform: translateX(-50%);
-  background-color: #333;
-  color: #fff;
-  padding: 3px 6px;
-  border-radius: 4px;
+  transform: translate(-50%, 4px);
+  background-color: #130824;
+  color: #F6FF4C;
+  border: 1px solid rgba(246, 255, 76, 0.5);
+  padding: 3px 8px;
+  border-radius: 999px;
   font-size: 0.75rem;
+  font-family: 'Tektur';
   white-space: nowrap;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .skill-icon-container:hover .tooltip-text {
-  display: block;
+  opacity: 1;
+  transform: translate(-50%, -4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-icon,
+  .tooltip-text {
+    transition: none;
+  }
+
+  .skill-icon-container:hover .skill-icon {
+    transform: none;
+  }
 }
 
 #social-skills ul li span.text-white {
